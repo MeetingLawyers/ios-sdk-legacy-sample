@@ -10,16 +10,18 @@ Para instalar la librería de MediQuo hay que incluir primero el repositorio pri
 pod repo add mediquo https://gitlab.com/mediquo/specs.git
 ```
 
-Posteriormente, en el ‘Podfile’ del proyecto añadimos en la cabecera el nuevo origen de pods: 
+Posteriormente, en el ‘Podfile’ del proyecto añadimos en la cabecera el nuevo origen de pods, además de la cabecera por defecto de Cocoapods: 
 
 ```
 source 'https://gitlab.com/mediquo/specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 ```
 
 Y finalmente, incluímos el pod en el target del proyecto con la última versión:
 
 ```
 pod 'MediQuo', '~> 0.9'
+pod 'R.swift'
 ```
 
 ## Integración
