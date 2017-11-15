@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let configuration = MediQuo.Configuration(id: "client_name", secret: "api_key")
+        
+        let configuration = MediQuo.Configuration(id: <#your client name#>, secret: <#your api key#>)
         MediQuo.initialize(with:configuration, options:launchOptions)
         return true
     }
