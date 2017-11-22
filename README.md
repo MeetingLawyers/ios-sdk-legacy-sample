@@ -63,6 +63,8 @@ El resultado de la autenticación no devuelve ningún valor más allá de la mis
 
 A partir de la respuesta correcta, podemos considerar que el usuario es correcto y el entorno de MediQuo está listo para mostrar las conversaciones activas del usuario.
 
+En el caso de este proyecto de ejemplo se encuentra en le clase *ViewController*
+
 ## Mensajes pendientes
 
 Superado el proceso de autenticación podemos consultar entonces los mensajes pendientes por leer que tiene el usuario mediante el siguiente método:
