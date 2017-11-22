@@ -10,6 +10,12 @@ Para instalar la librería de MediQuo hay que incluir primero el repositorio pri
 pod repo add mediquo https://gitlab.com/mediquo/specs.git
 ```
 
+Además, requeriremos de añadir una gema para cargar el podspec con el comando:
+
+```
+gem install dotenv --user-install
+```
+
 Posteriormente, en el ‘Podfile’ del proyecto añadimos en la cabecera el nuevo origen de pods, además de la cabecera por defecto de Cocoapods: 
 
 ```
@@ -20,8 +26,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 Y finalmente, incluímos el pod en el target del proyecto con la última versión:
 
 ```
-pod 'MediQuo', '~> 0.9'
-pod 'R.swift'
+pod 'MediQuo', '~> 0.9.1'
 ```
 
 ## Integración
@@ -63,7 +68,7 @@ El resultado de la autenticación no devuelve ningún valor más allá de la mis
 
 A partir de la respuesta correcta, podemos considerar que el usuario es correcto y el entorno de MediQuo está listo para mostrar las conversaciones activas del usuario.
 
-En el caso de este proyecto de ejemplo se encuentra en le clase *ViewController*
+En el caso de este proyecto de ejemplo se encuentra en la clase *ViewController*
 
 ## Mensajes pendientes
 
