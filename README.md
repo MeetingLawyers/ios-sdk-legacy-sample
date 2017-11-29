@@ -35,17 +35,17 @@ Access to camera or photo gallery always requires explicit permission from the u
 
 Your app must provide an explanation for its use of capture devices using the **NSCameraUsageDescription** and **NSPhotoLibraryUsageDescription** Info.plist key. iOS displays this explanation when initially asking the user for permission to attach an element in the current conversation. 
 
-(!) Attempting to attach a gallery photo or start a camera session without a usage description will raise an exception.
+⚠️ Attempting to attach a gallery photo or start a camera session without an usage description will raise an exception.
 
 ## Integration
 
-To use the library it is necessary to import it in our AppDelegate:
+To use the library is necessary to import it in our AppDelegate:
 
 ```swift
 import MediQuo
 ```
 
-Next, as soon as we receive notification from the system that our application is already active, we must configure the framework by providing the client's API key:
+Next, as soon as we receive a notification from the system telling that our application is already active, we must configure the framework by providing the client's API key:
 
 ```swift
 public func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -60,7 +60,7 @@ Without the initialization process, subsequent calls to the library will trigger
 
 ## Authentication
 
-Authentication verifies that the provided user token is correct and, therefore, can initiate the chat.
+Authentication verifies that the provided user token is correct and, therefore, it can initiate the chat.
 
 ```swift
 MediQuo.authenticate(token: "token") { (result: MediQuo.Result<Void>) in
@@ -73,11 +73,11 @@ MediQuo.authenticate(token: "token") { (result: MediQuo.Result<Void>) in
 }
 ```
 
-The result of the authentication does not return any value beyond the same verification of the success or failure of the operation.
+The result of the authentication does not return any value beyond the same verification of success or failure of the operation.
 
 From a successful answer, we can consider that the user is authenticated and MediQuo environment is ready to show the active conversations of the user.
 
-In the case of this example project you can find this snippet in class *ViewController*
+In the case of this example project you can find this snippet in class *ViewController*.
 
 ## Pending messages
 
@@ -114,7 +114,7 @@ MediQuo.present()
 
 It is important to invoke this method once the application has a 'UIApplication.keyWindow', since it is used to embed the MediQuo UI. In case of not being present, an 'invalidTopViewController' error is returned in the 'completion' callback.
 
-It should not be a problem for most applications, but there are special cases in which this situation can occur. For example, if we use Storyboards and we invoke this method in 'viewDidLoad' method of the initial view controller.
+It should not be a problem for most applications, but there are special cases in which this situation can occur. For example, if we use Storyboards and we invoke it in 'viewDidLoad' method of the initial view controller. This happens because 'UIApplication.keyWindow' is not set until 'viewDidAppear'.
 
 Once we have finished the conversations, with 'dismiss' method we close the view of the current controller and return to the screen from which it was invoked.
 
@@ -123,7 +123,8 @@ func dismiss(animated: Bool = true,
      completion: ((MediQuo.Result<Void>) -> Void)? = nil)
 ```
 
-Por otro lado en caso de querer recuperar la referecncia al -controller- de chat deberemos usar el siguiente método:
+On the other hand, if you want to retrieve the reference to the *inbox controller* of chats we must use the following method:
+
 ```swift
 [...]
 MediQuo.chatController { (controller, result) in
@@ -178,7 +179,7 @@ fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) ->
 }
 ```
 
-(!) WARNING:
+⚠️ WARNING:
 
 > It is necessary that the host application has the necessary permissions and entitlements to receive push notifications.
 
