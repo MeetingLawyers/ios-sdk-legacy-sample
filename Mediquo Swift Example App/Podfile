@@ -1,12 +1,9 @@
 source 'https://gitlab.com/mediquo/specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
-# Uncomment the next line to define a global platform for your project
 platform :ios, '10.0'
 
 def shared_pods
-    pod 'MediQuo', '~> 0.9'
-    pod 'R.swift', '~> 4.0.0'
-    pod 'RxSwift', '~> 4.0.0'
+    pod 'MediQuo', '0.10’
 end
 
 target 'Mediquo Swift Example App' do
@@ -26,5 +23,4 @@ target 'Mediquo Swift Example App' do
     # Pods for testing
     shared_pods
   end
-
 end
