@@ -113,6 +113,18 @@ func dismiss(animated: Bool = true,
      completion: ((MediQuo.Result<Void>) -> Void)? = nil)
 ```
 
+Por otro lado en caso de querer recuperar la referecncia al -controller- de chat deberemos usar el siguiente método:
+```swift
+...
+MediQuo.chatController { (controller, result) in
+    if let wrapController = controller, result.isSuccess {
+        // do some stuff
+    }
+}
+....
+```
+
+
 ## Estilos
 
 Los estilos de la lista de médicos se pueden personalizar creando una instancia que cumpla con el protocolo ‘MediQuoStyleType’, modificando sus propiedades para posteriormente vincularlo a la propiedad ‘style’ de la librería.
