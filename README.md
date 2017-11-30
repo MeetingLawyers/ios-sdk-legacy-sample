@@ -10,12 +10,6 @@ To install the MediQuo library you must first include MediQuo private pods repos
 pod repo add mediquo https://gitlab.com/mediquo/specs.git
 ```
 
-In addition, we will need to add a gem to load the podspec with the command:
-
-```
-sudo gem install dotenv
-```
-
 Later, in the project 'Podfile' we have to add in the header the new pods origin, in addition to the default header of Cocoapods:
 
 ```
