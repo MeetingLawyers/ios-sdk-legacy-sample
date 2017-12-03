@@ -1,8 +1,4 @@
 //
-//  AppDelegate.swift
-//  Mediquo Swift Example App
-//
-//  Created by Edgar Paz Moreno on 15/11/17.
 //  Copyright © 2017 Edgar Paz Moreno. All rights reserved.
 //
 
@@ -14,11 +10,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        let configuration = MediQuo.Configuration(id: <#your client name#>, secret: <#your api key#>)
+        let bundle: Bundle = Bundle.main
+        let configuration = MediQuo.Configuration(id: bundle.infoDictionary["MediQuoClientName"]!,
+                                                  secret: bundle.infoDictionary["MediQuoClientSecret"]!)
         MediQuo.initialize(with:configuration, options:launchOptions)
         return true
     }

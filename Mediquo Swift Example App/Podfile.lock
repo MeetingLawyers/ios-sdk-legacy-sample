@@ -3,35 +3,44 @@ PODS:
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
   - JSQDataSourcesKit (6.0.0)
-  - MediQuo (0.9.1):
-    - Alamofire (= 4.5.1)
+  - MediQuo (0.10):
     - AlamofireImage (= 3.3.0)
     - JSQDataSourcesKit (= 6.0.0)
-    - MediQuo-Controller (= 0.9.1)
-    - MediQuo-Core (= 0.9.1)
-    - MediQuo-Remote (= 0.9.1)
-    - MediQuo-Schema (= 0.9.1)
-    - MediQuo-Socket (= 0.9.1)
-    - MediQuo-Storage (= 0.9.1)
-    - MessageKit (= 0.10.1)
+    - MediQuo-Controller (= 0.10)
+    - MediQuo-Core (= 0.10)
+    - MediQuo-Remote (= 0.10)
+    - MediQuo-Schema (= 0.10)
+    - MediQuo-Socket (= 0.10)
+    - MediQuo-Storage (= 0.10)
+    - MessageKit (= 0.10.2)
     - R.swift (= 4.0.0)
-    - RealmSwift (= 3.0.2)
+  - MediQuo-Controller (0.10):
+    - MediQuo-Core (= 0.10)
+    - MediQuo-Schema (= 0.10)
+    - RxBlocking (= 4.0.0)
     - RxSwift (= 4.0.0)
+    - SwiftDate (= 4.5)
+  - MediQuo-Core (0.10)
+  - MediQuo-Remote (0.10):
+    - Alamofire (= 4.5.1)
+    - AlamofireImage (= 3.3.0)
+    - MediQuo-Controller (= 0.10)
+    - MediQuo-Core (= 0.10)
+    - MediQuo-Schema (= 0.10)
+  - MediQuo-Schema (0.10):
+    - MediQuo-Core (= 0.10)
+  - MediQuo-Socket (0.10):
+    - MediQuo-Controller (= 0.10)
+    - MediQuo-Core (= 0.10)
+    - MediQuo-Schema (= 0.10)
     - Socket.IO-Client-Swift (= 12.1.3)
-  - MediQuo-Controller (0.9.1):
-    - RxSwift (~> 4.0.0)
-  - MediQuo-Core (0.9.1)
-  - MediQuo-Remote (0.9.1):
-    - Alamofire (~> 4.5.1)
-    - RxSwift (~> 4.0.0)
-  - MediQuo-Schema (0.9.1)
-  - MediQuo-Socket (0.9.1):
-    - RxSwift (~> 4.0.0)
-    - Socket.IO-Client-Swift (~> 12.1.3)
-  - MediQuo-Storage (0.9.1):
-    - RealmSwift (~> 3.0.2)
-    - RxSwift (~> 4.0.0)
-  - MessageKit (0.10.1)
+  - MediQuo-Storage (0.10):
+    - MediQuo-Controller (= 0.10)
+    - MediQuo-Core (= 0.10)
+    - MediQuo-Schema (= 0.10)
+    - MediQuo-Socket (= 0.10)
+    - RealmSwift (= 3.0.2)
+  - MessageKit (0.10.2)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
@@ -40,36 +49,39 @@ PODS:
   - Realm/Headers (3.0.2)
   - RealmSwift (3.0.2):
     - Realm (= 3.0.2)
+  - RxBlocking (4.0.0):
+    - RxSwift (~> 4.0)
   - RxSwift (4.0.0)
   - Socket.IO-Client-Swift (12.1.3):
     - Starscream (~> 2.1.1)
   - Starscream (2.1.1)
+  - SwiftDate (4.5.0)
 
 DEPENDENCIES:
-  - MediQuo (~> 0.9)
-  - R.swift (~> 4.0.0)
-  - RxSwift (~> 4.0.0)
+  - MediQuo (= 0.10)
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
   JSQDataSourcesKit: 20cda71984408006b4c3e0cf224343fd1a913d58
-  MediQuo: 8e266dca77119db8908fb9b065684c8fde6a93e0
-  MediQuo-Controller: 625c0dc9ec1d8c17f1ad636e7c61c6fb3e599f50
-  MediQuo-Core: c840f45646003f1eb27c3b67a294afa6317f4d8a
-  MediQuo-Remote: add7a14ddd4c75967678adec7a81f3abce42d0a9
-  MediQuo-Schema: 586f3e0528914d6941353d1290b53b7e1300f5e2
-  MediQuo-Socket: db13c80eb8f1bef102560cc4cba1eb2dbd72ac90
-  MediQuo-Storage: d7c1fa841558d02c192d5f18a8035c797b00e309
-  MessageKit: 9fc8265cff91bfa62827471ea38f380a89ff537e
+  MediQuo: 1dd0cce296c409894b3ca9b7cd57768ec1ee0b9e
+  MediQuo-Controller: cb1aa232fdce96ddabb800f92f0c79f84a2a61be
+  MediQuo-Core: 9481652c684ef7d88add2b80d6e0cb320c2e8e50
+  MediQuo-Remote: 297e14b170b89247e187fe1bebd2fe3483c48775
+  MediQuo-Schema: 316558bcd146db620d5f4e23d9ab03cbcff3365b
+  MediQuo-Socket: 60f5f74cf8178cad34556fede36ec5c91e54bc8d
+  MediQuo-Storage: fb3755e514df884a565a993425da2c8118b24876
+  MessageKit: 2642b9641290691650cfa2612ad672512799a71c
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
+  RxBlocking: 923c2c8106d80d7c2d6b276afd66ce3b10824836
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   Socket.IO-Client-Swift: 2d3838d0e7bc105626872081fb6a23141145e8f8
   Starscream: 142bd8ef24592d985daee9fa48c936070b85b15f
+  SwiftDate: 17dd829c004a2d60432ef63ffcdb26ca2eb97a60
 
-PODFILE CHECKSUM: 26e7a891ce48b95e359d5bc9035584ed6a22282c
+PODFILE CHECKSUM: 437aad4429b94fdcb27f8e82f75dd0c57d91a98b
 
 COCOAPODS: 1.3.1

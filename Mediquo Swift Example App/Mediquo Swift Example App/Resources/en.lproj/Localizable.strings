@@ -1,8 +1,4 @@
 /* 
-  Localizable.strings
-  Mediquo Swift Example App
-
-  Created by Edgar Paz Moreno on 15/11/17.
   Copyright © 2017 Edgar Paz Moreno. All rights reserved.
 */
 "main.welcome.text" = "Welcome to MediQuo demo. Tap on the button to continue";

@@ -1,3 +1,5 @@
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a2464d0c5dd1600018b73bd&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a2464d0c5dd1600018b73bd/build/latest?branch=master)
+
 # Mediquo SDK
 
 Here are the steps to follow to include the MediQuo library to an iOS application project.
@@ -10,23 +12,17 @@ To install the MediQuo library you must first include MediQuo private pods repos
 pod repo add mediquo https://gitlab.com/mediquo/specs.git
 ```
 
-In addition, we will need to add a gem to load the podspec with the command:
-
-```
-sudo gem install dotenv
-```
-
 Later, in the project 'Podfile' we have to add in the header the new pods origin, in addition to the default header of Cocoapods:
 
-```
+```ruby
 source 'https://gitlab.com/mediquo/specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 ```
 
 And finally, we include the pod in the target of the project with the latest version:
 
-```
-pod 'MediQuo', '~> 0.10'
+```ruby
+pod 'MediQuo', '~> 0.11'
 ```
 
 ## Access permissions
@@ -144,15 +140,44 @@ By default, the 'style' property is already configured with initial values that 
 Properties:
 
 ```swift
-titleFont: UIFont? // Font to use for the inbox title.
-titleColor: UIColor? // Color of the navigation title. This includes inbox doctor list and professional name inside a conversation.
-titleView: UIView? // A custom view displayed in the center of the navigation bar.
-navigationBarOpaque: Bool // Whether the navigation bar should be translucent.
-navigationBarColor: UIColor? // Background color of the navigation bar
-navigationBarTintColor: UIColor? // Tint color of the navigation bar items, if applicable. This includes ‘back’ and ‘leftBarButtonItem’
-inboxTitle: String? // Title of the inbox navigation bar
-inboxLeftBarButtonItem: UIBarButtonItem? // Left bar button item to use as child navigation item. It can be customized to put a button that invokes the MediQuo.dismiss() method or open a side menu. By default it is empty.
-accentTintColor: UIColor? // Tint color for action controls.
+// Font to use for the inbox title.
+titleFont: UIFont? 
+
+// Color of the navigation title. This includes inbox doctor list and professional name inside a conversation.
+titleColor: UIColor? 
+
+// A custom view displayed in the center of the navigation bar.
+titleView: UIView? 
+
+// Whether the navigation bar should be translucent.
+navigationBarOpaque: Bool 
+
+// Background color of the navigation bar
+navigationBarColor: UIColor?
+
+// Tint color of the navigation bar items, if applicable. This includes ‘back’ and ‘leftBarButtonItem’
+navigationBarTintColor: UIColor? 
+
+// Title of the inbox navigation bar
+inboxTitle: String?
+
+// Left bar button item to use as child navigation item. It can be customized to put a button that invokes the MediQuo.dismiss() method or open a side menu. By default it is empty.
+inboxLeftBarButtonItem: UIBarButtonItem?
+
+// Tint color for action controls.
+accentTintColor: UIColor?
+
+// Outgoing conversation messages text color
+messageTextOutgoingColor: UIColor?
+
+// Incoming conversation messages text color
+messageTextIncomingColor: UIColor?
+
+// Outgoing conversation messages bubble background color
+bubbleBackgroundOutgoingColor: UIColor?
+
+// Incoming conversation messages bubble background color
+bubbleBackgroundIncomingColor: UIColor?
 ```
 
 ## Push notifications

@@ -1,8 +1,4 @@
 //
-//  ViewController.swift
-//  Mediquo Swift Example App
-//
-//  Created by Edgar Paz Moreno on 15/11/17.
 //  Copyright © 2017 Edgar Paz Moreno. All rights reserved.
 //
 
@@ -34,7 +30,7 @@ class ViewController: UIViewController {
         let topController: UIViewController? = UIApplication.shared.keyWindow?.rootViewController
         let isSame = topController == self
         print(isSame)
-        MediQuo.authenticate(token: <#User token#>) { [weak self] (result: MediQuo.Result<Void>) in
+        MediQuo.authenticate(token: Bundle.main.infoDictionary["MediQuoUserToken"]!) { [weak self] (result: MediQuo.Result<Void>) in
             self?.unreadMessageCount(result)
             self?.present(result)
         }
@@ -54,6 +50,4 @@ class ViewController: UIViewController {
             }
         }
     }
-    
 }
-
