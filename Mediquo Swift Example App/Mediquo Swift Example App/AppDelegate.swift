@@ -13,8 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let userInfo: [String: Any] = Bundle.main.infoDictionary!
-        let configuration = MediQuo.Configuration(id: userInfo["MediQuoClientName"]!,
-                                                  secret: userInfo["MediQuoClientSecret"]!)
+        let configuration = MediQuo.Configuration(id: userInfo["MediQuoClientName"] as! String,
+                                                  secret: userInfo["MediQuoClientSecret"] as! String)
         MediQuo.initialize(with:configuration, options:launchOptions)
         return true
     }

@@ -10,11 +10,11 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 ## Table of contents
 
 #### 0.x Releases
-- `0.11.x` Releases - [0.11.0](#0110)
+- `0.11.x` Releases - 0.11.0
 
 ---
 
-## [`0.11.0`](https://github.com/contentful/contentful.swift/releases/tag/0.4.0)
+## `0.11.0`
 Released on 2017-12-03.
 
 #### Added

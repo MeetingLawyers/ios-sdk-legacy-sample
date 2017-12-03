@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         print(isSame)
 
         let userInfo: [String: Any] = Bundle.main.infoDictionary!
-        MediQuo.authenticate(token: userInfo["MediQuoUserToken"]!) { [weak self] (result: MediQuo.Result<Void>) in
+        MediQuo.authenticate(token: userInfo["MediQuoUserToken"] as! String) { [weak self] (result: MediQuo.Result<Void>) in
             self?.unreadMessageCount(result)
             self?.present(result)
         }
