@@ -30,7 +30,9 @@ class ViewController: UIViewController {
         let topController: UIViewController? = UIApplication.shared.keyWindow?.rootViewController
         let isSame = topController == self
         print(isSame)
-        MediQuo.authenticate(token: Bundle.main.infoDictionary["MediQuoUserToken"]!) { [weak self] (result: MediQuo.Result<Void>) in
+
+        let userInfo: [String: Any] = Bundle.main.infoDictionary!
+        MediQuo.authenticate(token: userInfo["MediQuoUserToken"]!) { [weak self] (result: MediQuo.Result<Void>) in
             self?.unreadMessageCount(result)
             self?.present(result)
         }
