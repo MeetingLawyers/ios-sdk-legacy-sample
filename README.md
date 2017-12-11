@@ -137,7 +137,7 @@ MediQuo UI styles can be customized by creating an instance that complies with t
 
 By default, the 'style' property is already configured with initial values that fit with the MediQuo brand and are used if the style value is not overwritten or simply initialized to nil.
 
-Properties:
+### Properties:
 
 ```swift
 // Font to use for the inbox title.
@@ -148,6 +148,9 @@ titleColor: UIColor?
 
 // A custom view displayed in the center of the navigation bar.
 titleView: UIView? 
+
+// Status bar style
+preferredStatusBarStyle: UIStatusBarStyle
 
 // Whether the navigation bar should be translucent.
 navigationBarOpaque: Bool 
@@ -178,7 +181,32 @@ bubbleBackgroundOutgoingColor: UIColor?
 
 // Incoming conversation messages bubble background color
 bubbleBackgroundIncomingColor: UIColor?
+
+// Inbox contact list divider behavior.
+divider: MediQuoDividerType?
 ```
+
+### Divider configuration
+Using `MediQuoDivider` generic builder we can configure a divider view group style and behavior.
+
+Take for instance a `DividerContentView` which is a custom view we want to inject inside a divider cell. We would configure a style divider like this:
+
+```swift
+MediQuo.style?.divider = MediQuoDivider<DividerContentView>(view: divider)
+    .add(configuration: { (cell, view) -> Void in
+        view.button.setTitle("I'm interested", for: .normal)
+        view.label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    })
+    .add(selector: { (speciality, authorized) in
+        NSLog("[LaunchScreenViewController] Inbox item '\(speciality)' selected and authorized '\(authorized)'")
+        return
+    })
+```
+Configuration closure will be called every time the divider cell appears in the list so the user can update view values.
+
+Selector will be called on every user interaction over the cell (i.e. did select row)
+
+Both values are optional and it is not mandatory to implement them.
 
 ## Push notifications
 
