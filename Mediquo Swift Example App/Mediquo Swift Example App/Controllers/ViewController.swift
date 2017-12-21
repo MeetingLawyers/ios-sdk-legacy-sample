@@ -8,11 +8,13 @@ import MediQuo
 class ViewController: UIViewController {
     @IBOutlet weak var welcomeTitleLabel: UILabel!
     @IBOutlet weak var openChatButton: UIButton!
-    
+
+    public var isAuthenticated: Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        prepareUI()
+        self.prepareUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,9 +23,8 @@ class ViewController: UIViewController {
     }
     
     func prepareUI() {
-        welcomeTitleLabel.text = R.string.localizable.mainWelcomeText()
-        openChatButton.setTitle(R.string.localizable.mainButtonText(), for: .normal)
-        
+        self.welcomeTitleLabel.text = R.string.localizable.mainWelcomeText()
+        self.openChatButton.setTitle(R.string.localizable.mainButtonText(), for: .normal)
     }
 
     @IBAction func openChatAction(_ sender: UIButton) {
@@ -33,13 +34,15 @@ class ViewController: UIViewController {
 
         let userInfo: [String: Any] = Bundle.main.infoDictionary!
         MediQuo.authenticate(token: userInfo["MediQuoUserToken"] as! String) { [weak self] (result: MediQuo.Result<Void>) in
+            self?.isAuthenticated = result.isSuccess
             self?.unreadMessageCount(result)
             self?.present(result)
         }
     }
-    
+
     func present(_ completion: MediQuo.Result<Void>) {
         guard completion.isSuccess else { return }
+        MediQuo.style?.inboxLeftBarButtonItem = UIBarButtonItem(image: R.image.fingerprint(), style: .plain, target: self, action: #selector(ViewController.authenticationState))
         MediQuo.present()
     }
     
@@ -49,6 +52,20 @@ class ViewController: UIViewController {
             if let count = result.value {
                 NSLog("[LaunchScreenViewController] Pending messages to read '\(count)'")
                 UIApplication.shared.applicationIconBadgeNumber = count
+            }
+        }
+    }
+
+    @objc func authenticationState() {
+        if self.isAuthenticated {
+            MediQuo.style?.inboxLeftBarButtonItem?.tintColor = .red
+            self.isAuthenticated = false
+            MediQuo.shutdown()
+        } else {
+            let userInfo: [String: Any] = Bundle.main.infoDictionary!
+            MediQuo.style?.inboxLeftBarButtonItem?.tintColor = self.view.tintColor
+            MediQuo.authenticate(token: userInfo["MediQuoUserToken"] as! String) { [weak self] (result: MediQuo.Result<Void>) in
+                self?.isAuthenticated = result.isSuccess
             }
         }
     }

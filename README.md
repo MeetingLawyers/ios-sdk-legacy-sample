@@ -1,5 +1,5 @@
 [![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a2464d0c5dd1600018b73bd&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a2464d0c5dd1600018b73bd/build/latest?branch=master)
-
+[![Bintray](https://api.bintray.com/packages/mediquo/generic/MediQuo/images/download.svg)](https://bintray.com/mediquo/generic/MediQuo/_latestVersion)
 # Mediquo SDK
 
 Here are the steps to follow to include the MediQuo library to an iOS application project.
@@ -22,7 +22,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 And finally, we include the pod in the target of the project with the latest version:
 
 ```ruby
-pod 'MediQuo', '~> 0.12'
+pod 'MediQuo', '~> 0.14'
 ```
 
 ## Access permissions
@@ -208,6 +208,23 @@ Selector will be called on every user interaction over the cell (i.e. did select
 
 Both values are optional and it is not mandatory to implement them.
 
+## Shutdown
+
+A `shutdown` method exists so a chat user can disconnect and erase all sensible information:
+
+```swift
+MediQuo.shutdown { (result: MediQuo.Result<Void>) in
+        switch result {
+        case .success:
+        [...]
+        case .failure(let error):
+        [...]
+        }
+}
+```
+
+This operation removes all user concerning information, so once a user is deauthenticated, a to call `authenticate` must be invoked to access to the contact list again.
+
 ## Push notifications
 
 MediQuo library uses push notifications to communicate to users of pending messages.
@@ -216,19 +233,19 @@ As soon as the on-screen chat presentation starts, if permissions to send notifi
 
 ```swift
 func application(_ application: UIApplication, 
-didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-    MediQuo.didRegisterForRemoteNotifications(with: deviceToken)
+    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        MediQuo.didRegisterForRemoteNotifications(with: deviceToken)
 }
 
 func application(_ application: UIApplication, 
-didFailToRegisterForRemoteNotificationsWithError error: Error) {
-    MediQuo.didFailToRegisterForRemoteNotifications(with: error)
+    didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        MediQuo.didFailToRegisterForRemoteNotifications(with: error)
 }
 
 func application(_ application: UIApplication, 
-didReceiveRemoteNotification userInfo: [AnyHashable : Any], 
-fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-    MediQuo.didReceiveRemoteNotification(with: userInfo)
+    didReceiveRemoteNotification userInfo: [AnyHashable : Any], 
+    fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        MediQuo.didReceiveRemoteNotification(with: userInfo)
 }
 ```
 

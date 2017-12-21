@@ -12,8 +12,41 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 ## Table of contents
 
 #### 0.x Releases
-- `0.12.x` Releases - 0.12.0
-- `0.11.x` Releases - 0.11.0
+- `0.14.x` Releases - [0.14.0](#0140)
+- `0.13.x` Releases - [0.13.0](#0130) | [0.13.1](#0131)
+- `0.12.x` Releases - [0.12.0](#0120)
+- `0.11.x` Releases - [0.11.0](#0110)
+
+---
+
+## 0.14.0
+Released on 2017-12-20.
+
+#### Added
+- Link detector types for links in users conversations.
+- Tap file message event to download content.
+
+#### Updated
+- MessageKit pod version 0.12.0. 
+
+---
+
+## 0.13.1
+Released on 2017-12-19.
+
+#### Fixed
+- Connection problem while authentication and shutdown in the same session. Connection dispatchers were not attaching correctly due to incorrect call order that could be by-passed by calling again `initialize` method. 
+
+---
+
+## 0.13.0
+Released on 2017-12-18.
+
+#### Added
+- `shutdown` method dettaches user connections and wipes out stored user information.
+
+#### Fixed
+- Professional list order to match Android implementation. 
 
 ---
 
