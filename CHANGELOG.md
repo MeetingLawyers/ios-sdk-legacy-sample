@@ -12,10 +12,72 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 ## Table of contents
 
 #### 0.x Releases
-- `0.14.x` Releases - [0.14.0](#0140)
+- `0.15.x` Releases - [0.15.0](#0150)
+- `0.14.x` Releases - [0.14.0](#0140) | [0.14.1](#0141) | [0.14.2](#0141) | [0.14.3](#0141) | [0.14.4](#0141) | [0.14.5](#0141)
 - `0.13.x` Releases - [0.13.0](#0130) | [0.13.1](#0131)
 - `0.12.x` Releases - [0.12.0](#0120)
 - `0.11.x` Releases - [0.11.0](#0110)
+
+---
+
+## 0.15.0
+Released on 2018-01-15.
+
+#### Added
+- Contact profile layout and properties.
+- Call to update user information.
+- Navigation to the contact profile from the messages.
+- Exposing mediQuo role option set required to configure filtered view.
+- Added limitation to query results using realm lazy load.
+- Implemented a sample example for filtered view.
+- Expose inbox content size listener.
+
+#### Improved
+- Checking the message status event to emit contacts request every time update event is received.
+
+#### Fixed
+- Correctly managing disabled contacts on holiday and with last timestamp message to zero.
+- Pinning public keys instead of full byte to byte comparison.
+
+---
+
+## 0.14.5
+Released on 2018-01-04.
+
+#### Changed
+- Changed socket queue from concurrent to serial.
+
+---
+
+## 0.14.4
+Released on 2018-01-03.
+
+#### Changed
+- Updated the pods of the framework.
+
+---
+
+## 0.14.3
+Released on 2017-12-29.
+
+#### Changed
+- The messenger view controller is now instantiated using the storyboard.
+
+---
+
+## 0.14.2
+Released on 2017-12-29.
+
+#### Fixed
+- Concurrency problem with socket.io events.
+
+---
+
+## 0.14.1
+Released on 2017-12-22.
+
+#### Fixed
+- Absence of divider behaviour should allow users to start conversations with any professional.
 
 ---
 

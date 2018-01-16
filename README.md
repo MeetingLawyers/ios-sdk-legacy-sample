@@ -22,7 +22,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 And finally, we include the pod in the target of the project with the latest version:
 
 ```ruby
-pod 'MediQuo', '~> 0.14'
+pod 'MediQuo', '~> 0.15'
 ```
 
 ## Access permissions
@@ -123,12 +123,34 @@ On the other hand, if you want to retrieve the reference to the *inbox controlle
 
 ```swift
 [...]
-MediQuo.chatController { (controller, result) in
-    if let wrapController = controller, result.isSuccess {
-        // do some stuff
-    }
+let result = MediQuo.messengerViewController()
+if let wrapController = result.value {
+    // do some stuff
 }
 [...]
+```
+
+### Filtered contact list
+
+In order to filter the list of contacts, the following method is used:
+
+```swift
+MediQuo.inboxViewController(with: MediQuoFilterType, onUpdateLayout: ((CGSize) -> Void)?)
+```
+
+It takes as a parameter the filters wanted to be applied and optionally a size in case we need to update a height constraint to fit the result list.
+
+The next included example shows how we could filter using two categories and a limit setting to 2:
+
+```swift
+let filter: MediQuoFilterType = MediQuoFilter(profiles: [MediQuoRole.free, MediQuoRole.commercial], take: 2)
+let result: MediQuo.Result<UITableViewController> = MediQuo.inboxViewController(with: filter) { (contentSize: CGSize) in
+    // do some stuff
+}
+
+if let controller: UITableViewController = result.value {
+    // Update the view with the controller
+}
 ```
 
 ## Styles
