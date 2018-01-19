@@ -183,6 +183,9 @@ navigationBarColor: UIColor?
 // Tint color of the navigation bar items, if applicable. This includes ‘back’ and ‘leftBarButtonItem’
 navigationBarTintColor: UIColor? 
 
+// Override navigation bar back button with provided image.
+navigationBarBackIndicatorImage: UIImage?
+
 // Title of the inbox navigation bar
 inboxTitle: String?
 

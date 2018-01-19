@@ -12,11 +12,41 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 ## Table of contents
 
 #### 0.x Releases
-- `0.15.x` Releases - [0.15.0](#0150)
+- `0.15.x` Releases - [0.15.0](#0150) | [0.15.1](#0151) | [0.15.2](#0152) | [0.15.3](#0153)
 - `0.14.x` Releases - [0.14.0](#0140) | [0.14.1](#0141) | [0.14.2](#0141) | [0.14.3](#0141) | [0.14.4](#0141) | [0.14.5](#0141)
 - `0.13.x` Releases - [0.13.0](#0130) | [0.13.1](#0131)
 - `0.12.x` Releases - [0.12.0](#0120)
 - `0.11.x` Releases - [0.11.0](#0110)
+
+---
+
+## 0.15.3
+Released on 2018-01-18.
+
+#### Fixed
+- Avatar view size in messages view controller navigation bar.
+
+---
+
+## 0.15.2
+Released on 2018-01-18.
+
+#### Added
+- `navigationBarBackIndicatorImage` style property overrides default image for navigation bar back button.
+
+#### Improved
+- Extend navigation bar style configuration settings to be used with filtered contact list presentation.
+
+#### Fixed
+- Back button was not appearing with filtered contact list presentation style. A default back button will appear now unless a custom one is configured in presentation styles.
+
+---
+
+## 0.15.1
+Released on 2018-01-17.
+
+#### Fixed
+- Interface layout modification to show view controllers under opaque bars.
 
 ---
 
