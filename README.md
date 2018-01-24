@@ -140,12 +140,12 @@ MediQuo.inboxViewController(with: MediQuoFilterType, onUpdateLayout: ((CGSize) -
 
 It takes as a parameter the filters wanted to be applied and optionally a size in case we need to update a height constraint to fit the result list.
 
-The next included example shows how we could filter using two categories and a limit setting to 2:
+The next included example shows how we could filter the list using two specialities and taking the top two elements of the filtered elements:
 
 ```swift
-let filter: MediQuoFilterType = MediQuoFilter(profiles: [MediQuoRole.free, MediQuoRole.commercial], take: 2)
+let filter: MediQuoFilterType = MediQuoFilter(profiles: [.customerCare, .commercial], take: 2)
 let result: MediQuo.Result<UITableViewController> = MediQuo.inboxViewController(with: filter) { (contentSize: CGSize) in
-    // do some stuff
+    // do some stuff to resize layout
 }
 
 if let controller: UITableViewController = result.value {
