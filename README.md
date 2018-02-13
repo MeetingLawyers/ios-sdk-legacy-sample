@@ -192,6 +192,9 @@ inboxTitle: String?
 // Left bar button item to use as child navigation item. It can be customized to put a button that invokes the MediQuo.dismiss() method or open a side menu. By default it is empty.
 inboxLeftBarButtonItem: UIBarButtonItem?
 
+// Inbox cell style for contact list
+var inboxCellStyle: MediQuoInboxCellStyle
+
 // Tint color for action controls.
 accentTintColor: UIColor?
 
@@ -209,6 +212,22 @@ bubbleBackgroundIncomingColor: UIColor?
 
 // Inbox contact list divider behavior.
 divider: MediQuoDividerType?
+
+// Secondary color for views. If not informed has same color as navigationBarColor
+var secondaryTintColor: UIColor?
+
+// If is true show default background image of mediquo in the views.
+var showMediQuoBackgroundImage: Bool?
+
+// Inbox contact list Header
+var headerView: InboxHeaderStyle?
+
+/**
+Image used as background in chat screen. By default chat background is `.white`. If you set this parameter background will fill
+with a pattern of the *chatBackgroundPatternImage* setted, if image is smaller than chatView, image will be repeated as pattern.
+*/
+var chatBackgroundPatternImage: UIImage?
+
 ```
 
 ### Divider configuration
@@ -232,6 +251,42 @@ Configuration closure will be called every time the divider cell appears in the 
 Selector will be called on every user interaction over the cell (i.e. did select row)
 
 Both values are optional and it is not mandatory to implement them.
+
+### Header configuration
+Using `InboxHeaderStyle` builder you can configure view for header inside doctor list. With `InboxHeaderStyle` you can configure the view for header and the size for this view. If the frame width is higher than screen width, the header width will be same as screen widt. Example:
+
+````swift
+let headerFrame : CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height)
+MediQuo.style?.headerView = InboxHeaderStyle(headerView: inviteBanner(), frame: headerFrame)
+````
+
+If you want to remove the header you must set de headerView as `nil`.
+
+### Inbox cell style configuration
+Using `MediQuoInboxCellStyle` builder you can configure doctor list look. You can configure:
+- `Overlay` color for unauthorized cells.
+- `Badge` color for pending messages for a conversation.
+- `Speciality`color for speciality color text.
+Also you can choose cell style and can select `mediQuo` cell style or `classic` mediquo cell
+
+Usage for `mediquo` cell:
+```swift
+MediQuo.style?.inboxCellStyle = .mediquo(overlay: .white, badge: .cyan, specyality: .magenta)
+```
+
+Usage for `classic` cell:
+```swift
+MediQuo.style?.inboxCellStyle = .classic(overlay: .white, badge: .cyan, specyality: .magenta)
+```
+
+## Rererrer
+Ypu can retrieve the referrer code from mediQuo library to know if user acces to app via invitation. To retrieve the code, you can get it by mediQuo class.
+
+Usage:
+```swift
+    let code: String = MediQuo.referrer
+```
+
 
 ## Shutdown
 
