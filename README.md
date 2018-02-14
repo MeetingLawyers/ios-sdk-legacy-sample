@@ -22,7 +22,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 And finally, we include the pod in the target of the project with the latest version:
 
 ```ruby
-pod 'MediQuo', '~> 0.15'
+pod 'MediQuo', '~> 0.16'
 ```
 
 ## Access permissions
