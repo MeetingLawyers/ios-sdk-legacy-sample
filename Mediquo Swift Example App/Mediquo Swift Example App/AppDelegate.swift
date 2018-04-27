@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let userInfo: [String: Any] = Bundle.main.infoDictionary!
         let configuration = MediQuo.Configuration(id: userInfo["MediQuoClientName"] as! String,
                                                   secret: userInfo["MediQuoClientSecret"] as! String)
-        MediQuo.initialize(with:configuration, options:launchOptions)
+        let uuid: UUID? = MediQuo.initialize(with:configuration, options:launchOptions)
+        NSLog("[MediQuoApplicationPlugin] Synchronous installation identifier: '\(uuid?.uuidString ?? "")'")
         return true
     }
 
