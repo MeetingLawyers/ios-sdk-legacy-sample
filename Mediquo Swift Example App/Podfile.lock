@@ -1,87 +1,87 @@
 PODS:
-  - Alamofire (4.5.1)
-  - AlamofireImage (3.3.0):
+  - Alamofire (4.7.1)
+  - AlamofireImage (3.3.1):
     - Alamofire (~> 4.5)
   - JSQDataSourcesKit (7.0.0)
-  - MediQuo (0.15.3):
-    - AlamofireImage (= 3.3.0)
+  - MediQuo (0.20.4):
+    - AlamofireImage (= 3.3.1)
     - JSQDataSourcesKit (= 7.0.0)
-    - MediQuo-Controller (= 0.15.3)
-    - MediQuo-Core (= 0.15.3)
-    - MediQuo-Remote (= 0.15.3)
-    - MediQuo-Schema (= 0.15.3)
-    - MediQuo-Socket (= 0.15.3)
-    - MediQuo-Storage (= 0.15.3)
-    - MessageKit (= 0.12.0)
+    - MediQuo-Controller (= 0.20.4)
+    - MediQuo-Core (= 0.20.4)
+    - MediQuo-Remote (= 0.20.4)
+    - MediQuo-Schema (= 0.20.4)
+    - MediQuo-Socket (= 0.20.4)
+    - MediQuo-Storage (= 0.20.4)
+    - MessageKit (= 0.13.2)
     - R.swift (= 4.0.0)
-  - MediQuo-Controller (0.15.3):
-    - MediQuo-Core (= 0.15.3)
-    - MediQuo-Schema (= 0.15.3)
-    - RxBlocking (= 4.1.0)
-    - RxSwift (= 4.1.0)
+  - MediQuo-Controller (0.20.4):
+    - MediQuo-Core (= 0.20.4)
+    - MediQuo-Schema (= 0.20.4)
+    - RxBlocking (= 4.1.2)
+    - RxSwift (= 4.1.2)
     - SwiftDate (= 4.5.1)
-  - MediQuo-Core (0.15.3)
-  - MediQuo-Remote (0.15.3):
-    - Alamofire (= 4.5.1)
-    - AlamofireImage (= 3.3.0)
-    - MediQuo-Controller (= 0.15.3)
-    - MediQuo-Core (= 0.15.3)
-    - MediQuo-Schema (= 0.15.3)
-  - MediQuo-Schema (0.15.3):
-    - MediQuo-Core (= 0.15.3)
-  - MediQuo-Socket (0.15.3):
-    - MediQuo-Controller (= 0.15.3)
-    - MediQuo-Core (= 0.15.3)
-    - MediQuo-Schema (= 0.15.3)
-    - Socket.IO-Client-Swift (= 13.1.0)
-  - MediQuo-Storage (0.15.3):
-    - MediQuo-Controller (= 0.15.3)
-    - MediQuo-Core (= 0.15.3)
-    - MediQuo-Schema (= 0.15.3)
-    - MediQuo-Socket (= 0.15.3)
-    - RealmSwift (= 3.0.2)
-  - MessageKit (0.12.0)
+  - MediQuo-Core (0.20.4)
+  - MediQuo-Remote (0.20.4):
+    - Alamofire (= 4.7.1)
+    - AlamofireImage (= 3.3.1)
+    - MediQuo-Controller (= 0.20.4)
+    - MediQuo-Core (= 0.20.4)
+    - MediQuo-Schema (= 0.20.4)
+  - MediQuo-Schema (0.20.4):
+    - MediQuo-Core (= 0.20.4)
+  - MediQuo-Socket (0.20.4):
+    - MediQuo-Controller (= 0.20.4)
+    - MediQuo-Core (= 0.20.4)
+    - MediQuo-Schema (= 0.20.4)
+    - Socket.IO-Client-Swift (= 13.1.3)
+  - MediQuo-Storage (0.20.4):
+    - MediQuo-Controller (= 0.20.4)
+    - MediQuo-Core (= 0.20.4)
+    - MediQuo-Schema (= 0.20.4)
+    - MediQuo-Socket (= 0.20.4)
+    - RealmSwift (= 3.3.2)
+  - MessageKit (0.13.2)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
-  - Realm (3.0.2):
-    - Realm/Headers (= 3.0.2)
-  - Realm/Headers (3.0.2)
-  - RealmSwift (3.0.2):
-    - Realm (= 3.0.2)
-  - RxBlocking (4.1.0):
+  - Realm (3.3.2):
+    - Realm/Headers (= 3.3.2)
+  - Realm/Headers (3.3.2)
+  - RealmSwift (3.3.2):
+    - Realm (= 3.3.2)
+  - RxBlocking (4.1.2):
     - RxSwift (~> 4.0)
-  - RxSwift (4.1.0)
-  - Socket.IO-Client-Swift (13.1.0):
+  - RxSwift (4.1.2)
+  - Socket.IO-Client-Swift (13.1.3):
     - Starscream (~> 3.0.2)
-  - Starscream (3.0.4)
+  - Starscream (3.0.5)
   - SwiftDate (4.5.1)
 
 DEPENDENCIES:
-  - MediQuo (~> 0.15)
+  - MediQuo (~> 0.20.4)
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
   JSQDataSourcesKit: 6f4eb97e23f32abff0e8a2969a63b3f6a55567b1
-  MediQuo: 26003561f8745db3128d918c5e0979ec7e819692
-  MediQuo-Controller: 2705399f05ffa4fdc6867316022509346ab15503
-  MediQuo-Core: 19f7ce65a7d53648b9ec3d90503fec7a46cfa128
-  MediQuo-Remote: 7f5f1ed03a2e4fc785c84f1939742641d0eab155
-  MediQuo-Schema: 9110a4f1c638d7baf2ec34e12ea155c767c5e5c1
-  MediQuo-Socket: 1a37c43bdb813d521ee520c3869470baed8ecae5
-  MediQuo-Storage: d2048a245f317a66985a1429a2f9d380782fdaac
-  MessageKit: 9455b04be28eb7c50a00962e6168672cd3d403ae
+  MediQuo: 86d76f064098a256e4dce2796a36de09bb1793ef
+  MediQuo-Controller: 9b005b726a05fd2e54846c54ec2fff36af6c8e64
+  MediQuo-Core: 26f51ef190a20e313838872b7063fe7df31bd2de
+  MediQuo-Remote: 52895635fe01f969567429d775f5de031c0942ad
+  MediQuo-Schema: bb91c0551d0f0c518d86a44279ee2e35bf96de89
+  MediQuo-Socket: 6b79667468d2b6d5a930b4150d5f7cc47ff033b4
+  MediQuo-Storage: bbd3597bb001992aae46403fdfcedb978c61d688
+  MessageKit: 274efb4454ddc9b3408b031b3396498dd4ed2462
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
-  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
-  RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
-  RxBlocking: 193d33fad26f00a4e60831481938486deaaaa200
-  RxSwift: 4219941c1244c88002901bd87a69d3aea9ae71f0
-  Socket.IO-Client-Swift: b67a96d6a9e5f271bceb93e99779d2cf77c74868
-  Starscream: f5da93fe6984c77b694366bf7299b7dc63a76f26
+  Realm: d927fbf66df5532cfafc08afb5f7e53ded37b894
+  RealmSwift: 4e903a494e05d866581d69ad6f7e7b879d446baf
+  RxBlocking: f6054985901412fc8c02daa84e92d4ba68c61389
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+  Socket.IO-Client-Swift: d30d6fd08a38ad2a182b090936a043bf512ab2de
+  Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
   SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
 
-PODFILE CHECKSUM: eda709a905a21cd8f389fdfa7b44dc5d40c2bfc9
+PODFILE CHECKSUM: 169421c0618c3d854dfcff4aa8eff1a11e319ee6
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

@@ -1,8 +1,16 @@
-[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a2464d0c5dd1600018b73bd&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a2464d0c5dd1600018b73bd/build/latest?branch=master)
+[![Language](https://img.shields.io/badge/Swift-4.0-orange.svg)](https://swift.org/)
 [![Bintray](https://api.bintray.com/packages/mediquo/generic/MediQuo/images/download.svg)](https://bintray.com/mediquo/generic/MediQuo/_latestVersion)
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a2464d0c5dd1600018b73bd&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a2464d0c5dd1600018b73bd/build/latest?branch=master)
 # Mediquo SDK
 
 Here are the steps to follow to include the MediQuo library to an iOS application project.
+
+## Requirements
+
+| **Swift** | **Xcode** |   **MediQuo**  | **iOS** |
+|-----------|-----------|----------------|---------|
+| 4.0       | 9.0...9.2 | 0.1 ... 0.20.x | 10.0+   |
+| 4.1       | 9.3       |                | 10.0+   |
 
 ## Instalation
 
@@ -22,10 +30,10 @@ source 'https://github.com/CocoaPods/Specs.git'
 And finally, we include the pod in the target of the project with the latest version:
 
 ```ruby
-pod 'MediQuo', '~> 0.16'
+pod 'MediQuo', '~> 0.20'
 ```
 
-## Access permissions
+## Access permissions
 
 Access to camera or photo gallery always requires explicit permission from the user.
 
@@ -41,13 +49,42 @@ To use the library is necessary to import it in our AppDelegate:
 import MediQuo
 ```
 
-Next, as soon as we receive a notification from the system telling that our application is already active, we must configure the framework by providing the client's API key:
+Next, as soon as we receive a notification from the system telling that our application is already active, we must configure the framework by providing the client's API key configuration:
+
+```swift
+class func initialize(_ application: UIApplication = UIApplication.shared, with configuration: MediQuo.Configuration, options _: [UIApplicationLaunchOptionsKey: Any]?, completion: ((MediQuo.Result<MediQuoInstallationType>) -> Void)? = nil) -> UUID?
+```
+
+Last method parameter defines asynchronous initialization result of type `MediQuoInstallationType`. It does return framework and installation information responding to the protocol:
+
+```swift
+public protocol MediQuoInstallationType {
+    /// Unique intallation identifier for this device
+    var installationId: UUID { get }
+    /// UIDevice.current.systemVersion
+    var systemVersion: String { get }
+    /// MediQuo Framework build version number
+    var frameworkVersion: String { get }
+    /// Device manufacturer name (i.e. x86_64, iPhone8,2, etc.)
+    var deviceModel: String { get }
+    /// Installation referrer
+    var referrer: MediQuoReferrerType? { get }
+}
+```
+
+Initialization returns an optional (`@discardableResult`) synchronous installation identifier that will only be valid after `initialize` call has succeeded once:
 
 ```swift
 public func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     [...]
     let configuration = MediQuo.Configuration(id: “client_name”, secret: “api_key”)
-    MediQuo.initialize(with: configuration, options: launchOptions)
+    let uuid: UUID? = MediQuo.initialize(with: configuration, options: launchOptions) { (result: MediQuo.Result<MediQuoInstallationType>) in
+            guard let value: MediQuoInstallationType = result.value else {
+                NSLog("[MediQuo] Installation failed: '\(String(describing: result.error))'")
+                return
+            }
+            NSLog("[MediQuo] Mediquo framework initialization succeeded with identifier: '\(value.installationId)'")
+        }
     [...]
 }
 ```
@@ -71,7 +108,7 @@ MediQuo.authenticate(token: "token") { (result: MediQuo.Result<Void>) in
 
 The result of the authentication does not return any value beyond the same verification of success or failure of the operation.
 
-From a successful answer, we can consider that the user is authenticated and MediQuo environment is ready to show the active conversations of the user.
+From a successful response, we can consider that the user is authenticated and MediQuo environment is ready to show the active conversations of the user.
 
 In the case of this example project you can find this snippet in class *ViewController*.
 
@@ -88,7 +125,7 @@ So, once we get the result, we can update application badge icon:
 ```swift
 MediQuo.unreadMessageCount { (result: MediQuo.Result<Int>) in
     if let count = result.value {
-    UIApplication.shared.applicationIconBadgeNumber = count
+        UIApplication.shared.applicationIconBadgeNumber = count
     }
 }
 ```
@@ -190,10 +227,10 @@ navigationBarBackIndicatorImage: UIImage?
 inboxTitle: String?
 
 // Left bar button item to use as child navigation item. It can be customized to put a button that invokes the MediQuo.dismiss() method or open a side menu. By default it is empty.
-inboxLeftBarButtonItem: UIBarButtonItem?
+rootLeftBarButtonItem: UIBarButtonItem?
 
 // Inbox cell style for contact list
-var inboxCellStyle: MediQuoInboxCellStyle
+inboxCellStyle: MediQuoInboxCellStyle
 
 // Tint color for action controls.
 accentTintColor: UIColor?
@@ -214,20 +251,16 @@ bubbleBackgroundIncomingColor: UIColor?
 divider: MediQuoDividerType?
 
 // Secondary color for views. If not informed has same color as navigationBarColor
-var secondaryTintColor: UIColor?
+secondaryTintColor: UIColor?
 
 // If is true show default background image of mediquo in the views.
-var showMediQuoBackgroundImage: Bool?
+showMediQuoBackgroundImage: Bool?
 
 // Inbox contact list Header
-var headerView: InboxHeaderStyle?
+headerView: InboxHeaderStyle?
 
-/**
-Image used as background in chat screen. By default chat background is `.white`. If you set this parameter background will fill
-with a pattern of the *chatBackgroundPatternImage* setted, if image is smaller than chatView, image will be repeated as pattern.
-*/
-var chatBackgroundPatternImage: UIImage?
-
+// View used as background in chat screen.
+chatBackgroundView: UIView?
 ```
 
 ### Divider configuration
@@ -241,14 +274,15 @@ MediQuo.style?.divider = MediQuoDivider<DividerContentView>(view: divider)
         view.button.setTitle("I'm interested", for: .normal)
         view.label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     })
-    .add(selector: { (speciality, authorized) in
-        NSLog("[LaunchScreenViewController] Inbox item '\(speciality)' selected and authorized '\(authorized)'")
-        return
+    .add(selector: { (speciality, authorized) -> Bool in
+        NSLog("[LaunchScreenViewController] Inbox item '\(String(describing: speciality))' selected and authorized '\(authorized)'")
+        return true
     })
 ```
+
 Configuration closure will be called every time the divider cell appears in the list so the user can update view values.
 
-Selector will be called on every user interaction over the cell (i.e. did select row)
+Selector will be called on every user interaction over the cell (i.e. did select row). If user is allowed to talk with the professional, return value can override chat access.
 
 Both values are optional and it is not mandatory to implement them.
 
@@ -279,14 +313,14 @@ Usage for `classic` cell:
 MediQuo.style?.inboxCellStyle = .classic(overlay: .white, badge: .cyan, specyality: .magenta)
 ```
 
-## Rererrer
-Ypu can retrieve the referrer code from mediQuo library to know if user acces to app via invitation. To retrieve the code, you can get it by mediQuo class.
+## Referrer
+You can retrieve installation referral code from MediQuo library, and know if the user accessed the app with an invitation code. Referral code can be obtained through mediQuo class property or on framework initialization result type.
 
 Usage:
-```swift
-    let code: String = MediQuo.referrer
-```
 
+```swift
+let code: String = MediQuo.referrer
+```
 
 ## Shutdown
 
@@ -303,13 +337,13 @@ MediQuo.shutdown { (result: MediQuo.Result<Void>) in
 }
 ```
 
-This operation removes all user concerning information, so once a user is deauthenticated, a to call `authenticate` must be invoked to access to the contact list again.
+This operation removes all user concerning information, so once a user is deauthenticated, a call to `authenticate` must be invoked to access the contact list again.
 
 ## Push notifications
 
-MediQuo library uses push notifications to communicate to users of pending messages.
+MediQuo framework uses push notifications to communicate users' pending messages.
 
-As soon as the on-screen chat presentation starts, if permissions to send notifications have not yet been needed by the host application, the system security dialog is displayed. When the user grants the necessary permissions to send push notifications, it is mandatory to intervene system remote notification calls to notify MediQuo with the new device token. To do so, we require to add the following methods to the AppDelegate:
+As soon as the on-screen chat presentation starts, if permissions to send notifications have not yet been needed by the host application, the system security dialog is displayed. When the user grants the necessary permissions to send push notifications, it is mandatory to intervene system remote notification calls to notify MediQuo with the new device token. To do so, we require to implement the following methods in your AppDelegate:
 
 ```swift
 func application(_ application: UIApplication, 
@@ -325,7 +359,13 @@ func application(_ application: UIApplication,
 func application(_ application: UIApplication, 
     didReceiveRemoteNotification userInfo: [AnyHashable : Any], 
     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        MediQuo.didReceiveRemoteNotification(with: userInfo)
+        MediQuo.didReceiveRemoteNotification(application, with: userInfo) { (result: MediQuo.Result<UIBackgroundFetchResult>) in
+            do {
+                completionHandler(try result.unwrap())
+            } catch {
+                completionHandler(.failed)
+            }
+        }
 }
 ```
 
@@ -334,3 +374,13 @@ func application(_ application: UIApplication,
 > It is necessary that the host application has the necessary permissions and entitlements to receive push notifications.
 
 > It is essential to provide an APNs .p12 production certificate to the administrator of your MediQuo account so that notifications are received correctly.
+
+> It is highly recommended to implement background fetch result and modify your app capabilities to include 'fetch' and 'remote-notification' entitlements.
+
+```xml
+<key>UIBackgroundModes</key>
+<array>
+    <string>fetch</string>
+    <string>remote-notification</string>
+</array>
+```
