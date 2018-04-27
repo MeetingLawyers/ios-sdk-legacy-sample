@@ -25,6 +25,22 @@ class ViewController: UIViewController {
     func prepareUI() {
         self.welcomeTitleLabel.text = R.string.localizable.mainWelcomeText()
         self.openChatButton.setTitle(R.string.localizable.mainButtonText(), for: .normal)
+
+        MediQuo.style?.navigationBarColor = UIColor(red: 84 / 255, green: 24 / 255, blue: 172 / 255, alpha: 1)
+        MediQuo.style?.accentTintColor = UIColor(red: 0, green: 244 / 255, blue: 187 / 255, alpha: 1)
+        MediQuo.style?.preferredStatusBarStyle = .lightContent
+        MediQuo.style?.navigationBarTintColor = .white
+        MediQuo.style?.navigationBarOpaque = true
+        MediQuo.style?.titleColor = .white
+
+        // MediQuo.style?.divider = MediQuoDivider<UIView>(view: UIView(frame: .zero))
+        //    .add(configuration: { (cell, view) in
+        //        view.backgroundColor = UIColor(red: 84 / 255, green: 24 / 255, blue: 172 / 255, alpha: 0.7)
+        //    })
+        //    .add(selector: { (speciality, authorized) -> Bool in
+        //        NSLog("[ViewController] Professional '\(String(describing: speciality))' selected and authorized '\(authorized)'")
+        //        return true
+        //    })
     }
 
     @IBAction func openChatAction(_ sender: UIButton) {
@@ -42,7 +58,7 @@ class ViewController: UIViewController {
 
     func present(_ completion: MediQuo.Result<Void>) {
         guard completion.isSuccess else { return }
-        MediQuo.style?.inboxLeftBarButtonItem = UIBarButtonItem(image: R.image.fingerprint(), style: .plain, target: self, action: #selector(ViewController.authenticationState))
+        MediQuo.style?.rootLeftBarButtonItem = UIBarButtonItem(image: R.image.fingerprint(), style: .plain, target: self, action: #selector(ViewController.authenticationState))
         MediQuo.present()
     }
     
@@ -58,12 +74,12 @@ class ViewController: UIViewController {
 
     @objc func authenticationState() {
         if self.isAuthenticated {
-            MediQuo.style?.inboxLeftBarButtonItem?.tintColor = .red
+            MediQuo.style?.rootLeftBarButtonItem?.tintColor = .red
             self.isAuthenticated = false
             MediQuo.shutdown()
         } else {
             let userInfo: [String: Any] = Bundle.main.infoDictionary!
-            MediQuo.style?.inboxLeftBarButtonItem?.tintColor = self.view.tintColor
+            MediQuo.style?.rootLeftBarButtonItem?.tintColor = self.view.tintColor
             MediQuo.authenticate(token: userInfo["MediQuoUserToken"] as! String) { [weak self] (result: MediQuo.Result<Void>) in
                 self?.isAuthenticated = result.isSuccess
             }
