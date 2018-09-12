@@ -1,4 +1,4 @@
-[![Language](https://img.shields.io/badge/Swift-4.0-orange.svg)](https://swift.org/)
+[![Language](https://img.shields.io/badge/Swift-4.1-orange.svg)](https://swift.org/)
 [![Bintray](https://api.bintray.com/packages/mediquo/generic/MediQuo/images/download.svg)](https://bintray.com/mediquo/generic/MediQuo/_latestVersion)
 [![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a2464d0c5dd1600018b73bd&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a2464d0c5dd1600018b73bd/build/latest?branch=master)
 # Mediquo SDK
@@ -9,8 +9,8 @@ Here are the steps to follow to include the MediQuo library to an iOS applicatio
 
 | **Swift** | **Xcode** |   **MediQuo**  | **iOS** |
 |-----------|-----------|----------------|---------|
-| 4.0       | 9.0...9.2 | 0.1 ... 0.20.x | 10.0+   |
-| 4.1       | 9.3       |                | 10.0+   |
+| 4.0       | 9.0...9.2 | 0.1 ... 0.24.x | 10.0+   |
+| 4.1       | 9.3...9.4 | 0.25.x         | 10.0+   |
 
 ## Instalation
 
@@ -30,7 +30,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 And finally, we include the pod in the target of the project with the latest version:
 
 ```ruby
-pod 'MediQuo', '~> 0.20'
+pod 'MediQuo', '~> 0.25'
 ```
 
 ## Access permissions
