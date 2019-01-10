@@ -1,4 +1,4 @@
-[![Language](https://img.shields.io/badge/Swift-4.1-orange.svg)](https://swift.org/)
+[![Language](https://img.shields.io/badge/Swift-4.2-orange.svg)](https://swift.org/)
 [![Bintray](https://api.bintray.com/packages/mediquo/generic/MediQuo/images/download.svg)](https://bintray.com/mediquo/generic/MediQuo/_latestVersion)
 [![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a2464d0c5dd1600018b73bd&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a2464d0c5dd1600018b73bd/build/latest?branch=master)
 # Mediquo SDK
@@ -11,6 +11,7 @@ Here are the steps to follow to include the MediQuo library to an iOS applicatio
 |-----------|-----------|----------------|---------|
 | 4.0       | 9.0...9.2 | 0.1 ... 0.24.x | 10.0+   |
 | 4.1       | 9.3...9.4 | 0.25.x         | 10.0+   |
+| 4.2       | 9.4...10.1 | 0.26.x         | 11.0+   |
 
 ## Instalation
 
@@ -30,7 +31,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 And finally, we include the pod in the target of the project with the latest version:
 
 ```ruby
-pod 'MediQuo', '~> 0.25'
+pod 'MediQuo', '~> 0.26'
 ```
 
 ## Access permissions
@@ -52,7 +53,7 @@ import MediQuo
 Next, as soon as we receive a notification from the system telling that our application is already active, we must configure the framework by providing the client's API key configuration:
 
 ```swift
-class func initialize(_ application: UIApplication = UIApplication.shared, with configuration: MediQuo.Configuration, options _: [UIApplicationLaunchOptionsKey: Any]?, completion: ((MediQuo.Result<MediQuoInstallationType>) -> Void)? = nil) -> UUID?
+class func initialize(_ application: UIApplication = UIApplication.shared, with configuration: MediQuo.Configuration, options _: [UIApplication.LaunchOptionsKey: Any]?, completion: ((MediQuo.Result<MediQuoInstallationType>) -> Void)? = nil) -> UUID?
 ```
 
 Last method parameter defines asynchronous initialization result of type `MediQuoInstallationType`. It does return framework and installation information responding to the protocol:
@@ -75,16 +76,15 @@ public protocol MediQuoInstallationType {
 Initialization returns an optional (`@discardableResult`) synchronous installation identifier that will only be valid after `initialize` call has succeeded once:
 
 ```swift
-public func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     [...]
-    let configuration = MediQuo.Configuration(id: “client_name”, secret: “api_key”)
-    let uuid: UUID? = MediQuo.initialize(with: configuration, options: launchOptions) { (result: MediQuo.Result<MediQuoInstallationType>) in
-            guard let value: MediQuoInstallationType = result.value else {
-                NSLog("[MediQuo] Installation failed: '\(String(describing: result.error))'")
-                return
-            }
-            NSLog("[MediQuo] Mediquo framework initialization succeeded with identifier: '\(value.installationId)'")
+    if let clientName: String = “client_name”,
+        let clientSecret: String = “api_key” {
+        let configuration = MediQuo.Configuration(id: clientName, secret: clientSecret)
+        if let uuid: UUID = MediQuo.initialize(with: configuration, options: launchOptions) {
+            NSLog("[MediQuoApplicationPlugin] Synchronous installation identifier: '\(uuid.uuidString)'")
         }
+    }
     [...]
 }
 ```
