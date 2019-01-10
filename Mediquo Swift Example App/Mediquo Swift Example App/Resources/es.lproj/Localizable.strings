@@ -1,5 +1,5 @@
 /* 
   Copyright © 2017 Edgar Paz Moreno. All rights reserved.
 */
-"main.welcome.text" = "Bienvenido a la demo de Mediquo. Pulsa el botón para continuar";
+"main.welcome.text" = "Bienvenido a la demo de Mediquo.\nPulsa el botón para continuar";
 "main.button.text" = "Abrir el chat";
