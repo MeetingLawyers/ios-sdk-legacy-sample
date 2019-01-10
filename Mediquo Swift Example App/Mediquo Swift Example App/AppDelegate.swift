@@ -2,7 +2,6 @@
 //  Copyright © 2017 Edgar Paz Moreno. All rights reserved.
 //
 
-import UIKit
 import MediQuo
 
 @UIApplicationMain
@@ -10,13 +9,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let userInfo: [String: Any] = Bundle.main.infoDictionary!
-        let configuration = MediQuo.Configuration(id: userInfo["MediQuoClientName"] as! String,
-                                                  secret: userInfo["MediQuoClientSecret"] as! String)
-        let uuid: UUID? = MediQuo.initialize(with:configuration, options:launchOptions)
-        NSLog("[MediQuoApplicationPlugin] Synchronous installation identifier: '\(uuid?.uuidString ?? "")'")
+        if let clientName: String = MediQuo.getClientName(),
+            let clientSecret: String = MediQuo.getClientSecret() {
+            let configuration = MediQuo.Configuration(id: clientName, secret: clientSecret)
+            if let uuid: UUID = MediQuo.initialize(with: configuration, options: launchOptions) {
+                NSLog("[MediQuoApplicationPlugin] Synchronous installation identifier: '\(uuid.uuidString)'")
+            }
+        }
         return true
     }
 
@@ -41,7 +42,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
-

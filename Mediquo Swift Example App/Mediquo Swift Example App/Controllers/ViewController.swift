@@ -2,87 +2,110 @@
 //  Copyright © 2017 Edgar Paz Moreno. All rights reserved.
 //
 
-import UIKit
 import MediQuo
 
 class ViewController: UIViewController {
     @IBOutlet weak var welcomeTitleLabel: UILabel!
     @IBOutlet weak var openChatButton: UIButton!
 
-    public var isAuthenticated: Bool = false
+    private var isAuthenticated: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.prepareUI()
+        prepareUI()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func prepareUI() {
-        self.welcomeTitleLabel.text = R.string.localizable.mainWelcomeText()
-        self.openChatButton.setTitle(R.string.localizable.mainButtonText(), for: .normal)
-
-        MediQuo.style?.navigationBarColor = UIColor(red: 84 / 255, green: 24 / 255, blue: 172 / 255, alpha: 1)
-        MediQuo.style?.accentTintColor = UIColor(red: 0, green: 244 / 255, blue: 187 / 255, alpha: 1)
-        MediQuo.style?.preferredStatusBarStyle = .lightContent
-        MediQuo.style?.navigationBarTintColor = .white
-        MediQuo.style?.navigationBarOpaque = true
-        MediQuo.style?.titleColor = .white
-
-        // MediQuo.style?.divider = MediQuoDivider<UIView>(view: UIView(frame: .zero))
-        //    .add(configuration: { (cell, view) in
-        //        view.backgroundColor = UIColor(red: 84 / 255, green: 24 / 255, blue: 172 / 255, alpha: 0.7)
-        //    })
-        //    .add(selector: { (speciality, authorized) -> Bool in
-        //        NSLog("[ViewController] Professional '\(String(describing: speciality))' selected and authorized '\(authorized)'")
-        //        return true
-        //    })
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if var style = MediQuo.style {
+            style.rootLeftBarButtonItem = buildFingerPrintButtonItem()
+            MediQuo.style = style
+        }
     }
 
     @IBAction func openChatAction(_ sender: UIButton) {
-        let topController: UIViewController? = UIApplication.shared.keyWindow?.rootViewController
-        let isSame = topController == self
-        print(isSame)
-
-        let userInfo: [String: Any] = Bundle.main.infoDictionary!
-        MediQuo.authenticate(token: userInfo["MediQuoUserToken"] as! String) { [weak self] (result: MediQuo.Result<Void>) in
-            self?.isAuthenticated = result.isSuccess
-            self?.unreadMessageCount(result)
-            self?.present(result)
-        }
+        doLogin(completion: { isSuccess in
+            if isSuccess {
+                self.unreadMessageCount()
+                self.present()
+            }
+        })
     }
 
-    func present(_ completion: MediQuo.Result<Void>) {
-        guard completion.isSuccess else { return }
-        MediQuo.style?.rootLeftBarButtonItem = UIBarButtonItem(image: R.image.fingerprint(), style: .plain, target: self, action: #selector(ViewController.authenticationState))
-        MediQuo.present()
+    private func prepareUI() {
+        setTexts()
+        configureStyle()
     }
     
-    func unreadMessageCount(_ completion: MediQuo.Result<Void>) {
-        guard completion.isSuccess else { return }
-        MediQuo.unreadMessageCount { (result: MediQuo.Result<Int>) in
-            if let count = result.value {
-                NSLog("[LaunchScreenViewController] Pending messages to read '\(count)'")
+    private func setTexts() {
+        self.welcomeTitleLabel.text = R.string.localizable.mainWelcomeText()
+        self.openChatButton.setTitle(R.string.localizable.mainButtonText(), for: .normal)
+    }
+    
+    private func configureStyle() {
+        if var style = MediQuo.style {
+            style.navigationBarColor = UIColor(red: 84 / 255, green: 24 / 255, blue: 172 / 255, alpha: 1)
+            style.accentTintColor = UIColor(red: 0, green: 244 / 255, blue: 187 / 255, alpha: 1)
+            style.preferredStatusBarStyle = .lightContent
+            style.navigationBarTintColor = .white
+            style.navigationBarOpaque = true
+            style.titleColor = .white
+            MediQuo.style = style
+        }
+    }
+
+    private func buildFingerPrintButtonItem() -> UIBarButtonItem {
+        let image = R.image.fingerprint()
+        let style: UIBarButtonItem.Style = .plain
+        let target = self
+        let action = #selector(authenticationState)
+        return UIBarButtonItem(image: image, style: style, target: target, action: action)
+    }
+
+    private func unreadMessageCount() {
+        MediQuo.unreadMessageCount {
+            if let count = $0.value {
                 UIApplication.shared.applicationIconBadgeNumber = count
+                NSLog("[LaunchScreenViewController] Pending messages to read '\(count)'")
             }
         }
     }
 
-    @objc func authenticationState() {
-        if self.isAuthenticated {
-            MediQuo.style?.rootLeftBarButtonItem?.tintColor = .red
-            self.isAuthenticated = false
-            MediQuo.shutdown()
+    private func present() {
+        MediQuo.present()
+    }
+
+    @objc private func authenticationState() {
+        changeColorFingerPrintByAuthState()
+        changeStatus()
+    }
+    
+    private func changeColorFingerPrintByAuthState() {
+        if let style = MediQuo.style, let buttonItem = style.rootLeftBarButtonItem {
+            buttonItem.tintColor = isAuthenticated ? .red : view.tintColor
+        }
+    }
+    
+    private func changeStatus() {
+        if !isAuthenticated {
+            doLogin()
         } else {
-            let userInfo: [String: Any] = Bundle.main.infoDictionary!
-            MediQuo.style?.rootLeftBarButtonItem?.tintColor = self.view.tintColor
-            MediQuo.authenticate(token: userInfo["MediQuoUserToken"] as! String) { [weak self] (result: MediQuo.Result<Void>) in
-                self?.isAuthenticated = result.isSuccess
+            doLogout()
+        }
+    }
+    
+    private func doLogin(completion: ((Bool) -> Void)? = nil) {
+        if let userToken: String = MediQuo.getUserToken() {
+            MediQuo.authenticate(token: userToken) {
+                let success = $0.isSuccess
+                self.isAuthenticated = success
+                if let completion = completion { completion(success) }
             }
         }
+    }
+
+    private func doLogout() {
+        MediQuo.shutdown { _ in self.isAuthenticated = false }
     }
 }
