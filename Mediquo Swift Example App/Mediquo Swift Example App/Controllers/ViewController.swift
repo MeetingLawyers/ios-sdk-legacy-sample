@@ -73,7 +73,12 @@ class ViewController: UIViewController {
     }
 
     private func present() {
-        MediQuo.present()
+        let messengerResult = MediQuo.messengerViewController()
+        if let controller: UINavigationController = messengerResult.value {
+            self.present(controller, animated: true)
+        } else {
+            NSLog("[ViewController] Failed to instantiate messenger with error '\(String(describing: messengerResult.error))'")
+        }
     }
 
     @objc private func authenticationState() {

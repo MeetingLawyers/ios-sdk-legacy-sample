@@ -2,79 +2,130 @@ PODS:
   - Alamofire (4.7.2)
   - AlamofireImage (3.4.0):
     - Alamofire (~> 4.7)
-  - MediQuo (0.26.5):
+  - AWSAuthCore (2.9.3):
+    - AWSCore (= 2.9.3)
+  - AWSCognitoIdentityProvider (2.9.3):
+    - AWSCognitoIdentityProviderASF (= 1.0.1)
+    - AWSCore (= 2.9.3)
+  - AWSCognitoIdentityProviderASF (1.0.1)
+  - AWSCore (2.9.3)
+  - AWSMobileClient (2.9.3):
+    - AWSAuthCore (= 2.9.3)
+    - AWSCognitoIdentityProvider (= 2.9.3)
+  - AWSS3 (2.9.3):
+    - AWSCore (= 2.9.3)
+  - Differentiator (3.1.0)
+  - MediQuo (0.33.1):
     - AlamofireImage (= 3.4.0)
-    - MediQuo-Controller (= 0.26.5)
-    - MediQuo-Core (= 0.26.5)
-    - MediQuo-Remote (= 0.26.5)
-    - MediQuo-Schema (= 0.26.5)
-    - MediQuo-Socket (= 0.26.5)
-    - MediQuo-Storage (= 0.26.5)
+    - MediQuo-Controller (= 0.33.1)
+    - MediQuo-Core (= 0.33.1)
+    - MediQuo-Remote (= 0.33.1)
+    - MediQuo-Schema (= 0.33.1)
+    - MediQuo-Socket (= 0.33.1)
+    - MediQuo-Storage (= 0.33.1)
     - MessageKit (= 2.0.0)
+    - OpenTok (= 2.15.3)
     - R.swift (= 5.0.0.alpha.3)
-  - MediQuo-Controller (0.26.5):
-    - MediQuo-Core (= 0.26.5)
-    - MediQuo-Schema (= 0.26.5)
-    - RxBlocking (= 4.2.0)
-    - RxSwift (= 4.2.0)
+    - RxCocoa (= 4.4.1)
+    - RxDataSources (= 3.1.0)
+    - SDWebImage (= 4.0)
+    - Swinject (= 2.5.0)
+    - SwinjectStoryboard (= 2.1.0)
+  - MediQuo-Controller (0.33.1):
+    - AWSMobileClient (= 2.9.3)
+    - AWSS3 (= 2.9.3)
+    - MediQuo-Core (= 0.33.1)
+    - MediQuo-Schema (= 0.33.1)
+    - RxBlocking (= 4.4.1)
+    - RxSwift (= 4.4.1)
     - SwiftDate (= 4.5.1)
-  - MediQuo-Core (0.26.5)
-  - MediQuo-Remote (0.26.5):
+  - MediQuo-Core (0.33.1)
+  - MediQuo-Remote (0.33.1):
     - Alamofire (= 4.7.2)
     - AlamofireImage (= 3.4.0)
-    - MediQuo-Controller (= 0.26.5)
-    - MediQuo-Core (= 0.26.5)
-    - MediQuo-Schema (= 0.26.5)
-  - MediQuo-Schema (0.26.5):
-    - MediQuo-Core (= 0.26.5)
-  - MediQuo-Socket (0.26.5):
-    - MediQuo-Controller (= 0.26.5)
-    - MediQuo-Core (= 0.26.5)
-    - MediQuo-Schema (= 0.26.5)
+    - MediQuo-Controller (= 0.33.1)
+    - MediQuo-Core (= 0.33.1)
+    - MediQuo-Schema (= 0.33.1)
+  - MediQuo-Schema (0.33.1):
+    - MediQuo-Core (= 0.33.1)
+  - MediQuo-Socket (0.33.1):
+    - MediQuo-Controller (= 0.33.1)
+    - MediQuo-Core (= 0.33.1)
+    - MediQuo-Schema (= 0.33.1)
     - Socket.IO-Client-Swift (= 13.2.1)
-  - MediQuo-Storage (0.26.5):
-    - MediQuo-Controller (= 0.26.5)
-    - MediQuo-Core (= 0.26.5)
-    - MediQuo-Schema (= 0.26.5)
-    - MediQuo-Socket (= 0.26.5)
+  - MediQuo-Storage (0.33.1):
+    - MediQuo-Controller (= 0.33.1)
+    - MediQuo-Core (= 0.33.1)
+    - MediQuo-Schema (= 0.33.1)
+    - MediQuo-Socket (= 0.33.1)
     - RealmSwift (= 3.10.0)
   - MessageInputBar/Core (0.4.1)
   - MessageKit (2.0.0):
     - MessageInputBar/Core
+  - OpenTok (2.15.3)
   - R.swift (5.0.0.alpha.3):
     - R.swift.Library (~> 5.0.0.alpha.2)
-  - R.swift.Library (5.0.0)
+  - R.swift.Library (5.0.1)
   - Realm (3.10.0):
     - Realm/Headers (= 3.10.0)
   - Realm/Headers (3.10.0)
   - RealmSwift (3.10.0):
     - Realm (= 3.10.0)
-  - RxBlocking (4.2.0):
+  - RxAtomic (4.4.2)
+  - RxBlocking (4.4.1):
+    - RxAtomic (~> 4.4)
     - RxSwift (~> 4.0)
-  - RxSwift (4.2.0)
+  - RxCocoa (4.4.1):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.1):
+    - RxAtomic (~> 4.4)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
   - Socket.IO-Client-Swift (13.2.1):
     - Starscream (~> 3.0.2)
   - Starscream (3.0.6)
   - SwiftDate (4.5.1)
+  - Swinject (2.5.0)
+  - SwinjectStoryboard (2.1.0):
+    - Swinject (~> 2.5)
 
 DEPENDENCIES:
-  - MediQuo (~> 0.26.5)
+  - MediQuo (= 0.33.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
+    - AWSAuthCore
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSMobileClient
+    - AWSS3
+    - Differentiator
     - MessageInputBar
     - MessageKit
+    - OpenTok
     - R.swift
     - R.swift.Library
     - Realm
     - RealmSwift
+    - RxAtomic
     - RxBlocking
+    - RxCocoa
+    - RxDataSources
     - RxSwift
+    - SDWebImage
     - Socket.IO-Client-Swift
     - Starscream
     - SwiftDate
+    - Swinject
+    - SwinjectStoryboard
   https://gitlab.com/mediquo/specs.git:
     - MediQuo
     - MediQuo-Controller
@@ -87,25 +138,39 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   AlamofireImage: 5f79836de27236819b13b27d0c97be6c205976fe
-  MediQuo: ab201c441386f364f87687d5e77167176ac7cf9b
-  MediQuo-Controller: 0eeda272e72cc8bf8981570d69519d734d6f5d4d
-  MediQuo-Core: 3346748698308cf2d8ca54e3f0b3d09bcb9e9a3b
-  MediQuo-Remote: 2eccd0441e2732a510861292b914cb0387530497
-  MediQuo-Schema: d3219e495357574eb4aa2fdb1524a45fa0444047
-  MediQuo-Socket: f69260fdc06d879da74ad55e0fb076bada6ed06f
-  MediQuo-Storage: 9cda15caed188043d1d12799fb205876a0528550
+  AWSAuthCore: 616e8c65607d7d4b29a1320e62fe2c6586f2f396
+  AWSCognitoIdentityProvider: 827e8d7ec506dd09ed4f72afe7be587a6dd85af5
+  AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
+  AWSCore: 5cbb6c6ccfad4b55e494c2e8df87781512f7881e
+  AWSMobileClient: 57b907ae11832376a2d7cf07eba5fbe2c6b8cfa4
+  AWSS3: f016dddb6de858f0cc328d4e10a551299a66a3bb
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  MediQuo: 6edb0c7a367460e40cebe842ca594db8f96f71a6
+  MediQuo-Controller: b3fd2b6985291fe4b15551740f4783bb0ab5ce20
+  MediQuo-Core: fa6a90cf6a0fecccead2c5f98b9877e4aa5036ff
+  MediQuo-Remote: 3d8243cff27c3e411d8e1c8f4f3e5443895b2adf
+  MediQuo-Schema: 0d8fb8a1d9c0762b214dc28e52932a98f3a266d6
+  MediQuo-Socket: 82bb1ca509af9519ff66b1c688b487a2448501b8
+  MediQuo-Storage: f44736bcc9a2f11778d5c12b086e35b757c2cde1
   MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
   MessageKit: 29c1c87e5a396d2ca7a3f712e5171dc9aba42a1e
+  OpenTok: fde03ecc5ea31fe0a453242847c4ee1f47e1d735
   R.swift: ca4207ecc94545a1611ca0b2ae1197458b6ba30a
-  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   Realm: 85ab9e4f779d66f6e9ffeb118dc25b7f130c96ac
   RealmSwift: 69121c8b86d0ae005fb779efdb10e606732e1c74
-  RxBlocking: e339d8a6e752e25ade95ff858466c55436668f59
-  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  RxBlocking: 5508e90d36ca2304632dc9378ece4e9b5d4bf656
+  RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   Socket.IO-Client-Swift: b94943e2fb916fe2f95244b9ed21828634002280
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
   SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
+  Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
+  SwinjectStoryboard: 688f096033103e66ffcf6ca678211acd7d7be505
 
-PODFILE CHECKSUM: 1ad4d4f61714c3614ca63b26ca6e9b2ae7dbf0d6
+PODFILE CHECKSUM: 635e0f9496d71bc082561cadc5a8c60a44798b79
 
 COCOAPODS: 1.5.3
