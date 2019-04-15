@@ -11,7 +11,7 @@ Here are the steps to follow to include the MediQuo library to an iOS applicatio
 |-----------|-----------|----------------|---------|
 | 4.0       | 9.0...9.2 | 0.1 ... 0.24.x | 10.0+   |
 | 4.1       | 9.3...9.4 | 0.25.x         | 10.0+   |
-| 4.2       | 9.4...10.1 | 0.26.x         | 11.0+   |
+| 4.2       | 9.4...10.1 | 0.33.x         | 11.0+   |
 
 ## Instalation
 
@@ -31,7 +31,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 And finally, we include the pod in the target of the project with the latest version:
 
 ```ruby
-pod 'MediQuo', '~> 0.26'
+pod 'MediQuo', '~> 0.33.0'
 ```
 
 ## Access permissions
@@ -130,49 +130,34 @@ MediQuo.unreadMessageCount { (result: MediQuo.Result<Int>) in
 }
 ```
 
-## Inbox contact list
+## Messenger view controller
 
-Once we initialized the SDK and authenticated the user, we can launch the MediQuo UI using the following method:
+Once we initialized the SDK and authenticated the user, we can retrieve the MediQuo UI using the following method:
 
 ```swift
-func present(animated: Bool = true, 
-     completion: ((MediQuo.Result<Void>) -> Void)? = nil)
+public class func messengerViewController(with filter: MediQuoFilterType = 
+    MediQuoFilter.default, showHeader: Bool = false, showDivider: Bool = true,
+    onUpdateLayout listener: ((CGSize) -> Void)? = nil) ->
+    MediQuo.Result<UINavigationController>
 ```
 
 Method parameters have been overloaded with default values. So we can invoke the list of doctors by adding the following call:
 
 ```swift
-MediQuo.present()
-```
-
-It is important to invoke this method once the application has a 'UIApplication.keyWindow', since it is used to embed the MediQuo UI. In case of not being present, an 'invalidTopViewController' error is returned in the 'completion' callback.
-
-It should not be a problem for most applications, but there are special cases in which this situation can occur. For example, if we use Storyboards and we invoke it in 'viewDidLoad' method of the initial view controller. This happens because 'UIApplication.keyWindow' is not set until 'viewDidAppear'.
-
-Once we have finished the conversations, with 'dismiss' method we close the view of the current controller and return to the screen from which it was invoked.
-
-```swift
-func dismiss(animated: Bool = true, 
-     completion: ((MediQuo.Result<Void>) -> Void)? = nil)
-```
-
-On the other hand, if you want to retrieve the reference to the *inbox controller* of chats we must use the following method:
-
-```swift
 [...]
 let result = MediQuo.messengerViewController()
 if let wrapController = result.value {
-    // do some stuff
+// do some stuff
 }
 [...]
 ```
 
 ### Filtered contact list
 
-In order to filter the list of contacts, the following method is used:
+In order to filter the list of contacts, we must use the previous function passing a MediQuoFilter:
 
 ```swift
-MediQuo.inboxViewController(with: MediQuoFilterType, onUpdateLayout: ((CGSize) -> Void)?)
+MediQuo.messengerViewController(with: MediQuoFilterType, onUpdateLayout: ((CGSize) -> Void)?)
 ```
 
 It takes as a parameter the filters wanted to be applied and optionally a size in case we need to update a height constraint to fit the result list.
@@ -181,11 +166,11 @@ The next included example shows how we could filter the list using two specialit
 
 ```swift
 let filter: MediQuoFilterType = MediQuoFilter(profiles: [.customerCare, .commercial], take: 2)
-let result: MediQuo.Result<UITableViewController> = MediQuo.inboxViewController(with: filter) { (contentSize: CGSize) in
+let result: MediQuo.Result<UINavigationController> = MediQuo.messengerViewController(with: filter) { (contentSize: CGSize) in
     // do some stuff to resize layout
 }
 
-if let controller: UITableViewController = result.value {
+if let controller: UITableViewController = result.value?.viewControllers.first as? UITableViewController {
     // Update the view with the controller
 }
 ```
