@@ -31,7 +31,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 And finally, we include the pod in the target of the project with the latest version:
 
 ```ruby
-pod 'MediQuo', '~> 0.33.0'
+pod 'MediQuo'
 ```
 
 ## Access permissions
@@ -72,6 +72,21 @@ public protocol MediQuoInstallationType {
     var referrer: MediQuoReferrerType? { get }
 }
 ```
+
+To initialize MediQuo SDK, you need to create a configuration object:
+
+```swift
+public struct Configuration {
+    // Application name
+    public let id: String
+    // Chat Api key
+    public let secret: String
+    // If is `true`, SDK will be comunicate with sandbox environment. Otherwise interact with Production environment. By default es `false`
+    public let isDemo: Bool
+
+}
+```
+
 
 Initialization returns an optional (`@discardableResult`) synchronous installation identifier that will only be valid after `initialize` call has succeeded once:
 
@@ -242,7 +257,7 @@ secondaryTintColor: UIColor?
 showMediQuoBackgroundImage: Bool?
 
 // Inbox contact list Header
-headerView: InboxHeaderStyle?
+topDivider: MediQuoDividerType?
 
 // View used as background in chat screen.
 chatBackgroundView: UIView?
@@ -272,11 +287,10 @@ Selector will be called on every user interaction over the cell (i.e. did select
 Both values are optional and it is not mandatory to implement them.
 
 ### Header configuration
-Using `InboxHeaderStyle` builder you can configure view for header inside doctor list. With `InboxHeaderStyle` you can configure the view for header and the size for this view. If the frame width is higher than screen width, the header width will be same as screen widt. Example:
+Using `MediQuoDividerType` builder you can configure view for header inside doctor list. With `MediQuoDividerType` you can configure the view for header and the size for this view. If the frame width is higher than screen width, the header width will be same as screen widt. Example:
 
 ````swift
-let headerFrame : CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height)
-MediQuo.style?.headerView = InboxHeaderStyle(headerView: inviteBanner(), frame: headerFrame)
+MediQuo.style?.topDivider = MediQuoDivider<TopDividerContentView>(view: inviteBanner())
 ````
 
 If you want to remove the header you must set de headerView as `nil`.
@@ -358,7 +372,7 @@ func application(_ application: UIApplication,
 
 > It is necessary that the host application has the necessary permissions and entitlements to receive push notifications.
 
-> It is essential to provide an APNs .p12 production certificate to the administrator of your MediQuo account so that notifications are received correctly.
+> It is essential to provide an Authorization key to the administrator of your MediQuo account so that notifications are received correctly.
 
 > It is highly recommended to implement background fetch result and modify your app capabilities to include 'fetch' and 'remote-notification' entitlements.
 
