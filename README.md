@@ -85,7 +85,10 @@ public struct Configuration {
     public let secret: String
     // If is `true`, SDK will be comunicate with sandbox environment. Otherwise interact with Production environment. By default es `false`
     public let isDemo: Bool
-
+    // videocall apiKey, if is nil, videocall feature is disabled.
+    public let videoCallApiKey: String?
+    // call sound for videocall screen when professional is calling. File name must be the same for call notification.
+    public let videCallSoundFileName: String?
 }
 ```
 
@@ -385,3 +388,71 @@ func application(_ application: UIApplication,
     <string>remote-notification</string>
 </array>
 ```
+
+## Videocall
+
+- To enable videocall feature, first, you must configure videocallApiKey in the configuration structure before initialize SDk as mentioned in [Integration](#Integration).
+
+- Next you need to configure push to hear videocall push noticiation to update videocall status:
+
+````swift
+        MediQuo.userNotificationCenter(userNotificationCenter, didReceive: response) { result in
+            result.process(doSuccess: { _ in
+                completionHandler()
+            }, doFailure: { error in
+                if let mediQuoError = error as? MediQuoError,
+                    case let .videoCall(reason) = mediQuoError,
+                    case .cantNavigateExternalOriginIsRequired = reason,
+                    MediQuo.deeplink(.videoCall, origin: self.slideMenuController(), animated: animated) { result in
+                        result.process(doSuccess: { _ in
+                            // success
+                        }, doFailure: { error in
+                            // fail
+                        })
+                    }           
+                    completionHandler()
+                } else {
+                    completionHandler()
+                }
+            })
+        }
+
+````
+
+- Next step is configure videocall, we can configure many elements from the UI.  To configure Style, you must follow instructions in [Styles](#Styles).
+The properties that you need configure are these:
+
+````swift
+    // Placeholder for professional when is not assigned
+    videoCallIconDoctorNotAssignedImage: UIImage?
+    // Backgorund Color for doctor Image background
+    videoCallIconDoctorBackgroundColor: UIColor
+    // Background image for videocall screen
+    videoCallBackgroundImage: UIImage?
+    //
+    videoCallTopBackgroundImageTintColor: UIColor?
+    //
+    videoCallBottomBackgroundImageTintColor: UIColor?
+    //
+    videoCallTopBackgroundColor: UIColor?
+    // 
+    videoCallBottomBackgroundColor: UIColor?
+    // 
+    videoCallTitleTextColor: UIColor?
+    // 
+    videoCallNextAppointmentTextColor: UIColor?
+    // 
+    videoCallProfessionalNameTextColor: UIColor?
+    // 
+    videoCallProfessionalSpecialityTextColor: UIColor?
+    // 
+    videoCallCancelButtonBackgroundColor: UIColor?
+    // 
+    videoCallAcceptButtonBackgroundColor: UIColor?
+    // 
+    videoCallCancelButtonTextColor: UIColor?
+    // 
+    videoCallAcceptButtonTextColor: UIColor?
+    // 
+    videoCallIconDoctorNotAssignedImageTintColor: UIColor?
+````
