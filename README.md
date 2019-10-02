@@ -429,15 +429,15 @@ The properties that you need configure are these:
     videoCallIconDoctorBackgroundColor: UIColor
     // Background image for videocall screen
     videoCallBackgroundImage: UIImage?
-    //
+    // Tint color for top background image
     videoCallTopBackgroundImageTintColor: UIColor?
-    //
+    // Tint color for bottom background image
     videoCallBottomBackgroundImageTintColor: UIColor?
-    //
+    // Background color for top view
     videoCallTopBackgroundColor: UIColor?
-    // 
+    // Background color for bottom view
     videoCallBottomBackgroundColor: UIColor?
-    // 
+    // Title text color
     videoCallTitleTextColor: UIColor?
     // 
     videoCallNextAppointmentTextColor: UIColor?
