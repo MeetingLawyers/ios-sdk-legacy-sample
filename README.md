@@ -441,18 +441,32 @@ The properties that you need configure are these:
     videoCallTitleTextColor: UIColor?
     // 
     videoCallNextAppointmentTextColor: UIColor?
-    // 
+    // Color for professional name
     videoCallProfessionalNameTextColor: UIColor?
-    // 
+    // Color for professional speciality
     videoCallProfessionalSpecialityTextColor: UIColor?
-    // 
+    // Background color for cancel button
     videoCallCancelButtonBackgroundColor: UIColor?
-    // 
+    // Background color for accept button
     videoCallAcceptButtonBackgroundColor: UIColor?
-    // 
+    // Text color for cancel button
     videoCallCancelButtonTextColor: UIColor?
-    // 
+    // Text color for accept button
     videoCallAcceptButtonTextColor: UIColor?
-    // 
+    // Tint color for placeholder image
     videoCallIconDoctorNotAssignedImageTintColor: UIColor?
+````
+- Now you can launch videocall process. To launch videocall, you must do the following stuff:
+    - Check Camera permissions
+    - Check microphone permissions
+    - If permissions are ok, you must call the following method:
+
+````swift
+ MediQuo.deeplink(.videoCall, origin: self.selectedViewController, animated: animated) { result in
+            result.process(doSuccess: { _ in
+                NSLog("success")
+            }, doFailure: { error in
+                NSLog("Can't navigate deeplink: \(error)")
+            })
+        }
 ````
