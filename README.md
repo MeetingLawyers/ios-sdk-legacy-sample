@@ -137,13 +137,14 @@ In the case of this example project you can find this snippet in class *ViewCont
 Once the authentication process is over, we can then request the pending messages to be read by the user using the following method:
 
 ```swift
-func unreadMessageCount(_ completion: @escaping (MediQuo.Result<Int>) -> Void)
+func unreadMessageCount(with filter: MediQuoFilterType, _ completion: @escaping (MediQuo.Result<Int>) -> Void) {
 ```
 
 So, once we get the result, we can update application badge icon:
 
 ```swift
-MediQuo.unreadMessageCount { (result: MediQuo.Result<Int>) in
+let filter = MediQuoFilter.default // returns unread messages from all categories
+MediQuo.unreadMessageCount(with: filter) { (result: MediQuo.Result<Int>) in
     if let count = result.value {
         UIApplication.shared.applicationIconBadgeNumber = count
     }
@@ -266,6 +267,12 @@ topDivider: MediQuoDividerType?
 
 // View used as background in chat screen.
 chatBackgroundView: UIView?
+
+/// String of the literal for usser banned
+supportMailBanned: String?
+
+/// Whether the collegiate number should appear next to the speciality.
+showCollegiateNumber: Bool
 ```
 
 ### Divider configuration
@@ -309,13 +316,19 @@ Also you can choose cell style and can select `mediQuo` cell style or `classic` 
 
 Usage for `mediquo` cell:
 ```swift
-MediQuo.style?.inboxCellStyle = .mediquo(overlay: .white, badge: .cyan, specyality: .magenta)
+MediQuo.style?.inboxCellStyle = .mediquo(overlay: .white, badge: .cyan, specyality: .magenta, specialityIcon: .yellow)
 ```
 
 Usage for `classic` cell:
 ```swift
 MediQuo.style?.inboxCellStyle = .classic(overlay: .white, badge: .cyan, specyality: .magenta)
 ```
+
+Usage for `complete` cell:
+```swift
+MediQuo.style?.inboxCellStyle = .complete(overlay: .white, badge: .cyan, specyality: .magenta, specialityIcon: yellow, schedule: .cyan)
+```
+
 
 ## Referrer
 You can retrieve installation referral code from MediQuo library, and know if the user accessed the app with an invitation code. Referral code can be obtained through mediQuo class property or on framework initialization result type.
@@ -345,21 +358,87 @@ This operation removes all user concerning information, so once a user is deauth
 
 ## Push notifications
 
-MediQuo framework uses push notifications to communicate users' pending messages.
+MediQuo framework uses push notifications to communicate users' pending messages, these notifications are served by `Firebase SDK`.
 
 As soon as the on-screen chat presentation starts, if permissions to send notifications have not yet been needed by the host application, the system security dialog is displayed. When the user grants the necessary permissions to send push notifications, it is mandatory to intervene system remote notification calls to notify MediQuo with the new device token. To do so, we require to implement the following methods in your AppDelegate:
 
+````swift
+extension ApplicationDelegate: MessagingDelegate {
+    // Refresh_token
+    public func messaging(_: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        print("[ApplicationDelegate] Firebase registration token: \(fcmToken)")
+        // Note: This callback is fired at each app startup and whenever a new token is generated.
+        MediQuo.registerFirebaseForNotifications(token: fcmToken) { result in
+            result.process(doSuccess: { _ in
+                print("[ApplicationDelegate] Token registered correctly")
+            }, doFailure: { error in
+                print("[ApplicationDelegate] Error registering token: \(error)")
+            })
+        }
+    }
+}
+````
+
+Now, the app can receive chat notifications. After that you must pass notifications to library methods to process the Push Notification info:
+
 ```swift
-func application(_ application: UIApplication, 
-    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        MediQuo.didRegisterForRemoteNotifications(with: deviceToken)
-}
+func userNotificationCenter(_ userNotificationCenter: UNUserNotificationCenter,
+                                       willPresent notification: UNNotification,
+                                       withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        MediQuo.userNotificationCenter(userNotificationCenter, willPresent: notification) { result in
+            NSLog("[MediQuoApplicationPlugin] Case 2")
+            do {
+                completionHandler(try result.unwrap())
+            } catch {
+                completionHandler([.alert, .badge, .sound])
+            }
+        }
+    }
 
-func application(_ application: UIApplication, 
-    didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        MediQuo.didFailToRegisterForRemoteNotifications(with: error)
-}
+func userNotificationCenter(_ userNotificationCenter: UNUserNotificationCenter,
+                                       didReceive response: UNNotificationResponse,
+                                       withCompletionHandler completionHandler: @escaping () -> Void) {
+        MediQuo.userNotificationCenter(userNotificationCenter, didReceive: response) { result in
+            NSLog("[MediQuoApplicationPlugin] Case 3")
+            result.process(doSuccess: { _ in
+                completionHandler()
+            }, doFailure: { error in
+                if let mediQuoError = error as? MediQuoError,
+                    case let .messenger(reason) = mediQuoError,
+                    case let .cantNavigateTopViewControllerIsNotMessengerViewController(deeplinkOption) = reason,
+                    // put chat view controller on top of navigation and launch the deeplink
+                    MediQuo.deeplink(.messenger(option: deeplinkOption), origin: self.selectedViewController, animated: animated) { result in
+                       result.process(doSuccess: { _ in
+                            NSLog("navigation success")
+                        }, doFailure: { error in
+                            NSLog("Can't navigate deeplink: \(error)")
+                        })
+                    }
+                    completionHandler()
+                } else if let mediQuoError = error as? MediQuoError,
+                    case let .videoCall(reason) = mediQuoError,
+                    case .cantNavigateExternalOriginIsRequired = reason,
+                    // put chat view controller on top of navigation and launch the deeplink
+                    MediQuo.deeplink(.videoCall, origin: self.selectedViewController, animated: animated) { result in
+                        result.process(doSuccess: { _ in
+                            NSLog("navigation succeess")
+                        }, doFailure: { error in
+                            NSLog("Can't navigate deeplink: \(error)")
+                        })
+                    }
+                    completionHandler()
+                } else {
+                    NSLog("[MediQuoApplicationPlugin] Error user notification center: \(error)")
+                    completionHandler()
+                }
+            })
+        }
+    }
+```
 
+If you have Firebase notifications by certificates instead `Key Authorization` (.p8), you must add the next piece of code:
+
+```swift
 func application(_ application: UIApplication, 
     didReceiveRemoteNotification userInfo: [AnyHashable : Any], 
     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
@@ -372,6 +451,7 @@ func application(_ application: UIApplication,
         }
 }
 ```
+
 
 ⚠️ WARNING:
 
