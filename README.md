@@ -13,8 +13,6 @@ Here are the steps to follow to include the MediQuo library to an iOS applicatio
 | 4.1       | 9.3...9.4 | 0.25.x         | 10.0+   |
 | 4.2       | 9.4...11 | 0.33.x ... 0.35.x | 11.0+   |
 
-Last version 0.35.44
-
 ## Instalation
 
 To install the MediQuo library you must first include MediQuo private pods repository to the Cocoapods list using the following command:
