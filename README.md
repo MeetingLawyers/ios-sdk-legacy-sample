@@ -1,6 +1,6 @@
-[![Language](https://img.shields.io/badge/Swift-4.2-orange.svg)](https://swift.org/)
-[![Bintray](https://api.bintray.com/packages/mediquo/generic/MediQuo/images/download.svg)](https://bintray.com/meetingdoctors/iOS/legacy-library/_latestVersion)
-[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a2464d0c5dd1600018b73bd&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a2464d0c5dd1600018b73bd/build/latest?branch=master)
+[![Language](https://img.shields.io/badge/Swift-5.1-orange.svg)](https://swift.org/)
+[![Bintray](https://api.bintray.com/packages/meetingdoctors/iOS/legacy-library/images/download.svg)](https://bintray.com/meetingdoctors/iOS/legacy-library/_latestVersion)
+
 # MeetingDoctors SDK (formerly Mediquo SDK)
 
 Here are the steps to follow to include the MediQuo library to an iOS application project.
