@@ -7,26 +7,27 @@ Here are the steps to follow to include the MediQuo library to an iOS applicatio
 
 **Table of contents**
 -----------------------
-- [Requirements](#Requirements)
-- [Instalation](#Instalation)
-- [Access permissions](#Access-permissions)
-- [Integration](#Integration)
-- [Authentication](#Authentication)
-- [Pending messages](#Pending-messages)
-- [Messenger view controller](#Messenger-view-controller)
-- [Filtered contact list](#Filtered-contact-list)
-- [Styles](#Styles)
-- [Properties](#Properties)
-- [Divider configuration](#Divider-configuration)
-- [Header configuration](#Header-configuration)
-- [Inbox cell style configuration](#Inbox-cell-style-configuration)
-- [Referrer](#Referrer)
-- [Shutdown](#Shutdown)
-- [Logout](#Logout)
-- [Firebase configuration](#Firebase-configuration)
-- [Push notifications](#Push-notifications)
-- [Videocall](#Videocall)
+- [ Requirements ](#Requirements)
+- [ Instalation ](#Instalation)
+- [ Access permissions ](#Access-permissions)
+- [ Integration ](#Integration)
+- [ Authentication ](#Authentication)
+- [ Pending messages ](#Pending-messages)
+- [ Messenger view controller ](#Messenger-view-controller)
+- [ Filtered contact list ](#Filtered-contact-list)
+- [ Styles ](#Styles)
+- [ Properties ](#Properties)
+- [ Divider configuration ](#Divider-configuration)
+- [ Header configuration ](#Header-configuration)
+- [ Inbox cell style configuration ](#Inbox-cell-style-configuration)
+- [ Referrer ](#Referrer)
+- [ Shutdown ](#Shutdown)
+- [ Logout ](#Logout)
+- [ Firebase configuration ](#Firebase-configuration)
+- [ Push notifications ](#Push-notifications)
+- [ Videocall ](#Videocall)
 
+<a name="Requirements"></a>
 ## Requirements
 
 | **Swift** | **Xcode** |   **MediQuo**  | **iOS** |
@@ -36,6 +37,7 @@ Here are the steps to follow to include the MediQuo library to an iOS applicatio
 | 5.1       | 11, 11.1 | 3.x.x | 11.0+   |
 | 5.1       | 11+ | 4.x.x | 11.0+   |
 
+<a name="Instalation"></a>
 ## Instalation
 
 To install the MediQuo library you must first include MediQuo private pods repository to the Cocoapods list using the following command:
@@ -57,6 +59,7 @@ And finally, we include the pod in the target of the project with the latest ver
 pod 'MediQuo'
 ```
 
+<a name="Access-permissions"></a>
 ## Access permissions
 
 Access to camera or photo gallery always requires explicit permission from the user.
@@ -65,6 +68,7 @@ Your app must provide an explanation for its use of capture devices using the **
 
 ⚠️ Attempting to attach a gallery photo or start a camera session without an usage description will raise an exception.
 
+<a name="Integration"></a>
 ## Integration
 
 To use the library is necessary to import it in our AppDelegate:
@@ -132,6 +136,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 Without the initialization process, subsequent calls to the library will trigger error results.
 
+<a name="Authentication"></a>
 ## Authentication
 
 Authentication verifies that the provided user token is correct and, therefore, it can initiate the chat.
@@ -153,6 +158,7 @@ From a successful response, we can consider that the user is authenticated and M
 
 In the case of this example project you can find this snippet in class *ViewController*.
 
+<a name="Pending-messages"></a>
 ## Pending messages
 
 Once the authentication process is over, we can then request the pending messages to be read by the user using the following method:
@@ -172,6 +178,7 @@ MediQuo.unreadMessageCount(with: filter) { (result: MediQuo.Result<Int>) in
 }
 ```
 
+<a name="Messenger-view-controller"></a>
 ## Messenger view controller
 
 Once we initialized the SDK and authenticated the user, we can retrieve the MediQuo UI using the following method:
@@ -194,6 +201,7 @@ if let wrapController = result.value {
 [...]
 ```
 
+<a name="Filtered-contact-list"></a>
 ### Filtered contact list
 
 In order to filter the list of contacts, we must use the previous function passing a MediQuoFilter:
@@ -217,12 +225,14 @@ if let controller: UITableViewController = result.value?.viewControllers.first a
 }
 ```
 
+<a name="Styles"></a>
 ## Styles
 
 MediQuo UI styles can be customized by creating an instance that complies with the 'MediQuoStyleType' protocol, modifying its properties and then linking it to the 'style' property of the library.
 
 By default, the 'style' property is already configured with initial values that fit with the MediQuo brand and are used if the style value is not overwritten or simply initialized to nil.
 
+<a name="Properties"></a>
 ### Properties
 
 ```swift
@@ -296,6 +306,7 @@ supportMailBanned: String?
 showCollegiateNumber: Bool
 ```
 
+<a name="Divider-configuration"></a>
 ### Divider configuration
 Using `MediQuoDivider` generic builder we can configure a divider view group style and behavior.
 
@@ -319,6 +330,7 @@ Selector will be called on every user interaction over the cell (i.e. did select
 
 Both values are optional and it is not mandatory to implement them.
 
+<a name="Header configuration"></a>
 ### Header configuration
 Using `MediQuoDividerType` builder you can configure view for header inside doctor list. With `MediQuoDividerType` you can configure the view for header and the size for this view. If the frame width is higher than screen width, the header width will be same as screen widt. Example:
 
@@ -328,6 +340,7 @@ MediQuo.style?.topDivider = MediQuoDivider<TopDividerContentView>(view: inviteBa
 
 If you want to remove the header you must set de headerView as `nil`.
 
+<a name="Inbox-cell-style-configuration"></a>
 ### Inbox cell style configuration
 Using `MediQuoInboxCellStyle` builder you can configure doctor list look. You can configure:
 - `Overlay` color for unauthorized cells.
@@ -350,7 +363,7 @@ Usage for `complete` cell:
 MediQuo.style?.inboxCellStyle = .complete(overlay: .white, badge: .cyan, specyality: .magenta, specialityIcon: yellow, schedule: .cyan)
 ```
 
-
+<a name="Referrer"></a>
 ## Referrer
 You can retrieve installation referral code from MediQuo library, and know if the user accessed the app with an invitation code. Referral code can be obtained through mediQuo class property or on framework initialization result type.
 
@@ -360,6 +373,7 @@ Usage:
 let code: String = MediQuo.referrer
 ```
 
+<a name="Shutdown"></a>
 ## Shutdown
 
 A `shutdown` method exists so a chat user can disconnect and erase all sensible information:
@@ -377,6 +391,7 @@ MediQuo.shutdown { (result: MediQuo.Result<Void>) in
 
 This operation removes all user concerning information, so once a user is deauthenticated, a call to `authenticate` must be invoked to access the contact list again.
 
+<a name="Logout"></a>
 ## Logout
 
 First, you must `initialize` SDK previously to call this method. If you want to call method `authenticate`, please call it inside `logout` clousure.
@@ -394,12 +409,14 @@ MediQuo.logout { (result: MediQuo.Result<Void>) in
 }
 ```
 
+<a name="Firebase configuration"></a>
 ## Firebase configuration
 
 In order to enable MeetingDoctors Chat notifications, there are two posibilities:
 1.- If you have your own Firebase app declared, you must provide us Sender ID and Server Key from your Firebase workspace.
 2.- If you don't have a Firebase and don't want to create it, we can provide one. For Android we need your App Package, and for iOS we need .p8 Certificate file, Team ID, and the certificate key. Once Firebase app are created, we'll provide you google-services.json and GoogleService-info.plist files to add to your apps.
 
+<a name="Push-notifications"></a>
 ## Push notifications
 
 MediQuo framework uses push notifications to communicate users' pending messages, these notifications are served by `Firebase SDK`.
@@ -514,6 +531,7 @@ func application(_ application: UIApplication,
 </array>
 ```
 
+<a name="Videocall"></a>
 ## Videocall
 
 - To enable videocall feature, first, you must configure videocallApiKey in the configuration structure before initialize SDk as mentioned in [Integration](#Integration).
