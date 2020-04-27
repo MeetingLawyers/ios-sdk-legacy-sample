@@ -101,12 +101,11 @@ class ViewController: UIViewController {
     }
     
     private func doLogin(completion: ((Bool) -> Void)? = nil) {
-        if let userToken: String = MediQuo.getUserToken() {
-            MediQuo.authenticate(token: userToken) {
-                let success = $0.isSuccess
-                self.isAuthenticated = success
-                if let completion = completion { completion(success) }
-            }
+        let userToken: String = MediQuo.getUserToken()
+        MediQuo.authenticate(token: userToken) {
+            let success = $0.isSuccess
+            self.isAuthenticated = success
+            if let completion = completion { completion(success) }
         }
     }
 

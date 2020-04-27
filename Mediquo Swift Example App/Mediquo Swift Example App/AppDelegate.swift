@@ -3,6 +3,7 @@
 //
 
 import MediQuo
+import MediQuoCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,10 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         if let clientName: String = MediQuo.getClientName(),
             let clientSecret: String = MediQuo.getClientSecret() {
-            let configuration = MediQuo.Configuration(id: clientName, secret: clientSecret)
-            if let uuid: UUID = MediQuo.initialize(with: configuration, options: launchOptions) {
-                NSLog("[MediQuoApplicationPlugin] Synchronous installation identifier: '\(uuid.uuidString)'")
+            let configuration = MediQuo.Configuration(id: clientName, secret: clientSecret, isDemo: true)
+            let uuid: UUID? = MediQuo.initialize(with: configuration, options: launchOptions) {  result in
+                guard let value = result.value else {
+                    NSLog("[AppDelegate] Installation failed: '\(String(describing: result.error))'")
+                    return
+                }
+                NSLog("[AppDelegate] Mediquo framework initialization succeeded with identifier: '\(value.installationId)'")
             }
+            NSLog("[AppDelegate] Synchronous installation identifier: '\(uuid?.uuidString ?? "no uuid")'")
         }
         return true
     }

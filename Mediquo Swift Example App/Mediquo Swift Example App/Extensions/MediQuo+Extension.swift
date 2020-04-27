@@ -9,34 +9,16 @@
 import MediQuo
 
 extension MediQuo {
-    internal enum UserInfo: String {
-        case clientName = "MediQuoClientName"
-        case clientSecret = "MediQuoClientSecret"
-        case userToken = "MediQuoUserToken"
-    }
     
-    internal static func getUserInfo() -> [String: Any]? {
-        return Bundle.main.infoDictionary
-    }
-    
-    internal static func getUserToken() -> String? {
-        if let userInfo = getUserInfo() {
-            return userInfo[MediQuo.UserInfo.userToken.rawValue] as? String
-        }
-        return nil
+    internal static func getUserToken() -> String {
+        return "00000000A" // <#your demo user token#>
     }
 
     internal static func getClientName() -> String? {
-        if let userInfo = getUserInfo() {
-            return userInfo[MediQuo.UserInfo.clientName.rawValue] as? String
-        }
-        return nil
+        return "Asisa" ////<#your company name#>
     }
 
     internal static func getClientSecret() -> String? {
-        if let userInfo = getUserInfo() {
-            return userInfo[MediQuo.UserInfo.clientSecret.rawValue] as? String
-        }
-        return nil
+        return "tS347Jf56Idr5fD5" // <#your API Key#>
     }
 }

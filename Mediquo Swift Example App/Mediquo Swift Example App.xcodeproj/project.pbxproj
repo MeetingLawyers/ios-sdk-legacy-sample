@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EA20E4669BD243A297A7A61 /* Pods_Mediquo_Swift_Example_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5706D6D66427FC5181A8C38C /* Pods_Mediquo_Swift_Example_App.framework */; };
+		627E372C5B76C3036B6DEDEE /* Pods_Mediquo_Swift_Example_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE44589007CE2B913FF75F6 /* Pods_Mediquo_Swift_Example_AppTests.framework */; };
 		69BC178A1FBC83380025CC42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC17891FBC83380025CC42 /* AppDelegate.swift */; };
 		69BC179F1FBC83380025CC42 /* Mediquo_Swift_Example_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC179E1FBC83380025CC42 /* Mediquo_Swift_Example_AppTests.swift */; };
 		69BC17AA1FBC83380025CC42 /* Mediquo_Swift_Example_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC17A91FBC83380025CC42 /* Mediquo_Swift_Example_AppUITests.swift */; };
@@ -28,10 +30,8 @@
 		69BC17DD1FBC8DB20025CC42 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC17DC1FBC8DB20025CC42 /* R.generated.swift */; };
 		69BC17DE1FBC8DB20025CC42 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC17DC1FBC8DB20025CC42 /* R.generated.swift */; };
 		69BC17DF1FBC8DB20025CC42 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC17DC1FBC8DB20025CC42 /* R.generated.swift */; };
-		8F7517A9F138FA5C4EF2A977 /* Pods_Mediquo_Swift_Example_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09186D98E9FBDB364CEC227C /* Pods_Mediquo_Swift_Example_App.framework */; };
-		9700B01E86CA71887DCD9391 /* Pods_Mediquo_Swift_Example_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D7AE7A763BD3FBC949BE91 /* Pods_Mediquo_Swift_Example_AppUITests.framework */; };
+		B3565D1CDAFF54941230FBE6 /* Pods_Mediquo_Swift_Example_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57284A39BF8365109D49BDE7 /* Pods_Mediquo_Swift_Example_AppUITests.framework */; };
 		D585EEF521E6173300D3A21B /* MediQuo+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585EEF421E6173300D3A21B /* MediQuo+Extension.swift */; };
-		EC9D491497797B6BE2F14674 /* Pods_Mediquo_Swift_Example_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47EBBDE1193D18C51AB8AB6 /* Pods_Mediquo_Swift_Example_AppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,11 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09186D98E9FBDB364CEC227C /* Pods_Mediquo_Swift_Example_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mediquo_Swift_Example_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2991E2B4ADE8B5ADAE5598EE /* Pods-Mediquo Swift Example App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mediquo Swift Example App/Pods-Mediquo Swift Example App.debug.xcconfig"; sourceTree = "<group>"; };
-		4FDC176D3EE42AC26145F988 /* Pods-Mediquo Swift Example App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mediquo Swift Example App/Pods-Mediquo Swift Example App.release.xcconfig"; sourceTree = "<group>"; };
-		56CD461184949E8757E80A51 /* Pods-Mediquo Swift Example AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example AppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mediquo Swift Example AppUITests/Pods-Mediquo Swift Example AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		65D7AE7A763BD3FBC949BE91 /* Pods_Mediquo_Swift_Example_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mediquo_Swift_Example_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A3B74A241C404286708C62 /* Pods-Mediquo Swift Example AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Mediquo Swift Example AppTests/Pods-Mediquo Swift Example AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		48FB8BD04F0F45A6F5D67E82 /* Pods-Mediquo Swift Example AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Mediquo Swift Example AppUITests/Pods-Mediquo Swift Example AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		52F53EE76E034250600506CA /* Pods-Mediquo Swift Example App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example App.release.xcconfig"; path = "Target Support Files/Pods-Mediquo Swift Example App/Pods-Mediquo Swift Example App.release.xcconfig"; sourceTree = "<group>"; };
+		5706D6D66427FC5181A8C38C /* Pods_Mediquo_Swift_Example_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mediquo_Swift_Example_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57284A39BF8365109D49BDE7 /* Pods_Mediquo_Swift_Example_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mediquo_Swift_Example_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BC17861FBC83380025CC42 /* Mediquo Swift Example App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mediquo Swift Example App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BC17891FBC83380025CC42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69BC17951FBC83380025CC42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,11 +75,11 @@
 		69BC17D81FBC8BDC0025CC42 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = ../es.lproj/Main.strings; sourceTree = "<group>"; };
 		69BC17D91FBC8BDD0025CC42 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		69BC17DC1FBC8DB20025CC42 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		96F479A0A28BF00FFCBFB6D4 /* Pods-Mediquo Swift Example AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mediquo Swift Example AppTests/Pods-Mediquo Swift Example AppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A47EBBDE1193D18C51AB8AB6 /* Pods_Mediquo_Swift_Example_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mediquo_Swift_Example_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A961F6FABA2B686539C96756 /* Pods-Mediquo Swift Example AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mediquo Swift Example AppTests/Pods-Mediquo Swift Example AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		7F1CFB0FFC99E389E8493633 /* Pods-Mediquo Swift Example AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example AppTests.release.xcconfig"; path = "Target Support Files/Pods-Mediquo Swift Example AppTests/Pods-Mediquo Swift Example AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		A2409A0ED53EEC3681F36976 /* Pods-Mediquo Swift Example App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example App.debug.xcconfig"; path = "Target Support Files/Pods-Mediquo Swift Example App/Pods-Mediquo Swift Example App.debug.xcconfig"; sourceTree = "<group>"; };
+		BCE44589007CE2B913FF75F6 /* Pods_Mediquo_Swift_Example_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mediquo_Swift_Example_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D585EEF421E6173300D3A21B /* MediQuo+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediQuo+Extension.swift"; sourceTree = "<group>"; };
-		E52D4196B343F549A802E08D /* Pods-Mediquo Swift Example AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example AppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mediquo Swift Example AppUITests/Pods-Mediquo Swift Example AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ED50C3CBF6D7E4150331F618 /* Pods-Mediquo Swift Example AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mediquo Swift Example AppUITests/Pods-Mediquo Swift Example AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F7517A9F138FA5C4EF2A977 /* Pods_Mediquo_Swift_Example_App.framework in Frameworks */,
+				4EA20E4669BD243A297A7A61 /* Pods_Mediquo_Swift_Example_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC9D491497797B6BE2F14674 /* Pods_Mediquo_Swift_Example_AppTests.framework in Frameworks */,
+				627E372C5B76C3036B6DEDEE /* Pods_Mediquo_Swift_Example_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,26 +103,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9700B01E86CA71887DCD9391 /* Pods_Mediquo_Swift_Example_AppUITests.framework in Frameworks */,
+				B3565D1CDAFF54941230FBE6 /* Pods_Mediquo_Swift_Example_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17BE783B47303F00EB847197 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2991E2B4ADE8B5ADAE5598EE /* Pods-Mediquo Swift Example App.debug.xcconfig */,
-				4FDC176D3EE42AC26145F988 /* Pods-Mediquo Swift Example App.release.xcconfig */,
-				96F479A0A28BF00FFCBFB6D4 /* Pods-Mediquo Swift Example AppTests.debug.xcconfig */,
-				A961F6FABA2B686539C96756 /* Pods-Mediquo Swift Example AppTests.release.xcconfig */,
-				56CD461184949E8757E80A51 /* Pods-Mediquo Swift Example AppUITests.debug.xcconfig */,
-				E52D4196B343F549A802E08D /* Pods-Mediquo Swift Example AppUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		69BC177D1FBC83380025CC42 = {
 			isa = PBXGroup;
 			children = (
@@ -130,8 +117,8 @@
 				69BC179D1FBC83380025CC42 /* Mediquo Swift Example AppTests */,
 				69BC17A81FBC83380025CC42 /* Mediquo Swift Example AppUITests */,
 				69BC17871FBC83380025CC42 /* Products */,
-				17BE783B47303F00EB847197 /* Pods */,
-				EAE7CC056A0192C6EBDBAE08 /* Frameworks */,
+				EEF65B39CF2312EC5F5E7F4E /* Pods */,
+				87AAD72127DA514F9B06D30A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,6 +198,16 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		87AAD72127DA514F9B06D30A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5706D6D66427FC5181A8C38C /* Pods_Mediquo_Swift_Example_App.framework */,
+				BCE44589007CE2B913FF75F6 /* Pods_Mediquo_Swift_Example_AppTests.framework */,
+				57284A39BF8365109D49BDE7 /* Pods_Mediquo_Swift_Example_AppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D585EEF321E6164A00D3A21B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,14 +216,18 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		EAE7CC056A0192C6EBDBAE08 /* Frameworks */ = {
+		EEF65B39CF2312EC5F5E7F4E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				09186D98E9FBDB364CEC227C /* Pods_Mediquo_Swift_Example_App.framework */,
-				A47EBBDE1193D18C51AB8AB6 /* Pods_Mediquo_Swift_Example_AppTests.framework */,
-				65D7AE7A763BD3FBC949BE91 /* Pods_Mediquo_Swift_Example_AppUITests.framework */,
+				A2409A0ED53EEC3681F36976 /* Pods-Mediquo Swift Example App.debug.xcconfig */,
+				52F53EE76E034250600506CA /* Pods-Mediquo Swift Example App.release.xcconfig */,
+				36A3B74A241C404286708C62 /* Pods-Mediquo Swift Example AppTests.debug.xcconfig */,
+				7F1CFB0FFC99E389E8493633 /* Pods-Mediquo Swift Example AppTests.release.xcconfig */,
+				ED50C3CBF6D7E4150331F618 /* Pods-Mediquo Swift Example AppUITests.debug.xcconfig */,
+				48FB8BD04F0F45A6F5D67E82 /* Pods-Mediquo Swift Example AppUITests.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,12 +237,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69BC17AE1FBC83380025CC42 /* Build configuration list for PBXNativeTarget "Mediquo Swift Example App" */;
 			buildPhases = (
-				5DE3D60CCCF6B1614EBE6C46 /* [CP] Check Pods Manifest.lock */,
+				278CFB29FAAF89E10834271D /* [CP] Check Pods Manifest.lock */,
 				69BC17DB1FBC8C8A0025CC42 /* ShellScript */,
 				69BC17821FBC83380025CC42 /* Sources */,
 				69BC17831FBC83380025CC42 /* Frameworks */,
 				69BC17841FBC83380025CC42 /* Resources */,
-				4021882736F0A05E79DDCA34 /* [CP] Embed Pods Frameworks */,
+				C8E9E824A0D256AF8A1895E5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,7 +257,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69BC17B11FBC83380025CC42 /* Build configuration list for PBXNativeTarget "Mediquo Swift Example AppTests" */;
 			buildPhases = (
-				EAE574BE086D18C6047BF6B6 /* [CP] Check Pods Manifest.lock */,
+				82BED76FA4246CD9A5BCCCE2 /* [CP] Check Pods Manifest.lock */,
 				69BC17961FBC83380025CC42 /* Sources */,
 				69BC17971FBC83380025CC42 /* Frameworks */,
 				69BC17981FBC83380025CC42 /* Resources */,
@@ -275,7 +276,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69BC17B41FBC83380025CC42 /* Build configuration list for PBXNativeTarget "Mediquo Swift Example AppUITests" */;
 			buildPhases = (
-				B3147E12922BD5F5116FA67B /* [CP] Check Pods Manifest.lock */,
+				BD08495EDFB78BE2C5CAFAA4 /* [CP] Check Pods Manifest.lock */,
 				69BC17A11FBC83380025CC42 /* Sources */,
 				69BC17A21FBC83380025CC42 /* Frameworks */,
 				69BC17A31FBC83380025CC42 /* Resources */,
@@ -379,13 +380,92 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4021882736F0A05E79DDCA34 /* [CP] Embed Pods Frameworks */ = {
+		278CFB29FAAF89E10834271D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mediquo Swift Example App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69BC17DB1FBC8C8A0025CC42 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Mediquo Swift Example App/Pods-Mediquo Swift Example App-frameworks.sh",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo 'Generating R files'\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Mediquo Swift Example App/Resources/Generated\"";
+		};
+		82BED76FA4246CD9A5BCCCE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mediquo Swift Example AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD08495EDFB78BE2C5CAFAA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mediquo Swift Example AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8E9E824A0D256AF8A1895E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mediquo Swift Example App/Pods-Mediquo Swift Example App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
@@ -394,6 +474,7 @@
 				"${BUILT_PRODUCTS_DIR}/AWSS3/AWSS3.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${PODS_ROOT}/MediQuo/MediQuo/MediQuo.framework",
 				"${PODS_ROOT}/MediQuo/MediQuo/MediQuo.framework.dSYM",
@@ -423,8 +504,10 @@
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyMarkdown/SwiftyMarkdown.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -436,6 +519,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSS3.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MediQuo.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/MediQuo.framework.dSYM",
@@ -465,79 +549,14 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyMarkdown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mediquo Swift Example App/Pods-Mediquo Swift Example App-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5DE3D60CCCF6B1614EBE6C46 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Mediquo Swift Example App-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		69BC17DB1FBC8C8A0025CC42 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "echo 'Generating R files'\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Mediquo Swift Example App/Resources/Generated\"";
-		};
-		B3147E12922BD5F5116FA67B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Mediquo Swift Example AppUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EAE574BE086D18C6047BF6B6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Mediquo Swift Example AppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mediquo Swift Example App/Pods-Mediquo Swift Example App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -735,7 +754,7 @@
 		};
 		69BC17AF1FBC83380025CC42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2991E2B4ADE8B5ADAE5598EE /* Pods-Mediquo Swift Example App.debug.xcconfig */;
+			baseConfigurationReference = A2409A0ED53EEC3681F36976 /* Pods-Mediquo Swift Example App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -746,13 +765,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.medipremium.main;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		69BC17B01FBC83380025CC42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FDC176D3EE42AC26145F988 /* Pods-Mediquo Swift Example App.release.xcconfig */;
+			baseConfigurationReference = 52F53EE76E034250600506CA /* Pods-Mediquo Swift Example App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -763,13 +782,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.medipremium.main;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		69BC17B21FBC83380025CC42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96F479A0A28BF00FFCBFB6D4 /* Pods-Mediquo Swift Example AppTests.debug.xcconfig */;
+			baseConfigurationReference = 36A3B74A241C404286708C62 /* Pods-Mediquo Swift Example AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -786,7 +805,7 @@
 		};
 		69BC17B31FBC83380025CC42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A961F6FABA2B686539C96756 /* Pods-Mediquo Swift Example AppTests.release.xcconfig */;
+			baseConfigurationReference = 7F1CFB0FFC99E389E8493633 /* Pods-Mediquo Swift Example AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -803,7 +822,7 @@
 		};
 		69BC17B51FBC83380025CC42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56CD461184949E8757E80A51 /* Pods-Mediquo Swift Example AppUITests.debug.xcconfig */;
+			baseConfigurationReference = ED50C3CBF6D7E4150331F618 /* Pods-Mediquo Swift Example AppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -819,7 +838,7 @@
 		};
 		69BC17B61FBC83380025CC42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E52D4196B343F549A802E08D /* Pods-Mediquo Swift Example AppUITests.release.xcconfig */;
+			baseConfigurationReference = 48FB8BD04F0F45A6F5D67E82 /* Pods-Mediquo Swift Example AppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
