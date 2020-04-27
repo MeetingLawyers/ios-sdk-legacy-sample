@@ -79,7 +79,7 @@ import MediQuo
 Next, as soon as we receive a notification from the system telling that our application is already active, we must configure the framework by providing the client's API key configuration:
 
 ```swift
-class func initialize(_ application: UIApplication = UIApplication.shared, with configuration: MediQuo.Configuration, options _: [UIApplication.LaunchOptionsKey: Any]?, completion: ((MediQuo.Result<MediQuoInstallationType>) -> Void)? = nil) -> UUID?
+class func initialize(_ application: UIApplication = UIApplication.shared, with configuration: MediQuo.Configuration, options _: [UIApplication.LaunchOptionsKey: Any]?, completion: ((MediQuoResult<MediQuoInstallationType>) -> Void)? = nil) -> UUID?
 ```
 
 Last method parameter defines asynchronous initialization result of type `MediQuoInstallationType`. It does return framework and installation information responding to the protocol:
@@ -141,7 +141,7 @@ Without the initialization process, subsequent calls to the library will trigger
 Authentication verifies that the provided user token is correct and, therefore, it can initiate the chat.
 
 ```swift
-MediQuo.authenticate(token: "token") { (result: MediQuo.Result<Void>) in
+MediQuo.authenticate(token: "token") { (result: MediQuoResult<Void>) in
         switch result {
         case .success:
         [...]
@@ -162,14 +162,14 @@ In the case of this example project you can find this snippet in class *ViewCont
 Once the authentication process is over, we can then request the pending messages to be read by the user using the following method:
 
 ```swift
-func unreadMessageCount(with filter: MediQuoFilterType, _ completion: @escaping (MediQuo.Result<Int>) -> Void) {
+func unreadMessageCount(with filter: MediQuoFilterType, _ completion: @escaping (MediQuoResult<Int>) -> Void) {
 ```
 
 So, once we get the result, we can update application badge icon:
 
 ```swift
 let filter = MediQuoFilter.default // returns unread messages from all categories
-MediQuo.unreadMessageCount(with: filter) { (result: MediQuo.Result<Int>) in
+MediQuo.unreadMessageCount(with: filter) { (result: MediQuoResult<Int>) in
     if let count = result.value {
         UIApplication.shared.applicationIconBadgeNumber = count
     }
@@ -184,7 +184,7 @@ Once we initialized the SDK and authenticated the user, we can retrieve the Medi
 public class func messengerViewController(with filter: MediQuoFilterType = 
     MediQuoFilter.default, showHeader: Bool = false, showDivider: Bool = true,
     onUpdateLayout listener: ((CGSize) -> Void)? = nil) ->
-    MediQuo.Result<UINavigationController>
+    MediQuoResult<UINavigationController>
 ```
 
 Method parameters have been overloaded with default values. So we can invoke the list of doctors by adding the following call:
@@ -212,7 +212,7 @@ The next included example shows how we could filter the list using two specialit
 
 ```swift
 let filter: MediQuoFilterType = MediQuoFilter(profiles: [.customerCare, .commercial], take: 2)
-let result: MediQuo.Result<UINavigationController> = MediQuo.messengerViewController(with: filter) { (contentSize: CGSize) in
+let result: MediQuoResult<UINavigationController> = MediQuo.messengerViewController(with: filter) { (contentSize: CGSize) in
     // do some stuff to resize layout
 }
 
@@ -368,7 +368,7 @@ let code: String = MediQuo.referrer
 A `shutdown` method exists so a chat user can disconnect and erase all sensible information:
 
 ```swift
-MediQuo.shutdown { (result: MediQuo.Result<Void>) in
+MediQuo.shutdown { (result: MediQuoResult<Void>) in
         switch result {
         case .success:
         [...]
@@ -387,7 +387,7 @@ First, you must `initialize` SDK previously to call this method. If you want to 
 A `logout` method delete all user cached data, including chat messages and professional list:
 
 ```swift
-MediQuo.logout { (result: MediQuo.Result<Void>) in
+MediQuo.logout { (result: MediQuoResult<Void>) in
         switch result {
         case .success:
         [...]
@@ -490,7 +490,7 @@ If you have Firebase notifications by certificates instead `Key Authorization` (
 func application(_ application: UIApplication, 
     didReceiveRemoteNotification userInfo: [AnyHashable : Any], 
     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        MediQuo.didReceiveRemoteNotification(application, with: userInfo) { (result: MediQuo.Result<UIBackgroundFetchResult>) in
+        MediQuo.didReceiveRemoteNotification(application, with: userInfo) { (result: MediQuoResult<UIBackgroundFetchResult>) in
             do {
                 completionHandler(try result.unwrap())
             } catch {
