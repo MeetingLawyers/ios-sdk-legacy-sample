@@ -11,6 +11,18 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 
 ## Table of contents
 
+#### 4.x Releases
+- `4.0.x` Releases - [4.0.0](#400) 
+
+#### 3.x Releases
+- `3.0.x` Releases - [3.0.7](#307) | [3.0.8](#308) | [3.0.9](#309) | [3.0.10](#3010) | [3.0.11](#3011)
+
+#### 2.x Releases
+- `2.0.x` Releases - [2.0.7](#207)
+
+#### 1.x Releases
+- `1.0.x` Releases - [1.0.7](#107)
+
 #### 0.x Releases
 - `0.15.x` Releases - [0.15.0](#0150) | [0.15.1](#0151) | [0.15.2](#0152) | [0.15.3](#0153) | [0.15.5](#0155)
 - `0.14.x` Releases - [0.14.0](#0140) | [0.14.1](#0141) | [0.14.2](#0141) | [0.14.3](#0141) | [0.14.4](#0141) | [0.14.5](#0141)
@@ -19,6 +31,61 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 - `0.11.x` Releases - [0.11.0](#0110)
 
 ---
+
+## 4.0.0
+Released 2020-04-27
+
+#### Added
+* Added Module stability support (support Xcode 11+)
+* Added block Videocall feature for forbidden users (when videocall is disabled for user)
+* Fix UI present feature when sdk uses VideoCall flow (iOS 13 issue)
+
+## 3.0.11
+Released 2020-04-07
+
+#### Added
+* Added Portuguese language
+
+## 3.0.10
+Released 2020-04.02
+
+#### Added
+* Added basque language
+
+###3.0.9
+Released 2020-03-27
+
+#### Added
+* Change VideoCall waiting screen text ("Danos unos instantes,\nahora verás en pantalla\nla llamada de tu médico...")
+
+## 3.0.8
+Released 2020-03-20
+
+#### Added
+* Fix inbox title
+* Fix refresh control behaviour in inbox screen
+
+## 3.0.7
+Released on 2020-03-5
+
+#### Added
+* Remove receiveFirstMessage, receive and receiveMessage from MediQuo class.(March 5, 2020)
+* Update RxSwift to fix UIWebView issue
+
+## 2.0.7
+Released on 2020-03-5
+
+#### Added
+* Remove receiveFirstMessage, receive and receiveMessage from MediQuo class.
+* Update RxSwift to fix UIWebView issue
+
+## 1.0.7
+Released on 2020-03-5
+
+#### Added
+* Remove receiveFirstMessage, receive and receiveMessage from MediQuo class
+* Update RxSwift to fix UIWebView issue
+
 
 ## 0.15.5
 Released on 2018-01-24.
