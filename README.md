@@ -27,6 +27,7 @@ Here are the steps to follow to include the MediQuo library to an iOS applicatio
 - [ Push notifications ](#Push-notifications)
 - [ Videocall ](#Videocall)
 - [Migration to 4.0](#Migration-to-4.0)
+- [Uploading app to AppStore](#Uploading-app-to-AppStore)
 
 
 ## Requirements
@@ -602,3 +603,7 @@ The properties that you need configure are these:
 # Migration to 4.0
 
 To migrate the SDK from versions 1.0.x, 2.0.x and 3.0.x to new version 4.0, yo must change all the references form `MediQuo.Result` to `MediQuoResult`
+
+# Uploading app to AppStore
+
+When you submit your app to AppStore you must mark the app uses IDFA identifier, then mark the options `Serve advertisements within the app`and `Attribute an action taken within this app to a previously servedadvertisement`. Finally you must select the checkbox at bottom of the page. Now you can submit your app.
