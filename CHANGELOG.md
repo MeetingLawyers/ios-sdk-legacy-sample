@@ -15,7 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 - `4.0.x` Releases - [4.0.0](#400) 
 
 #### 3.x Releases
-- `3.0.x` Releases - [3.0.7](#307) | [3.0.8](#308) | [3.0.9](#309) | [3.0.10](#3010) | [3.0.11](#3011)
+- `3.0.x` Releases - [3.0.7](#307) | [3.0.8](#308) | [3.0.9](#309) | [3.0.10](#3010) | [3.0.11](#3011) | [3.0.12](#3012)
 
 #### 2.x Releases
 - `2.0.x` Releases - [2.0.7](#207)
@@ -33,12 +33,18 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 ---
 
 ## 4.0.0
-Released 2020-04-27
+Released 2020-05-05
 
 #### Added
 * Added Module stability support (support Xcode 11+)
 * Added block Videocall feature for forbidden users (when videocall is disabled for user)
 * Fix UI present feature when sdk uses VideoCall flow (iOS 13 issue)
+
+## 3.0.11
+Released 2020-05-05
+
+#### Added
+* Added block Videocall feature for forbidden users (when videocall is disabled for user)
 
 ## 3.0.11
 Released 2020-04-07
