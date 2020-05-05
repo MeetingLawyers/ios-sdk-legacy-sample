@@ -37,7 +37,7 @@ Here are the steps to follow to include the MediQuo library to an iOS applicatio
 | 4.2       | 10.0 | 1.x.x | 11.0+   |
 | 5.0       | 10.2 | 2.x.x | 11.0+   |
 | 5.1       | 11, 11.1 | 3.x.x | 11.0+   |
-| 5.1       | 11+ | 4.x.x | 11.0+   |
+| 5.1       | 11+ | 4.x.x | 13.0+   |
 
 ## Instalation
 
