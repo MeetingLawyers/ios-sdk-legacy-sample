@@ -12,7 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 ## Table of contents
 
 #### 4.x Releases
-- `4.0.x` Releases - [4.0.0](#400) 
+- `4.0.x` Releases - [4.0.0](#400) | [4.0.1](#401)
 
 #### 3.x Releases
 - `3.0.x` Releases - [3.0.7](#307) | [3.0.8](#308) | [3.0.9](#309) | [3.0.10](#3010) | [3.0.11](#3011) | [3.0.12](#3012)
@@ -33,6 +33,29 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 ---
 
 ## 4.0.0
+Released 2020-05-15
+
+#### Added
+* Added isAuthenticated flag
+* Added deregister Push Token when integrator calls logout function
+* Added "user not loged" error when integrator tries to register the push notification
+
+## 3.0.13
+Released 2020-05-15
+
+#### Added
+* Added isAuthenticated flag
+* Added deregister Push Token when integrator calls logout function
+* Added "user not loged" error when integrator tries to register the push notification
+
+## 3.0.12
+Released 2020-05-05
+
+#### Added
+* Added block Videocall feature for forbidden users (when videocall is disabled for user)
+* Fix UI present feature when sdk uses VideoCall flow (iOS 13 issue)
+
+## 4.0.0
 Released 2020-05-05
 
 #### Added
@@ -41,7 +64,7 @@ Released 2020-05-05
 * Fix UI present feature when sdk uses VideoCall flow (iOS 13 issue)
 
 ## 3.0.11
-Released 2020-05-05
+Released 2020-04-05
 
 #### Added
 * Added block Videocall feature for forbidden users (when videocall is disabled for user)
