@@ -32,7 +32,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 
 ---
 
-## 4.0.0
+## 4.0.1
 Released 2020-05-15
 
 #### Added

@@ -60,6 +60,21 @@ And finally, we include the pod in the target of the project with the latest ver
 pod 'MediQuo'
 ```
 
+At the end of çPodfile, you must add the next lines:
+
+```ruby
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      if target.name == 'MessageKit'
+        config.build_settings['SWIFT_VERSION'] = '4.2'
+      end
+      config.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf' # avoid too many symbols
+    end
+  end
+end
+```
+
 ## Access permissions
 
 Access to camera or photo gallery always requires explicit permission from the user.
