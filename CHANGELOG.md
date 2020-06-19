@@ -12,10 +12,10 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 ## Table of contents
 
 #### 4.x Releases
-- `4.0.x` Releases - [4.0.0](#400) | [4.0.1](#401)
+- `4.0.x` Releases - [4.0.0](#400) | [4.0.1](#401) | [4.0.2](#402)
 
 #### 3.x Releases
-- `3.0.x` Releases - [3.0.7](#307) | [3.0.8](#308) | [3.0.9](#309) | [3.0.10](#3010) | [3.0.11](#3011) | [3.0.12](#3012)
+- `3.0.x` Releases - [3.0.7](#307) | [3.0.8](#308) | [3.0.9](#309) | [3.0.10](#3010) | [3.0.11](#3011) | [3.0.12](#3012) | [3.0.13](#3013) | [3.0.14](#3014)
 
 #### 2.x Releases
 - `2.0.x` Releases - [2.0.7](#207)
@@ -31,6 +31,21 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 - `0.11.x` Releases - [0.11.0](#0110)
 
 ---
+
+
+## 4.0.2
+Released 2020-06-19
+
+#### Added
+* Added methods to encrypt sensitive data
+* Remove cached request from backend
+
+## 3.0.14
+Released 2020-06-18
+
+#### Added
+* Added methods to encrypt sensitive data
+* Remove cached request from backend
 
 ## 4.0.1
 Released 2020-05-15
