@@ -26,7 +26,7 @@ Here are the steps to follow to include the MediQuo library to an iOS applicatio
 - [ Firebase configuration ](#Firebase-configuration)
 - [ Push notifications ](#Push-notifications)
 - [ Videocall ](#Videocall)
-- [Migration to 4.0](#Migration-to-4.0)
+- [Migration to 4.0 and 3.0.14+](#Migration-to-4.0-and-3.0.14+)
 - [Uploading app to AppStore](#Uploading-app-to-AppStore)
 
 
@@ -615,9 +615,9 @@ The properties that you need configure are these:
         }
 ````
 
-# Migration to 4.0
+# Migration to 4.0 and 3.0.14+
 
-To migrate the SDK from versions 1.0.x, 2.0.x and 3.0.x to new version 4.0, yo must change all the references form `MediQuo.Result` to `MediQuoResult`
+To migrate the SDK from versions 1.0.x, 2.0.x and prior 3.0.14 to new version 4.0 and 3.0.14+, yo must change all the references form `MediQuo.Result` to `MediQuoResult`
 
 # Uploading app to AppStore
 
