@@ -353,21 +353,23 @@ Using `MediQuoInboxCellStyle` builder you can configure doctor list look. You ca
 - `Overlay` color for unauthorized cells.
 - `Badge` color for pending messages for a conversation.
 - `Speciality`color for speciality color text.
+
+In versions 3.0.19 and 4.0.6 we introduce a new parameter `hideSchedule` to allow hide the schedule information of the professionals. If you use a prior version, please remove the `hideSchedule` parameter.
 Also you can choose cell style and can select `mediQuo` cell style or `classic` mediquo cell
 
 Usage for `mediquo` cell:
 ```swift
-MediQuo.style?.inboxCellStyle = .mediquo(overlay: .white, badge: .cyan, specyality: .magenta, specialityIcon: .yellow)
+MediQuo.style?.inboxCellStyle = .mediquo(overlay: .white, badge: .cyan, specyality: .magenta, specialityIcon: .yellow, hideSchedule: false)
 ```
 
 Usage for `classic` cell:
 ```swift
-MediQuo.style?.inboxCellStyle = .classic(overlay: .white, badge: .cyan, specyality: .magenta)
+MediQuo.style?.inboxCellStyle = .classic(overlay: .white, badge: .cyan, specyality: .magenta, hideSchedule: false)
 ```
 
 Usage for `complete` cell:
 ```swift
-MediQuo.style?.inboxCellStyle = .complete(overlay: .white, badge: .cyan, specyality: .magenta, specialityIcon: yellow, schedule: .cyan)
+MediQuo.style?.inboxCellStyle = .complete(overlay: .white, badge: .cyan, specyality: .magenta, specialityIcon: yellow, schedule: .cyan, hideSchedule: false)
 ```
 
 ## Referrer
