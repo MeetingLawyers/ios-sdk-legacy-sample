@@ -12,10 +12,10 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 ## Table of contents
 
 #### 4.x Releases
-- `4.0.x` Releases - [4.0.0](#400) | [4.0.1](#401) | [4.0.2](#402) | [4.0.3](#403) | [4.0.4](#404) | [4.0.5](#405) | [4.0.6](#406)
+- `4.0.x` Releases - [4.0.0](#400) | [4.0.1](#401) | [4.0.2](#402) | [4.0.3](#403) | [4.0.4](#404) | [4.0.5](#405) | [4.0.6](#406) 
 
 #### 3.x Releases
-- `3.0.x` Releases - [3.0.7](#307) | [3.0.8](#308) | [3.0.9](#309) | [3.0.10](#3010) | [3.0.11](#3011) | [3.0.12](#3012) | [3.0.13](#3013) | [3.0.14](#3014) | [3.0.15](#3015) | [3.0.16](#3016) | [3.0.17](#3017) | [3.0.18](#3018) | [3.0.19](#3019)
+- `3.0.x` Releases - [3.0.7](#307) | [3.0.8](#308) | [3.0.9](#309) | [3.0.10](#3010) | [3.0.11](#3011) | [3.0.12](#3012) | [3.0.13](#3013) | [3.0.14](#3014) | [3.0.15](#3015) | [3.0.16](#3016) | [3.0.17](#3017) | [3.0.18](#3018) | [3.0.19](#3019) | [3.0.20](#3020) | [3.0.21](#3021)
 
 #### 2.x Releases
 - `2.0.x` Releases - [2.0.7](#207)
@@ -31,6 +31,29 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 - `0.11.x` Releases - [0.11.0](#0110)
 
 ---
+
+## 4.0.7
+Released 2020-09-17
+
+#### Added
+* Added firebase token cache, now integrator don't need to resend firebase token after sdk authentication
+* Added new parameter video_call_1to1
+* Added My Documents section in Medical history
+* Added digital prescription
+
+## 3.0.21
+Released 2020-09-16
+
+#### Added
+* Added My Documents section in Medical history
+* Added digital prescription
+
+## 3.0.20
+Released 2020-09-04
+
+#### Added
+* Added firebase token cache, now integrator don't need to resend firebase token after sdk authentication
+* Added new parameter video_call_1to1
 
 ## 4.0.6
 Released 2020-08-17
