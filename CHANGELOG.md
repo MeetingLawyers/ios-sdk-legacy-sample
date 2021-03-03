@@ -32,31 +32,36 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 
 ---
  
-## 3.0.36: March 01, 2021
+## 3.0.36
+Released: March 01, 2021
 
 #### Added
  * Allow possibility to put custom literals on precall view
  * Allow possibility to put custom literals on recipe body/empty
  
-## 3.0.35: Feb 25, 2021
+## 3.0.35
+Released: Feb 25, 2021
 
 #### Added
  * Diseases cell image removed
  * Fix diseases date selection
  * Fix report cell textColor
  
-## 3.0.34: Feb 23, 2021
+## 3.0.34
+Released: Feb 23, 2021
 
 #### Added
  * Fix label counter
  * Remove SwiftyMarkdown
 
-## 3.0.33: Feb 22, 2021
+## 3.0.33
+Released: Feb 22, 2021
 
 #### Added
  * Fix no connection message on placeholder
 
-## 3.0.32: Feb 18, 2021
+## 3.0.32
+Released: Feb 18, 2021
 
 #### Added
  * Added NPS support
@@ -70,7 +75,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
  * disable send messages when no connection
  * Fix default date today inside Medical History
 
-## 4.0.8: Feb 2, 2021
+## 4.0.8
+Released: Feb 2, 2021
 
 #### Added
  * Fix English strings
@@ -101,44 +107,52 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
  * Allow possibility to put custom literals on precall view
  * Allow possibility to put custom literals on recipe body/empty
 
-### 3.0.31: Jan 15, 2021
+### 3.0.31
+Released: Jan 15, 2021
 
 #### Added
  * Fix socket WatchDog behaviour
  * Fix conversation options in iPad
  
-## 3.0.30: Dec 28, 2020
+## 3.0.30
+Released: Dec 28, 2020
  
 #### Added
  * Fix Portuguese strings
 
-## 3.0.29: Dec 18, 2020
+## 3.0.29
+Released: Dec 18, 2020
  
 #### Added
  * Update Dev certificate
 
-## 3.0.28: Dec 15, 2020
+## 3.0.28
+Released: Dec 15, 2020
  
 #### Added
  * Added flags to medical history
  * Added new specialty 'customerCareIsaludColectivos'
 
-## 3.0.27: Nov 24, 2020
+## 3.0.27
+Released: Nov 24, 2020
  
 #### Added
  * Added portuguese literals
 
-### 3.0.26: Nov 11, 2020
+### 3.0.26
+Released: Nov 11, 2020
 
 #### Added
  * Update Medical History Texts
 
-### 3.0.25: Oct 29, 2020
+### 3.0.25
+Released: Oct 29, 2020
 
 #### Added
 * Added Medical History Options parameter
 
-### 3.0.24: Oct 19, 2020
+### 3.0.24
+Released: Oct 19, 2020
 
 #### Added
  * Update message when professional is disconnected
