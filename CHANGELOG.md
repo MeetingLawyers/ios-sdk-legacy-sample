@@ -139,32 +139,32 @@ Released: Nov 24, 2020
 #### Added
  * Added portuguese literals
 
-### 3.0.26
+## 3.0.26
 Released: Nov 11, 2020
 
 #### Added
  * Update Medical History Texts
 
-### 3.0.25
+## 3.0.25
 Released: Oct 29, 2020
 
 #### Added
 * Added Medical History Options parameter
 
-### 3.0.24
+## 3.0.24
 Released: Oct 19, 2020
 
 #### Added
  * Update message when professional is disconnected
 
 
-### 3.0.23
+## 3.0.23
 Released: Oct 15, 2020
 
 #### Added
  * Fix English strings
 
-### 3.0.22
+## 3.0.22
 Released: Oct 15, 2020
 
 #### Added
