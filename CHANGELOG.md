@@ -107,7 +107,7 @@ Released: Feb 2, 2021
  * Allow possibility to put custom literals on precall view
  * Allow possibility to put custom literals on recipe body/empty
 
-### 3.0.31
+## 3.0.31
 Released: Jan 15, 2021
 
 #### Added
