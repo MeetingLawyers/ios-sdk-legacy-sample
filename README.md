@@ -32,12 +32,13 @@ Here are the steps to follow to include the MediQuo library to an iOS applicatio
 
 ## Requirements
 
-| **Swift** | **Xcode** |   **MediQuo**  | **iOS** |
-|-----------|-----------|----------------|---------|
-| 4.2       | 10.0 | 1.x.x | 11.0+   |
-| 5.0       | 10.2 | 2.x.x | 11.0+   |
-| 5.1       | 11, 11.1 | 3.x.x | 11.0+   |
-| 5.1       | 11+ | 4.x.x | 13.0+   |
+| **Swift** | **Xcode** |   **MediQuo**  | **iOS** | **Status** |
+|-----------|-----------|----------------|---------|------------|
+| 4.2       | 10.0 | 1.x.x | 11.0+ | <span style="color:red">Deprecated</span> |
+| 5.0       | 10.2 | 2.x.x | 11.0+ | <span style="color:red">Deprecated</span> |
+| 5.1       | 11, 11.1 | 3.0.x | 11.0+ | <span style="color:red">Deprecated</span> |
+| 5.1       | 11.x | 4.0.x | 13.0+ | <span style="color:red">Deprecated</span> |
+| 5.3       | 12.1 | 3.1.x | 11.0+ | <span style="color:green">Supported</span> |
 
 ## Instalation
 
@@ -50,7 +51,7 @@ pod repo add meetingdoctors https://bitbucket.org/meetingdoctors-team/cocoapods-
 Later, in the project 'Podfile' we have to add in the header the new pods origin, in addition to the default header of Cocoapods:
 
 ```ruby
-source 'https://bitbucket.org/meetingdoctors-team/cocoapods-specs.git'
+source 'https://cdn.cocoapods.org/'
 source 'https://github.com/CocoaPods/Specs.git'
 ```
 

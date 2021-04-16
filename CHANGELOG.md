@@ -17,6 +17,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 #### 3.x Releases
 - `3.0.x` Releases - [3.0.7](#307) | [3.0.8](#308) | [3.0.9](#309) | [3.0.10](#3010) | [3.0.11](#3011) | [3.0.12](#3012) | [3.0.13](#3013) | [3.0.14](#3014) | [3.0.15](#3015) | [3.0.16](#3016) | [3.0.17](#3017) | [3.0.18](#3018) | [3.0.19](#3019) | [3.0.20](#3020) | [3.0.21](#3021) | [3.0.22](#3022) | [3.0.23](#3023) | [3.0.24](#3024) | [3.0.25](#3025) | [3.0.26](#3026) | [3.0.27](#3027) | [3.0.28](#3028) | [3.0.29](#3029) | [3.0.30](#3030) | [3.0.31](#3031) | [3.0.32](#3032) | [3.0.33](#3033) | [3.0.34](#3034) | [3.0.35](#3035) | [3.0.36](#3036)
 
+- `3.1.x` Releases - [3.1.0](#310) | [3.1.1](#311)
+
 #### 2.x Releases
 - `2.0.x` Releases - [2.0.7](#207)
 
@@ -31,7 +33,100 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 - `0.11.x` Releases - [0.11.0](#0110)
 
 ---
- 
+
+## 3.1.1
+Released: April 12, 2021
+
+#### Added
+ * First update to JFrog
+
+## 3.1.0
+Released: March 8, 2021
+
+#### Added
+ * Added support to Xcode 12.1
+
+## 4.0.8
+Released: February 2, 2021
+
+#### Added
+* Fix English strings
+ * Update VideoCall and Prescription English strings
+ * Update message when professional is disconnected
+ * Added Medical History Options parameter
+ * Added portuguese literals
+ * Added flags to medical history
+ * Added new specialty 'customerCareIsaludColectivos'
+ * Update Dev certificate
+ * Fix socket WatchDog behaviour
+ * Fix conversation options in iPad
+ * Added recipe footer
+ * Removed Medical history watermark
+ * Fix status bar colors
+ * Update medical history icons
+ * fix conversation options in iPad
+ * update bundle from application 
+ * fix action sheet on main thread
+ * disable send messages when no connection
+ * Fix default date today inside Medical History
+ * Fix no connection message on placeholder
+ * Fix label counter
+ * Removed SwiftyMarkdown
+ * Diseases cell image removed
+ * Fix diseases date selection
+ * Fix report cell textColor
+ * Allow possibility to put custom literals on precall view
+ * Allow possibility to put custom literals on recipe body/empty
+ * Fix placeholder when paste more than 256 characters
+ * Fix medical history banner height in iPhoneSE
+ * Fix medical history - Referrals literal
+ * Fix medical history - appearance of allergies / diseases / medications deleted from another device
+ * Fix medical history labels to allow multiline
+ * Fix medical history tableview footer
+ * Fix videocall black screen
+ * Fix images sended resolution
+ * Fix chat input disappear bug
+
+
+## 3.0.42
+Released: March 30, 2021
+
+#### Added
+ * Fix images sended resolution
+ * Fix chat input disappear 
+
+## 3.0.41
+Released: March 29, 2021
+
+#### Added
+* Fix videocall black screen
+
+## 3.0.40
+Released: March 10, 2021
+
+#### Added
+* Fix medical history tableview footer
+
+## 3.0.39
+Released: March 09, 2021
+
+#### Added
+ * Fix medical history - Referrals literal
+ * Fix medical history - appearance of allergies / diseases / medications deleted from another device
+ * Fix medical history labels to allow multiline
+
+## 3.0.38
+Released: March 05, 2021
+
+#### Added
+* Fix medical history banner height in iPhoneSE
+
+## 3.0.37
+Released: March 03, 2021
+
+#### Added
+* Fix placeholder when paste more than 256 characters
+
 ## 3.0.36
 Released: March 01, 2021
 
