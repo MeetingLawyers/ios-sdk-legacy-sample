@@ -34,11 +34,11 @@ Here are the steps to follow to include the MediQuo library to an iOS applicatio
 
 | **Swift** | **Xcode** |   **MediQuo**  | **iOS** | **Status** |
 |-----------|-----------|----------------|---------|------------|
-| 4.2       | 10.0 | 1.x.x | 11.0+ | <span style="color:red">Deprecated</span> |
-| 5.0       | 10.2 | 2.x.x | 11.0+ | <span style="color:red">Deprecated</span> |
-| 5.1       | 11, 11.1 | 3.0.x | 11.0+ | <span style="color:red">Deprecated</span> |
-| 5.1       | 11.x | 4.0.x | 13.0+ | <span style="color:red">Deprecated</span> |
-| 5.3       | 12.1 | 3.1.x | 11.0+ | <span style="color:green">Supported</span> |
+| 4.2       | 10.0 | 1.x.x | 11.0+ | {color:#FF0000}Deprecated{color} |
+| 5.0       | 10.2 | 2.x.x | 11.0+ | {color:#FF0000}Deprecated{color} |
+| 5.1       | 11, 11.1 | 3.0.x | 11.0+ | {color:#FF0000}Deprecated{color} |
+| 5.1       | 11.x | 4.0.x | 13.0+ | {color:#FF0000}Deprecated{color} |
+| 5.3       | 12.1 | 3.1.x | 11.0+ | {color:#00FF00}Supported{color} |
 
 ## Instalation
 
