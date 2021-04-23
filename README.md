@@ -52,7 +52,6 @@ Later, in the project 'Podfile' we have to add in the header the new pods origin
 
 ```ruby
 source 'https://cdn.cocoapods.org/'
-source 'https://github.com/CocoaPods/Specs.git'
 ```
 
 And finally, we include the pod in the target of the project with the latest version:
