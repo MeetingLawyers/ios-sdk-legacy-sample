@@ -4,7 +4,7 @@ platform :ios, '11.0'
 use_frameworks!
 
 def shared_pods
-    pod 'MediQuo'
+    pod 'MediQuo', '3.1.1'
 end
 
 target 'Mediquo Swift Example App' do
@@ -24,6 +24,11 @@ post_install do |installer|
     target.build_configurations.each do |config|
       if target.name == 'MessageKit'
         config.build_settings['SWIFT_VERSION'] = '4.2'
+      end
+      config.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf' # avoid too many symbols
+      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+      if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].include? "8"
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = "9.0"
       end
     end
   end
