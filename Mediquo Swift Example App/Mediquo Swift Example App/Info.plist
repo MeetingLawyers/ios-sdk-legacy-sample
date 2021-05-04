@@ -30,6 +30,8 @@
 	<string>#NSCameraUsageDescription</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>#NSPhotoLibraryUsageDescription</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Send push notifications</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
