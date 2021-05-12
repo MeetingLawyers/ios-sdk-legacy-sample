@@ -3,6 +3,8 @@
 //
 
 import MediQuo
+import AppTrackingTransparency
+import AdSupport
 
 class ViewController: UIViewController {
     @IBOutlet weak var welcomeTitleLabel: UILabel!
@@ -14,6 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         prepareUI()
+        requestPermission()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -112,4 +115,66 @@ class ViewController: UIViewController {
     private func doLogout() {
         MediQuo.shutdown { _ in self.isAuthenticated = false }
     }
+    
+    //NEWLY ADDED PERMISSIONS FOR iOS 14
+    func oldRequestPermission() {
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { status in
+                switch status {
+                case .authorized:
+                    // Tracking authorization dialog was shown
+                    // and we are authorized
+                    print("Authorized")
+                    
+                    // Now that we are authorized we can get the IDFA
+                    print(ASIdentifierManager.shared().advertisingIdentifier)
+                case .denied:
+                    // Tracking authorization dialog was
+                    // shown and permission is denied
+                    print("Denied")
+                case .notDetermined:
+                    // Tracking authorization dialog has not been shown
+                    print("Not Determined")
+                case .restricted:
+                    print("Restricted")
+                @unknown default:
+                    print("Unknown")
+                }
+            }
+        }
+    }
+
+    func requestPermission() {
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { status in
+                DispatchQueue.main.async {
+                    switch status {
+                    case .authorized:
+                        // Authorized
+                        let idfa = ASIdentifierManager.shared().advertisingIdentifier
+                        print(idfa.uuidString)
+                    case .denied,
+                         .notDetermined,
+                         .restricted:
+                        break
+                    @unknown default:
+                        break
+                    }
+                }
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+    
+    func gotoAppPrivacySettings() {
+        guard let url = URL(string: UIApplication.openSettingsURLString),
+            UIApplication.shared.canOpenURL(url) else {
+                assertionFailure("Not able to open App privacy settings")
+                return
+        }
+
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
 }
+
