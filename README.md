@@ -52,6 +52,7 @@ Later, in the project 'Podfile' we have to add in the header the new pods origin
 
 ```ruby
 source 'https://cdn.cocoapods.org/'
+source 'https://bitbucket.org/meetingdoctors-team/cocoapods-specs.git'
 ```
 
 And finally, we include the pod in the target of the project with the latest version:
@@ -70,6 +71,7 @@ post_install do |installer|
         config.build_settings['SWIFT_VERSION'] = '4.2'
       end
       config.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf' # avoid too many symbols
+      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
     end
   end
 end
