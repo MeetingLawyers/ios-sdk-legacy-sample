@@ -125,8 +125,8 @@ public struct Configuration {
     public let id: String
     // Chat Api key
     public let secret: String
-    // If is `true`, SDK will be comunicate with sandbox environment. Otherwise interact with Production environment. By default es `false`
-    public let isDemo: Bool
+    // If is `.development`, SDK will be comunicate with sandbox environment. if is `.production` interact with Production environment. Finally if value is `.staging` SDK wil be comunicate with staging environment. By default is `.production`
+    public let environment: MediQuoCore.EnvironmentType
     // videocall apiKey, if is nil, videocall feature is disabled.
     public let videoCallApiKey: String?
     // call sound for videocall screen when professional is calling. File name must be the same for call notification.
@@ -134,6 +134,7 @@ public struct Configuration {
 }
 ```
 
+In prior versions 3.1.1 or less the `environment`parameter called isDemo, and this value was `true` to comunicate against sandbox environment and `false` to comunicate against production environment.
 
 Initialization returns an optional (`@discardableResult`) synchronous installation identifier that will only be valid after `initialize` call has succeeded once:
 
@@ -215,6 +216,26 @@ if let wrapController = result.value {
 }
 [...]
 ```
+
+## Medical History view controller
+
+Once we initialized the SDK and authenticated the user, we can retrieve the MediQuo UI using the following method:
+
+```swift
+public class func medicalHistoryViewController() -> MediQuoResult<UIViewController>
+```
+
+So we can invoke the medical history by adding the following call:
+
+```swift
+[...]
+let result = MediQuo.medicalHistoryViewController()
+if let wrapController = result.value {
+// do some stuff
+}
+[...]
+```
+
 
 ### Filtered contact list
 

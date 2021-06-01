@@ -17,7 +17,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 #### 3.x Releases
 - `3.0.x` Releases - [3.0.7](#307) | [3.0.8](#308) | [3.0.9](#309) | [3.0.10](#3010) | [3.0.11](#3011) | [3.0.12](#3012) | [3.0.13](#3013) | [3.0.14](#3014) | [3.0.15](#3015) | [3.0.16](#3016) | [3.0.17](#3017) | [3.0.18](#3018) | [3.0.19](#3019) | [3.0.20](#3020) | [3.0.21](#3021) | [3.0.22](#3022) | [3.0.23](#3023) | [3.0.24](#3024) | [3.0.25](#3025) | [3.0.26](#3026) | [3.0.27](#3027) | [3.0.28](#3028) | [3.0.29](#3029) | [3.0.30](#3030) | [3.0.31](#3031) | [3.0.32](#3032) | [3.0.33](#3033) | [3.0.34](#3034) | [3.0.35](#3035) | [3.0.36](#3036)
 
-- `3.1.x` Releases - [3.1.0](#310) | [3.1.1](#311)
+- `3.1.x` Releases - [3.1.0](#310) | [3.1.1](#311) | [3.1.2](#312) | [3.1.3](#313) | [3.1.4](#314)
 
 #### 2.x Releases
 - `2.0.x` Releases - [2.0.7](#207)
@@ -33,6 +33,25 @@ This project adheres to [Semantic Versioning](http://semver.org/) starting from 
 - `0.11.x` Releases - [0.11.0](#0110)
 
 ---
+
+## 3.1.4
+Released: May 18, 2021
+
+#### Added
+ * Update keychain get/set password to restore it when user unlock device for first time
+
+## 3.1.3
+Released: May 17, 2021
+
+#### Added
+ * Update OpenTok to 2.19.1
+
+## 3.1.2
+Released: May 14, 2021
+
+#### Added
+ * Apply full fixing to videocall workflow
+ * Added support to Staging
 
 ## 3.1.1
 Released: April 12, 2021
