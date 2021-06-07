@@ -4,6 +4,13 @@
 
 import MediQuo
 import MediQuoCore
+import class MediQuo.MediQuo
+
+import MeetingLawyersSDK
+import MeetingLawyersCore
+
+typealias MDMediquo = MediQuo
+typealias MLMediquo = MeetingLawyersSDK.MediQuo
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -12,10 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        if let clientName: String = MediQuo.getClientName(),
-            let clientSecret: String = MediQuo.getClientSecret() {
-            let configuration = MediQuo.Configuration(id: clientName, secret: clientSecret, isDemo: true)
-            let uuid: UUID? = MediQuo.initialize(with: configuration, options: launchOptions) {  result in
+        if let clientName: String = MDMediquo.getClientName(),
+           let clientSecret: String = MDMediquo.getClientSecret() {
+            let configuration = MDMediquo.Configuration(id: clientName, secret: clientSecret, environment: .development)
+            let uuid: UUID? = MDMediquo.initialize(with: configuration, options: launchOptions) {  result in
                 guard let value = result.value else {
                     NSLog("[AppDelegate] Installation failed: '\(String(describing: result.error))'")
                     return
@@ -24,6 +31,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             NSLog("[AppDelegate] Synchronous installation identifier: '\(uuid?.uuidString ?? "no uuid")'")
         }
+        
+//        // Override point for customization after application launch.
+//        if let clientName: String = MLMediquo.getClientName(),
+//           let clientSecret: String = MLMediquo.getClientSecret() {
+//            let configuration = MLMediquo.Configuration(id: clientName, secret: clientSecret, environment: .development)
+//            let uuid: UUID? = MLMediquo.initialize(with: configuration, options: launchOptions) {  result in
+//                guard let value = result.value else {
+//                    NSLog("[AppDelegate] Installation failed: '\(String(describing: result.error))'")
+//                    return
+//                }
+//                NSLog("[AppDelegate] Mediquo framework initialization succeeded with identifier: '\(value.installationId)'")
+//            }
+//            NSLog("[AppDelegate] Synchronous installation identifier: '\(uuid?.uuidString ?? "no uuid")'")
+//        }
         return true
     }
 
