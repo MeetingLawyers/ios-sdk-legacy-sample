@@ -8,17 +8,17 @@
 
 import MeetingLawyersSDK
 
-extension MediQuo {
+extension MLMediQuo {
     
     internal static func getUserToken() -> String {
-        return "manel.roca@meetinglawyers.com"
+        return <#your demo user token#>
     }
 
     internal static func getClientName() -> String? {
-        return "MeetingLawyers"
+        return <#your company name#>
     }
 
     internal static func getClientSecret() -> String? {
-        return  "GZLtGkT8AX7puX9G"
+        return  <#your API Key#>
     }
 }

@@ -2,4 +2,5 @@
   Copyright © 2017 Edgar Paz Moreno. All rights reserved.
 */
 "main.welcome.text" = "Welcome to MediQuo demo.\nTap on the button to continue";
-"main.button.text" = "Open chat";
+"main.button.text" = "Open MD chat";
+"main.button.mltext" = "Open ML chat";

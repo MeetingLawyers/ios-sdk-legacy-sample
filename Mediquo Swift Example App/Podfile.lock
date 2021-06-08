@@ -17,15 +17,15 @@ PODS:
   - CryptoSwift (1.4.0)
   - Device (3.1.2)
   - Differentiator (4.0.1)
-  - MediQuo (0.0.3-alpha3):
+  - MediQuo (3.1.4):
     - AlamofireImage (= 3.6.0)
     - Device (= 3.1.2)
-    - MediQuo-Controller (= 0.0.3-alpha3)
-    - MediQuo-Core (= 0.0.3-alpha3)
-    - MediQuo-Remote (= 0.0.3-alpha3)
-    - MediQuo-Schema (= 0.0.3-alpha3)
-    - MediQuo-Socket (= 0.0.3-alpha3)
-    - MediQuo-Storage (= 0.0.3-alpha3)
+    - MediQuo-Controller (= 3.1.4)
+    - MediQuo-Core (= 3.1.4)
+    - MediQuo-Remote (= 3.1.4)
+    - MediQuo-Schema (= 3.1.4)
+    - MediQuo-Socket (= 3.1.4)
+    - MediQuo-Storage (= 3.1.4)
     - MessageKit (= 2.0.0)
     - OpenTok (= 2.19.1)
     - R.swift (= 5.1.0)
@@ -35,73 +35,73 @@ PODS:
     - Swinject (= 2.6.0)
     - SwinjectStoryboard (= 2.2.0)
     - SwipeCellKit (= 2.5.4)
-  - MediQuo-Controller (0.0.3-alpha3):
+  - MediQuo-Controller (3.1.4):
     - AWSMobileClient (= 2.16.0)
     - AWSS3 (= 2.16.0)
-    - MediQuo-Core (= 0.0.3-alpha3)
-    - MediQuo-Schema (= 0.0.3-alpha3)
+    - MediQuo-Core (= 3.1.4)
+    - MediQuo-Schema (= 3.1.4)
     - RxBlocking (= 5.1.0)
     - RxSwift (= 5.1.0)
     - SwiftDate (= 4.5.1)
-  - MediQuo-Core (0.0.3-alpha3):
+  - MediQuo-Core (3.1.4):
     - CryptoSwift (~> 1.0)
-  - MediQuo-Remote (0.0.3-alpha3):
+  - MediQuo-Remote (3.1.4):
     - Alamofire (= 4.9.1)
     - AlamofireImage (= 3.6.0)
-    - MediQuo-Controller (= 0.0.3-alpha3)
-    - MediQuo-Core (= 0.0.3-alpha3)
-    - MediQuo-Schema (= 0.0.3-alpha3)
-  - MediQuo-Schema (0.0.3-alpha3):
-    - MediQuo-Core (= 0.0.3-alpha3)
-  - MediQuo-Socket (0.0.3-alpha3):
-    - MediQuo-Controller (= 0.0.3-alpha3)
-    - MediQuo-Core (= 0.0.3-alpha3)
-    - MediQuo-Schema (= 0.0.3-alpha3)
+    - MediQuo-Controller (= 3.1.4)
+    - MediQuo-Core (= 3.1.4)
+    - MediQuo-Schema (= 3.1.4)
+  - MediQuo-Schema (3.1.4):
+    - MediQuo-Core (= 3.1.4)
+  - MediQuo-Socket (3.1.4):
+    - MediQuo-Controller (= 3.1.4)
+    - MediQuo-Core (= 3.1.4)
+    - MediQuo-Schema (= 3.1.4)
     - Socket.IO-Client-Swift (= 15.2.0)
-  - MediQuo-Storage (0.0.3-alpha3):
-    - MediQuo-Controller (= 0.0.3-alpha3)
-    - MediQuo-Core (= 0.0.3-alpha3)
-    - MediQuo-Schema (= 0.0.3-alpha3)
-    - MediQuo-Socket (= 0.0.3-alpha3)
+  - MediQuo-Storage (3.1.4):
+    - MediQuo-Controller (= 3.1.4)
+    - MediQuo-Core (= 3.1.4)
+    - MediQuo-Schema (= 3.1.4)
+    - MediQuo-Socket (= 3.1.4)
     - RealmSwift (= 10.1.2)
-  - MeetingLawyers-Controller (0.0.3-alpha6):
+  - MeetingLawyers-Controller (0.0.3-alpha8):
     - AWSMobileClient (= 2.16.0)
     - AWSS3 (= 2.16.0)
-    - MeetingLawyers-Core (= 0.0.3-alpha6)
-    - MeetingLawyers-Schema (= 0.0.3-alpha6)
+    - MeetingLawyers-Core (= 0.0.3-alpha8)
+    - MeetingLawyers-Schema (= 0.0.3-alpha8)
     - RxBlocking (= 5.1.0)
     - RxSwift (= 5.1.0)
     - SwiftDate (= 4.5.1)
-  - MeetingLawyers-Core (0.0.3-alpha6):
+  - MeetingLawyers-Core (0.0.3-alpha8):
     - CryptoSwift (~> 1.0)
-  - MeetingLawyers-Remote (0.0.3-alpha6):
+  - MeetingLawyers-Remote (0.0.3-alpha8):
     - Alamofire (= 4.9.1)
     - AlamofireImage (= 3.6.0)
-    - MeetingLawyers-Controller (= 0.0.3-alpha6)
-    - MeetingLawyers-Core (= 0.0.3-alpha6)
-    - MeetingLawyers-Schema (= 0.0.3-alpha6)
-  - MeetingLawyers-Schema (0.0.3-alpha6):
-    - MeetingLawyers-Core (= 0.0.3-alpha6)
-  - MeetingLawyers-Socket (0.0.3-alpha6):
-    - MeetingLawyers-Controller (= 0.0.3-alpha6)
-    - MeetingLawyers-Core (= 0.0.3-alpha6)
-    - MeetingLawyers-Schema (= 0.0.3-alpha6)
+    - MeetingLawyers-Controller (= 0.0.3-alpha8)
+    - MeetingLawyers-Core (= 0.0.3-alpha8)
+    - MeetingLawyers-Schema (= 0.0.3-alpha8)
+  - MeetingLawyers-Schema (0.0.3-alpha8):
+    - MeetingLawyers-Core (= 0.0.3-alpha8)
+  - MeetingLawyers-Socket (0.0.3-alpha8):
+    - MeetingLawyers-Controller (= 0.0.3-alpha8)
+    - MeetingLawyers-Core (= 0.0.3-alpha8)
+    - MeetingLawyers-Schema (= 0.0.3-alpha8)
     - Socket.IO-Client-Swift (= 15.2.0)
-  - MeetingLawyers-Storage (0.0.3-alpha6):
-    - MeetingLawyers-Controller (= 0.0.3-alpha6)
-    - MeetingLawyers-Core (= 0.0.3-alpha6)
-    - MeetingLawyers-Schema (= 0.0.3-alpha6)
-    - MeetingLawyers-Socket (= 0.0.3-alpha6)
+  - MeetingLawyers-Storage (0.0.3-alpha8):
+    - MeetingLawyers-Controller (= 0.0.3-alpha8)
+    - MeetingLawyers-Core (= 0.0.3-alpha8)
+    - MeetingLawyers-Schema (= 0.0.3-alpha8)
+    - MeetingLawyers-Socket (= 0.0.3-alpha8)
     - RealmSwift (= 10.1.2)
-  - MeetingLawyersSDK (0.0.3-alpha6):
+  - MeetingLawyersSDK (0.0.3-alpha8):
     - AlamofireImage (= 3.6.0)
     - Device (= 3.1.2)
-    - MeetingLawyers-Controller (= 0.0.3-alpha6)
-    - MeetingLawyers-Core (= 0.0.3-alpha6)
-    - MeetingLawyers-Remote (= 0.0.3-alpha6)
-    - MeetingLawyers-Schema (= 0.0.3-alpha6)
-    - MeetingLawyers-Socket (= 0.0.3-alpha6)
-    - MeetingLawyers-Storage (= 0.0.3-alpha6)
+    - MeetingLawyers-Controller (= 0.0.3-alpha8)
+    - MeetingLawyers-Core (= 0.0.3-alpha8)
+    - MeetingLawyers-Remote (= 0.0.3-alpha8)
+    - MeetingLawyers-Schema (= 0.0.3-alpha8)
+    - MeetingLawyers-Socket (= 0.0.3-alpha8)
+    - MeetingLawyers-Storage (= 0.0.3-alpha8)
     - MessageKit (= 2.0.0)
     - OpenTok (= 2.19.1)
     - R.swift (= 5.1.0)
@@ -148,11 +148,11 @@ PODS:
   - SwipeCellKit (2.5.4)
 
 DEPENDENCIES:
-  - MediQuo (~> 0.0.3-alpha)
+  - MediQuo (~> 3.1.1)
   - MeetingLawyersSDK (~> 0.0.3-alpha)
 
 SPEC REPOS:
-  https://bitbucket.org/meetinglawyers/ios-cocoapods-specs.git:
+  https://bitbucket.org/meetingdoctors-team/cocoapods-specs.git:
     - MediQuo
     - MediQuo-Controller
     - MediQuo-Core
@@ -160,6 +160,7 @@ SPEC REPOS:
     - MediQuo-Schema
     - MediQuo-Socket
     - MediQuo-Storage
+  https://bitbucket.org/meetinglawyers/ios-cocoapods-specs.git:
     - MeetingLawyers-Controller
     - MeetingLawyers-Core
     - MeetingLawyers-Remote
@@ -211,20 +212,20 @@ SPEC CHECKSUMS:
   CryptoSwift: 7cc902df1784de3b389a387756c7d710f197730c
   Device: 62242076214c30fb5760174b3601cefafa70a481
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
-  MediQuo: e87dba23cbd1aa25d41405d5b40692160431b9bd
-  MediQuo-Controller: cada3c9d16ebd2f36b735375683b420a7eb7a04d
-  MediQuo-Core: 597bee33ff9cd9d5a16b204876edf1b5df3cf82d
-  MediQuo-Remote: 425e4c7767195ee18c5ef9b2130d1a46a18596d2
-  MediQuo-Schema: 8fb01d6a43bcba9042d6a8871634bc944b9d32d2
-  MediQuo-Socket: bc8b6f92bff9634f6bb8334460cdd9a8889d7cb6
-  MediQuo-Storage: 52ec993f41d2b47bba1523b2123d640e1316e20d
-  MeetingLawyers-Controller: 012613d10550804ecdcb8b0f1214a3b11b5bb257
-  MeetingLawyers-Core: d6e94d2b80681fb23461871aeb8cb11984cf18fe
-  MeetingLawyers-Remote: 5054d1e8b063b88764629e097f4843930b6c6685
-  MeetingLawyers-Schema: 36c7c9f6952b99c552511b470e1703fb3f67927e
-  MeetingLawyers-Socket: 53f310f5be5e7acfb8416e013eb6dfe942ee2e9e
-  MeetingLawyers-Storage: 1796ad2f094064b2bb0fbcbe710d4c209529c4d8
-  MeetingLawyersSDK: 5a67583ad4d0827661b1198e8f82702bd0dcdcf3
+  MediQuo: dc014ecb2bbc85f2095b8850d7dbff7c896b1f3d
+  MediQuo-Controller: 479bb6134d07605bfc72365dc2fb8a892ef2a9a6
+  MediQuo-Core: b0c945289eb2b2083d6f2295505764de73e8f842
+  MediQuo-Remote: 64ce34cd1ea0d68a5627ef749810cc750bd48e3e
+  MediQuo-Schema: 28c93eca25f54a6c4450c6de78240edeb68b0fff
+  MediQuo-Socket: 5ae87fb7c2b54c675de68ca95c96d7a9cc19bedc
+  MediQuo-Storage: c938a741a28c8cdd320ae065abdf378520d961c6
+  MeetingLawyers-Controller: 120d2f60a42b1463415e6fc36a71d3ec37050192
+  MeetingLawyers-Core: e6e81b7be47586ec5d7fef9e7ee42faf0e409f37
+  MeetingLawyers-Remote: aaa68f4f5f657fa5c14107c3808f7339ff146f4e
+  MeetingLawyers-Schema: 75b685ce0ad935a4140d99be630307334d6c3184
+  MeetingLawyers-Socket: 8994ee86fecb46928e93190362d080dbdbdd3fc7
+  MeetingLawyers-Storage: ce6ae6a689b6704a97d58fd6fa546be09f7cc4ad
+  MeetingLawyersSDK: d76ec3624fe9ff9f1d050ad342eb2a493d68bced
   MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
   MessageKit: 29c1c87e5a396d2ca7a3f712e5171dc9aba42a1e
   OpenTok: 0c4b4f336462ed5e2aa18b9868eed971f922a09f
@@ -245,6 +246,6 @@ SPEC CHECKSUMS:
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
   SwipeCellKit: 4eada3884ab1bbae5e8d2fb9030c242aa23d7f42
 
-PODFILE CHECKSUM: 9470b369937ca56bc56018f91e39acca84e9de24
+PODFILE CHECKSUM: 0bcef2375ddec3084387ef5c12cc32330de70d33
 
 COCOAPODS: 1.10.1

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,19 +16,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zu-Zq-kPf">
-                                <rect key="frame" x="154.5" y="298" width="66" height="91"/>
+                                <rect key="frame" x="154.5" y="268.5" width="66" height="130.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ck4-4f-363">
-                                        <rect key="frame" x="10" y="10" width="46" height="21"/>
+                                        <rect key="frame" x="10" y="10" width="46" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DR0-SQ-NJh">
-                                        <rect key="frame" x="10" y="51" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DR0-SQ-NJh">
+                                        <rect key="frame" x="10" y="50.5" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="openChatAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LOG-bu-DKY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SO0-MQ-dSd" userLabel="Open ChatML Button">
+                                        <rect key="frame" x="10" y="90.5" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="openMLChatAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QLY-1a-juD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -41,12 +45,16 @@
                                     <constraint firstItem="DR0-SQ-NJh" firstAttribute="leading" secondItem="8zu-Zq-kPf" secondAttribute="leading" constant="10" id="DlX-An-iVx"/>
                                     <constraint firstAttribute="trailing" secondItem="ck4-4f-363" secondAttribute="trailing" constant="10" id="G2Y-pf-MbH"/>
                                     <constraint firstItem="ck4-4f-363" firstAttribute="leading" secondItem="8zu-Zq-kPf" secondAttribute="leading" constant="10" id="Xbn-My-qaU"/>
-                                    <constraint firstAttribute="bottom" secondItem="DR0-SQ-NJh" secondAttribute="bottom" constant="10" id="dIL-PN-9nL"/>
+                                    <constraint firstItem="SO0-MQ-dSd" firstAttribute="leading" secondItem="8zu-Zq-kPf" secondAttribute="leading" constant="10" id="YRD-D9-bPE"/>
                                     <constraint firstItem="DR0-SQ-NJh" firstAttribute="top" secondItem="ck4-4f-363" secondAttribute="bottom" constant="20" id="fYf-vV-07Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="SO0-MQ-dSd" secondAttribute="trailing" constant="10" id="fb4-ph-Jwk"/>
+                                    <constraint firstItem="SO0-MQ-dSd" firstAttribute="top" secondItem="DR0-SQ-NJh" secondAttribute="bottom" constant="10" id="j7W-Av-lRl"/>
+                                    <constraint firstAttribute="bottom" secondItem="SO0-MQ-dSd" secondAttribute="bottom" constant="10" id="jo1-bI-Edg"/>
                                     <constraint firstAttribute="trailing" secondItem="DR0-SQ-NJh" secondAttribute="trailing" constant="10" id="zLf-LH-kMf"/>
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8zu-Zq-kPf" secondAttribute="trailing" constant="10" id="EiO-pX-drx"/>
@@ -54,15 +62,16 @@
                             <constraint firstItem="8zu-Zq-kPf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="R9N-V7-dD2"/>
                             <constraint firstItem="8zu-Zq-kPf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ord-Ex-5G6"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="openChatButton" destination="DR0-SQ-NJh" id="MWX-GU-AtH"/>
+                        <outlet property="openChatMLButton" destination="SO0-MQ-dSd" id="oes-bb-gbg"/>
                         <outlet property="welcomeTitleLabel" destination="ck4-4f-363" id="gVG-dj-cuZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-295" y="14"/>
         </scene>
     </scenes>
 </document>

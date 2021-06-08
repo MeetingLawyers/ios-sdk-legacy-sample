@@ -5,11 +5,14 @@
 import MediQuo
 import AppTrackingTransparency
 import AdSupport
+import MeetingLawyersSDK
+
 
 class ViewController: UIViewController {
     @IBOutlet weak var welcomeTitleLabel: UILabel!
     @IBOutlet weak var openChatButton: UIButton!
-
+    @IBOutlet weak var openChatMLButton: UIButton!
+    
     private var isAuthenticated: Bool = false
 
     override func viewDidLoad() {
@@ -21,9 +24,14 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if var style = MediQuo.style {
+        if var style = MDMediquo.style {
             style.rootLeftBarButtonItem = buildFingerPrintButtonItem()
-            MediQuo.style = style
+            MDMediquo.style = style
+        }
+        
+        if var style = MLMediQuo.style {
+            style.rootLeftBarButtonItem = buildFingerPrintButtonItem()
+            MLMediQuo.style = style
         }
     }
 
@@ -36,6 +44,15 @@ class ViewController: UIViewController {
         })
     }
 
+    @IBAction func openMLChatAction(_ sender: Any) {
+        doMLLogin(completion: { isSuccess in
+            if isSuccess {
+                self.unreadMLMessageCount()
+                self.presentML()
+            }
+        })
+    }
+    
     private func prepareUI() {
         setTexts()
         configureStyle()
@@ -44,17 +61,28 @@ class ViewController: UIViewController {
     private func setTexts() {
         self.welcomeTitleLabel.text = R.string.localizable.mainWelcomeText()
         self.openChatButton.setTitle(R.string.localizable.mainButtonText(), for: .normal)
+        self.openChatMLButton.setTitle(R.string.localizable.mainButtonMltext(), for: .normal)
     }
     
     private func configureStyle() {
-        if var style = MediQuo.style {
+        if var style = MDMediquo.style {
             style.navigationBarColor = UIColor(red: 84 / 255, green: 24 / 255, blue: 172 / 255, alpha: 1)
             style.accentTintColor = UIColor(red: 0, green: 244 / 255, blue: 187 / 255, alpha: 1)
             style.preferredStatusBarStyle = .lightContent
             style.navigationBarTintColor = .white
             style.navigationBarOpaque = true
             style.titleColor = .white
-            MediQuo.style = style
+            MDMediquo.style = style
+        }
+        
+        if var style = MLMediQuo.style {
+            style.navigationBarColor = UIColor(red: 84 / 255, green: 24 / 255, blue: 172 / 255, alpha: 1)
+            style.accentTintColor = UIColor(red: 0, green: 244 / 255, blue: 187 / 255, alpha: 1)
+            style.preferredStatusBarStyle = .lightContent
+            style.navigationBarTintColor = .white
+            style.navigationBarOpaque = true
+            style.titleColor = .white
+            MLMediQuo.style = style
         }
     }
 
@@ -67,7 +95,16 @@ class ViewController: UIViewController {
     }
 
     private func unreadMessageCount() {
-        MediQuo.unreadMessageCount {
+        MDMediquo.unreadMessageCount {
+            if let count = $0.value {
+                UIApplication.shared.applicationIconBadgeNumber = count
+                NSLog("[LaunchScreenViewController] Pending messages to read '\(count)'")
+            }
+        }
+    }
+    
+    private func unreadMLMessageCount() {
+        MLMediQuo.unreadMessageCount {
             if let count = $0.value {
                 UIApplication.shared.applicationIconBadgeNumber = count
                 NSLog("[LaunchScreenViewController] Pending messages to read '\(count)'")
@@ -76,7 +113,16 @@ class ViewController: UIViewController {
     }
 
     private func present() {
-        let messengerResult = MediQuo.messengerViewController()
+        let messengerResult = MDMediquo.messengerViewController()
+        if let controller: UINavigationController = messengerResult.value {
+            self.present(controller, animated: true)
+        } else {
+            NSLog("[ViewController] Failed to instantiate messenger with error '\(String(describing: messengerResult.error))'")
+        }
+    }
+    
+    private func presentML() {
+        let messengerResult = MLMediQuo.messengerViewController()
         if let controller: UINavigationController = messengerResult.value {
             self.present(controller, animated: true)
         } else {
@@ -90,7 +136,7 @@ class ViewController: UIViewController {
     }
     
     private func changeColorFingerPrintByAuthState() {
-        if let style = MediQuo.style, let buttonItem = style.rootLeftBarButtonItem {
+        if let style = MDMediquo.style, let buttonItem = style.rootLeftBarButtonItem {
             buttonItem.tintColor = isAuthenticated ? .red : view.tintColor
         }
     }
@@ -104,8 +150,8 @@ class ViewController: UIViewController {
     }
     
     private func doLogin(completion: ((Bool) -> Void)? = nil) {
-        let userToken: String = MediQuo.getUserToken()
-        MediQuo.authenticate(token: userToken) {
+        let userToken: String = MDMediquo.getUserToken()
+        MDMediquo.authenticate(token: userToken) {
             let success = $0.isSuccess
             self.isAuthenticated = success
             if let completion = completion { completion(success) }
@@ -113,7 +159,20 @@ class ViewController: UIViewController {
     }
 
     private func doLogout() {
-        MediQuo.shutdown { _ in self.isAuthenticated = false }
+        MDMediquo.shutdown { _ in self.isAuthenticated = false }
+    }
+    
+    private func doMLLogin(completion: ((Bool) -> Void)? = nil) {
+        let userToken: String = MLMediQuo.getUserToken()
+        MLMediQuo.authenticate(token: userToken) {
+            let success = $0.isSuccess
+            self.isAuthenticated = success
+            if let completion = completion { completion(success) }
+        }
+    }
+
+    private func doMLLogout() {
+        MLMediQuo.shutdown { _ in self.isAuthenticated = false }
     }
     
     //NEWLY ADDED PERMISSIONS FOR iOS 14

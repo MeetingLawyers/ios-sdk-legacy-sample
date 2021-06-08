@@ -30,7 +30,7 @@
 		69BC17DD1FBC8DB20025CC42 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC17DC1FBC8DB20025CC42 /* R.generated.swift */; };
 		69BC17DE1FBC8DB20025CC42 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC17DC1FBC8DB20025CC42 /* R.generated.swift */; };
 		69BC17DF1FBC8DB20025CC42 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC17DC1FBC8DB20025CC42 /* R.generated.swift */; };
-		8AE7039C266A55F3007CB5C5 /* MediQuo+ExtensionML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE7039B266A55F3007CB5C5 /* MediQuo+ExtensionML.swift */; };
+		8AE7039C266A55F3007CB5C5 /* MLMediQuo+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE7039B266A55F3007CB5C5 /* MLMediQuo+Extension.swift */; };
 		B3565D1CDAFF54941230FBE6 /* Pods_Mediquo_Swift_Example_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57284A39BF8365109D49BDE7 /* Pods_Mediquo_Swift_Example_AppUITests.framework */; };
 		D585EEF521E6173300D3A21B /* MediQuo+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585EEF421E6173300D3A21B /* MediQuo+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -77,7 +77,7 @@
 		69BC17D91FBC8BDD0025CC42 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		69BC17DC1FBC8DB20025CC42 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		7F1CFB0FFC99E389E8493633 /* Pods-Mediquo Swift Example AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example AppTests.release.xcconfig"; path = "Target Support Files/Pods-Mediquo Swift Example AppTests/Pods-Mediquo Swift Example AppTests.release.xcconfig"; sourceTree = "<group>"; };
-		8AE7039B266A55F3007CB5C5 /* MediQuo+ExtensionML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MediQuo+ExtensionML.swift"; sourceTree = "<group>"; };
+		8AE7039B266A55F3007CB5C5 /* MLMediQuo+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMediQuo+Extension.swift"; sourceTree = "<group>"; };
 		A2409A0ED53EEC3681F36976 /* Pods-Mediquo Swift Example App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example App.debug.xcconfig"; path = "Target Support Files/Pods-Mediquo Swift Example App/Pods-Mediquo Swift Example App.debug.xcconfig"; sourceTree = "<group>"; };
 		BCE44589007CE2B913FF75F6 /* Pods_Mediquo_Swift_Example_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mediquo_Swift_Example_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D585EEF421E6173300D3A21B /* MediQuo+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediQuo+Extension.swift"; sourceTree = "<group>"; };
@@ -213,7 +213,7 @@
 		D585EEF321E6164A00D3A21B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8AE7039B266A55F3007CB5C5 /* MediQuo+ExtensionML.swift */,
+				8AE7039B266A55F3007CB5C5 /* MLMediQuo+Extension.swift */,
 				D585EEF421E6173300D3A21B /* MediQuo+Extension.swift */,
 			);
 			path = Extensions;
@@ -413,11 +413,11 @@
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
-				"${SRCROOT}/Mediquo\\ Swift\\ Example\\ App/Mediquo\\ Swift\\ Example\\ App/Resources/Generated/R.generated.swift",
+				"${SRCROOT}/Mediquo Swift Example App/Resources/Generated/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo 'Generating R files'\n\"${PODS_ROOT}/R.swift/rswift\" generate \"${SRCROOT}/Mediquo\\ Swift\\ Example\\ App/Mediquo\\ Swift\\ Example\\ App/Resources/Generated/R.generated.swift\"\n";
+			shellScript = "echo 'Generating R files'\n\"${PODS_ROOT}/R.swift/rswift\" generate \"${SRCROOT}/Mediquo Swift Example App/Resources/Generated/R.generated.swift\"\n";
 		};
 		82BED76FA4246CD9A5BCCCE2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -572,7 +572,7 @@
 			files = (
 				69BC17BB1FBC8B6C0025CC42 /* ViewController.swift in Sources */,
 				69BC178A1FBC83380025CC42 /* AppDelegate.swift in Sources */,
-				8AE7039C266A55F3007CB5C5 /* MediQuo+ExtensionML.swift in Sources */,
+				8AE7039C266A55F3007CB5C5 /* MLMediQuo+Extension.swift in Sources */,
 				D585EEF521E6173300D3A21B /* MediQuo+Extension.swift in Sources */,
 				69BC17DD1FBC8DB20025CC42 /* R.generated.swift in Sources */,
 			);
