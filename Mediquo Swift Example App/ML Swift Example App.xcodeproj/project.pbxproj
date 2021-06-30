@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4EA20E4669BD243A297A7A61 /* Pods_Mediquo_Swift_Example_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5706D6D66427FC5181A8C38C /* Pods_Mediquo_Swift_Example_App.framework */; };
-		627E372C5B76C3036B6DEDEE /* Pods_Mediquo_Swift_Example_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE44589007CE2B913FF75F6 /* Pods_Mediquo_Swift_Example_AppTests.framework */; };
 		69BC178A1FBC83380025CC42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC17891FBC83380025CC42 /* AppDelegate.swift */; };
 		69BC179F1FBC83380025CC42 /* Mediquo_Swift_Example_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC179E1FBC83380025CC42 /* Mediquo_Swift_Example_AppTests.swift */; };
 		69BC17AA1FBC83380025CC42 /* Mediquo_Swift_Example_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC17A91FBC83380025CC42 /* Mediquo_Swift_Example_AppUITests.swift */; };
@@ -31,8 +29,10 @@
 		69BC17DE1FBC8DB20025CC42 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC17DC1FBC8DB20025CC42 /* R.generated.swift */; };
 		69BC17DF1FBC8DB20025CC42 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC17DC1FBC8DB20025CC42 /* R.generated.swift */; };
 		8AE7039C266A55F3007CB5C5 /* MLMediQuo+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE7039B266A55F3007CB5C5 /* MLMediQuo+Extension.swift */; };
-		B3565D1CDAFF54941230FBE6 /* Pods_Mediquo_Swift_Example_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57284A39BF8365109D49BDE7 /* Pods_Mediquo_Swift_Example_AppUITests.framework */; };
+		B020590B3C4972445F3DF9D9 /* Pods_ML_Swift_Example_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3BBA3FD1B4D1593FA336CA /* Pods_ML_Swift_Example_AppTests.framework */; };
+		C8A1CCFA0E0DC7BB5AC473EC /* Pods_ML_Swift_Example_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB93A0848F4ABAF0419B476 /* Pods_ML_Swift_Example_App.framework */; };
 		D585EEF521E6173300D3A21B /* MediQuo+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585EEF421E6173300D3A21B /* MediQuo+Extension.swift */; };
+		EF9C10513DEC2219CA9DDAF9 /* Pods_ML_Swift_Example_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2BB93BC5067DBCB39CCA28 /* Pods_ML_Swift_Example_AppUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,18 +53,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17C2ED1854A70B60CE2D21E1 /* Pods-ML Swift Example AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ML Swift Example AppTests.debug.xcconfig"; path = "Target Support Files/Pods-ML Swift Example AppTests/Pods-ML Swift Example AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B0F6724DCD1D2043887F3C0 /* Pods-ML Swift Example App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ML Swift Example App.debug.xcconfig"; path = "Target Support Files/Pods-ML Swift Example App/Pods-ML Swift Example App.debug.xcconfig"; sourceTree = "<group>"; };
+		32FBD6B30CFA989B7F22A5FF /* Pods-ML Swift Example App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ML Swift Example App.release.xcconfig"; path = "Target Support Files/Pods-ML Swift Example App/Pods-ML Swift Example App.release.xcconfig"; sourceTree = "<group>"; };
 		36A3B74A241C404286708C62 /* Pods-Mediquo Swift Example AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Mediquo Swift Example AppTests/Pods-Mediquo Swift Example AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		48FB8BD04F0F45A6F5D67E82 /* Pods-Mediquo Swift Example AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Mediquo Swift Example AppUITests/Pods-Mediquo Swift Example AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		52F53EE76E034250600506CA /* Pods-Mediquo Swift Example App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example App.release.xcconfig"; path = "Target Support Files/Pods-Mediquo Swift Example App/Pods-Mediquo Swift Example App.release.xcconfig"; sourceTree = "<group>"; };
-		5706D6D66427FC5181A8C38C /* Pods_Mediquo_Swift_Example_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mediquo_Swift_Example_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		57284A39BF8365109D49BDE7 /* Pods_Mediquo_Swift_Example_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mediquo_Swift_Example_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		69BC17861FBC83380025CC42 /* Mediquo Swift Example App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mediquo Swift Example App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69BC17861FBC83380025CC42 /* ML Swift Example App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ML Swift Example App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BC17891FBC83380025CC42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69BC17951FBC83380025CC42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69BC179A1FBC83380025CC42 /* Mediquo Swift Example AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mediquo Swift Example AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69BC179A1FBC83380025CC42 /* ML Swift Example AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ML Swift Example AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BC179E1FBC83380025CC42 /* Mediquo_Swift_Example_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mediquo_Swift_Example_AppTests.swift; sourceTree = "<group>"; };
 		69BC17A01FBC83380025CC42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69BC17A51FBC83380025CC42 /* Mediquo Swift Example AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mediquo Swift Example AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69BC17A51FBC83380025CC42 /* ML Swift Example AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ML Swift Example AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BC17A91FBC83380025CC42 /* Mediquo_Swift_Example_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mediquo_Swift_Example_AppUITests.swift; sourceTree = "<group>"; };
 		69BC17AB1FBC83380025CC42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69BC17BA1FBC8B6C0025CC42 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,11 +77,16 @@
 		69BC17D81FBC8BDC0025CC42 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = ../es.lproj/Main.strings; sourceTree = "<group>"; };
 		69BC17D91FBC8BDD0025CC42 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		69BC17DC1FBC8DB20025CC42 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		752DD3EC9EC5C2908FB84884 /* Pods-ML Swift Example AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ML Swift Example AppTests.release.xcconfig"; path = "Target Support Files/Pods-ML Swift Example AppTests/Pods-ML Swift Example AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		7CB93A0848F4ABAF0419B476 /* Pods_ML_Swift_Example_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ML_Swift_Example_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F1CFB0FFC99E389E8493633 /* Pods-Mediquo Swift Example AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example AppTests.release.xcconfig"; path = "Target Support Files/Pods-Mediquo Swift Example AppTests/Pods-Mediquo Swift Example AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		81FCFD4B84BDB8945F1145AF /* Pods-ML Swift Example AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ML Swift Example AppUITests.release.xcconfig"; path = "Target Support Files/Pods-ML Swift Example AppUITests/Pods-ML Swift Example AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8AE7039B266A55F3007CB5C5 /* MLMediQuo+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMediQuo+Extension.swift"; sourceTree = "<group>"; };
 		A2409A0ED53EEC3681F36976 /* Pods-Mediquo Swift Example App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example App.debug.xcconfig"; path = "Target Support Files/Pods-Mediquo Swift Example App/Pods-Mediquo Swift Example App.debug.xcconfig"; sourceTree = "<group>"; };
-		BCE44589007CE2B913FF75F6 /* Pods_Mediquo_Swift_Example_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mediquo_Swift_Example_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA3BBA3FD1B4D1593FA336CA /* Pods_ML_Swift_Example_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ML_Swift_Example_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB2BB93BC5067DBCB39CCA28 /* Pods_ML_Swift_Example_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ML_Swift_Example_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D585EEF421E6173300D3A21B /* MediQuo+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediQuo+Extension.swift"; sourceTree = "<group>"; };
+		E8348C54FCBF9BF5C6B97DF2 /* Pods-ML Swift Example AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ML Swift Example AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ML Swift Example AppUITests/Pods-ML Swift Example AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED50C3CBF6D7E4150331F618 /* Pods-Mediquo Swift Example AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mediquo Swift Example AppUITests/Pods-Mediquo Swift Example AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EA20E4669BD243A297A7A61 /* Pods_Mediquo_Swift_Example_App.framework in Frameworks */,
+				C8A1CCFA0E0DC7BB5AC473EC /* Pods_ML_Swift_Example_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				627E372C5B76C3036B6DEDEE /* Pods_Mediquo_Swift_Example_AppTests.framework in Frameworks */,
+				B020590B3C4972445F3DF9D9 /* Pods_ML_Swift_Example_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3565D1CDAFF54941230FBE6 /* Pods_Mediquo_Swift_Example_AppUITests.framework in Frameworks */,
+				EF9C10513DEC2219CA9DDAF9 /* Pods_ML_Swift_Example_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,9 +133,9 @@
 		69BC17871FBC83380025CC42 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				69BC17861FBC83380025CC42 /* Mediquo Swift Example App.app */,
-				69BC179A1FBC83380025CC42 /* Mediquo Swift Example AppTests.xctest */,
-				69BC17A51FBC83380025CC42 /* Mediquo Swift Example AppUITests.xctest */,
+				69BC17861FBC83380025CC42 /* ML Swift Example App.app */,
+				69BC179A1FBC83380025CC42 /* ML Swift Example AppTests.xctest */,
+				69BC17A51FBC83380025CC42 /* ML Swift Example AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,9 +209,9 @@
 		87AAD72127DA514F9B06D30A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5706D6D66427FC5181A8C38C /* Pods_Mediquo_Swift_Example_App.framework */,
-				BCE44589007CE2B913FF75F6 /* Pods_Mediquo_Swift_Example_AppTests.framework */,
-				57284A39BF8365109D49BDE7 /* Pods_Mediquo_Swift_Example_AppUITests.framework */,
+				7CB93A0848F4ABAF0419B476 /* Pods_ML_Swift_Example_App.framework */,
+				AA3BBA3FD1B4D1593FA336CA /* Pods_ML_Swift_Example_AppTests.framework */,
+				CB2BB93BC5067DBCB39CCA28 /* Pods_ML_Swift_Example_AppUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -228,6 +234,12 @@
 				7F1CFB0FFC99E389E8493633 /* Pods-Mediquo Swift Example AppTests.release.xcconfig */,
 				ED50C3CBF6D7E4150331F618 /* Pods-Mediquo Swift Example AppUITests.debug.xcconfig */,
 				48FB8BD04F0F45A6F5D67E82 /* Pods-Mediquo Swift Example AppUITests.release.xcconfig */,
+				1B0F6724DCD1D2043887F3C0 /* Pods-ML Swift Example App.debug.xcconfig */,
+				32FBD6B30CFA989B7F22A5FF /* Pods-ML Swift Example App.release.xcconfig */,
+				17C2ED1854A70B60CE2D21E1 /* Pods-ML Swift Example AppTests.debug.xcconfig */,
+				752DD3EC9EC5C2908FB84884 /* Pods-ML Swift Example AppTests.release.xcconfig */,
+				E8348C54FCBF9BF5C6B97DF2 /* Pods-ML Swift Example AppUITests.debug.xcconfig */,
+				81FCFD4B84BDB8945F1145AF /* Pods-ML Swift Example AppUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -235,9 +247,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		69BC17851FBC83380025CC42 /* Mediquo Swift Example App */ = {
+		69BC17851FBC83380025CC42 /* ML Swift Example App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69BC17AE1FBC83380025CC42 /* Build configuration list for PBXNativeTarget "Mediquo Swift Example App" */;
+			buildConfigurationList = 69BC17AE1FBC83380025CC42 /* Build configuration list for PBXNativeTarget "ML Swift Example App" */;
 			buildPhases = (
 				278CFB29FAAF89E10834271D /* [CP] Check Pods Manifest.lock */,
 				69BC17DB1FBC8C8A0025CC42 /* ShellScript */,
@@ -250,14 +262,14 @@
 			);
 			dependencies = (
 			);
-			name = "Mediquo Swift Example App";
+			name = "ML Swift Example App";
 			productName = "Mediquo Swift Example App";
-			productReference = 69BC17861FBC83380025CC42 /* Mediquo Swift Example App.app */;
+			productReference = 69BC17861FBC83380025CC42 /* ML Swift Example App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		69BC17991FBC83380025CC42 /* Mediquo Swift Example AppTests */ = {
+		69BC17991FBC83380025CC42 /* ML Swift Example AppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69BC17B11FBC83380025CC42 /* Build configuration list for PBXNativeTarget "Mediquo Swift Example AppTests" */;
+			buildConfigurationList = 69BC17B11FBC83380025CC42 /* Build configuration list for PBXNativeTarget "ML Swift Example AppTests" */;
 			buildPhases = (
 				82BED76FA4246CD9A5BCCCE2 /* [CP] Check Pods Manifest.lock */,
 				69BC17961FBC83380025CC42 /* Sources */,
@@ -269,14 +281,14 @@
 			dependencies = (
 				69BC179C1FBC83380025CC42 /* PBXTargetDependency */,
 			);
-			name = "Mediquo Swift Example AppTests";
+			name = "ML Swift Example AppTests";
 			productName = "Mediquo Swift Example AppTests";
-			productReference = 69BC179A1FBC83380025CC42 /* Mediquo Swift Example AppTests.xctest */;
+			productReference = 69BC179A1FBC83380025CC42 /* ML Swift Example AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		69BC17A41FBC83380025CC42 /* Mediquo Swift Example AppUITests */ = {
+		69BC17A41FBC83380025CC42 /* ML Swift Example AppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69BC17B41FBC83380025CC42 /* Build configuration list for PBXNativeTarget "Mediquo Swift Example AppUITests" */;
+			buildConfigurationList = 69BC17B41FBC83380025CC42 /* Build configuration list for PBXNativeTarget "ML Swift Example AppUITests" */;
 			buildPhases = (
 				BD08495EDFB78BE2C5CAFAA4 /* [CP] Check Pods Manifest.lock */,
 				69BC17A11FBC83380025CC42 /* Sources */,
@@ -288,9 +300,9 @@
 			dependencies = (
 				69BC17A71FBC83380025CC42 /* PBXTargetDependency */,
 			);
-			name = "Mediquo Swift Example AppUITests";
+			name = "ML Swift Example AppUITests";
 			productName = "Mediquo Swift Example AppUITests";
-			productReference = 69BC17A51FBC83380025CC42 /* Mediquo Swift Example AppUITests.xctest */;
+			productReference = 69BC17A51FBC83380025CC42 /* ML Swift Example AppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -324,7 +336,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 69BC17811FBC83380025CC42 /* Build configuration list for PBXProject "Mediquo Swift Example App" */;
+			buildConfigurationList = 69BC17811FBC83380025CC42 /* Build configuration list for PBXProject "ML Swift Example App" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -338,9 +350,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				69BC17851FBC83380025CC42 /* Mediquo Swift Example App */,
-				69BC17991FBC83380025CC42 /* Mediquo Swift Example AppTests */,
-				69BC17A41FBC83380025CC42 /* Mediquo Swift Example AppUITests */,
+				69BC17851FBC83380025CC42 /* ML Swift Example App */,
+				69BC17991FBC83380025CC42 /* ML Swift Example AppTests */,
+				69BC17A41FBC83380025CC42 /* ML Swift Example AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -397,7 +409,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Mediquo Swift Example App-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ML Swift Example App-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -434,7 +446,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Mediquo Swift Example AppTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ML Swift Example AppTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -456,7 +468,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Mediquo Swift Example AppUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ML Swift Example AppUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -469,7 +481,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mediquo Swift Example App/Pods-Mediquo Swift Example App-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ML Swift Example App/Pods-ML Swift Example App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
@@ -560,7 +572,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mediquo Swift Example App/Pods-Mediquo Swift Example App-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ML Swift Example App/Pods-ML Swift Example App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -603,12 +615,12 @@
 /* Begin PBXTargetDependency section */
 		69BC179C1FBC83380025CC42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 69BC17851FBC83380025CC42 /* Mediquo Swift Example App */;
+			target = 69BC17851FBC83380025CC42 /* ML Swift Example App */;
 			targetProxy = 69BC179B1FBC83380025CC42 /* PBXContainerItemProxy */;
 		};
 		69BC17A71FBC83380025CC42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 69BC17851FBC83380025CC42 /* Mediquo Swift Example App */;
+			target = 69BC17851FBC83380025CC42 /* ML Swift Example App */;
 			targetProxy = 69BC17A61FBC83380025CC42 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -759,7 +771,7 @@
 		};
 		69BC17AF1FBC83380025CC42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2409A0ED53EEC3681F36976 /* Pods-Mediquo Swift Example App.debug.xcconfig */;
+			baseConfigurationReference = 1B0F6724DCD1D2043887F3C0 /* Pods-ML Swift Example App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -777,7 +789,7 @@
 		};
 		69BC17B01FBC83380025CC42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52F53EE76E034250600506CA /* Pods-Mediquo Swift Example App.release.xcconfig */;
+			baseConfigurationReference = 32FBD6B30CFA989B7F22A5FF /* Pods-ML Swift Example App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -795,7 +807,7 @@
 		};
 		69BC17B21FBC83380025CC42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36A3B74A241C404286708C62 /* Pods-Mediquo Swift Example AppTests.debug.xcconfig */;
+			baseConfigurationReference = 17C2ED1854A70B60CE2D21E1 /* Pods-ML Swift Example AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -806,13 +818,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mediquo Swift Example App.app/Mediquo Swift Example App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ML Swift Example App.app/ML Swift Example App";
 			};
 			name = Debug;
 		};
 		69BC17B31FBC83380025CC42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F1CFB0FFC99E389E8493633 /* Pods-Mediquo Swift Example AppTests.release.xcconfig */;
+			baseConfigurationReference = 752DD3EC9EC5C2908FB84884 /* Pods-ML Swift Example AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -823,13 +835,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mediquo Swift Example App.app/Mediquo Swift Example App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ML Swift Example App.app/ML Swift Example App";
 			};
 			name = Release;
 		};
 		69BC17B51FBC83380025CC42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED50C3CBF6D7E4150331F618 /* Pods-Mediquo Swift Example AppUITests.debug.xcconfig */;
+			baseConfigurationReference = E8348C54FCBF9BF5C6B97DF2 /* Pods-ML Swift Example AppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -845,7 +857,7 @@
 		};
 		69BC17B61FBC83380025CC42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48FB8BD04F0F45A6F5D67E82 /* Pods-Mediquo Swift Example AppUITests.release.xcconfig */;
+			baseConfigurationReference = 81FCFD4B84BDB8945F1145AF /* Pods-ML Swift Example AppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -862,7 +874,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		69BC17811FBC83380025CC42 /* Build configuration list for PBXProject "Mediquo Swift Example App" */ = {
+		69BC17811FBC83380025CC42 /* Build configuration list for PBXProject "ML Swift Example App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69BC17AC1FBC83380025CC42 /* Debug */,
@@ -871,7 +883,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69BC17AE1FBC83380025CC42 /* Build configuration list for PBXNativeTarget "Mediquo Swift Example App" */ = {
+		69BC17AE1FBC83380025CC42 /* Build configuration list for PBXNativeTarget "ML Swift Example App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69BC17AF1FBC83380025CC42 /* Debug */,
@@ -880,7 +892,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69BC17B11FBC83380025CC42 /* Build configuration list for PBXNativeTarget "Mediquo Swift Example AppTests" */ = {
+		69BC17B11FBC83380025CC42 /* Build configuration list for PBXNativeTarget "ML Swift Example AppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69BC17B21FBC83380025CC42 /* Debug */,
@@ -889,7 +901,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69BC17B41FBC83380025CC42 /* Build configuration list for PBXNativeTarget "Mediquo Swift Example AppUITests" */ = {
+		69BC17B41FBC83380025CC42 /* Build configuration list for PBXNativeTarget "ML Swift Example AppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69BC17B51FBC83380025CC42 /* Debug */,

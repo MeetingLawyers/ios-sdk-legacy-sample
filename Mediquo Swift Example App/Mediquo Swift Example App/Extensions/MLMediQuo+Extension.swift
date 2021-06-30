@@ -11,14 +11,14 @@ import MeetingLawyersSDK
 extension MLMediQuo {
     
     internal static func getUserToken() -> String {
-        return <#your demo user token#>
+        return "manel.roca@meetinglawyers.com"
     }
 
     internal static func getClientName() -> String? {
-        return <#your company name#>
+        return "MeetingLawyers"
     }
 
     internal static func getClientSecret() -> String? {
-        return  <#your API Key#>
+        return  "GZLtGkT8AX7puX9G"
     }
 }

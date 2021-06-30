@@ -7,17 +7,17 @@ use_frameworks!
 
 def shared_pods
     pod 'MediQuo', '~> 3.1.1'
-    pod 'MeetingLawyersSDK', '~> 0.0.3-alpha'
+    pod 'MeetingLawyersSDK', '~> 1.0.0'
 end
 
-target 'Mediquo Swift Example App' do
+target 'ML Swift Example App' do
   shared_pods
 
-  target 'Mediquo Swift Example AppTests' do
+  target 'ML Swift Example AppTests' do
     inherit! :search_paths
   end
 
-  target 'Mediquo Swift Example AppUITests' do
+  target 'ML Swift Example AppUITests' do
     inherit! :search_paths
   end
 end
