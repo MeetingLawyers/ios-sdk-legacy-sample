@@ -64,44 +64,44 @@ PODS:
     - MediQuo-Schema (= 3.1.4)
     - MediQuo-Socket (= 3.1.4)
     - RealmSwift (= 10.1.2)
-  - MeetingLawyers-Controller (1.0.0):
+  - MeetingLawyers-Controller (1.0.2):
     - AWSMobileClient (= 2.16.0)
     - AWSS3 (= 2.16.0)
-    - MeetingLawyers-Core (= 1.0.0)
-    - MeetingLawyers-Schema (= 1.0.0)
+    - MeetingLawyers-Core (= 1.0.2)
+    - MeetingLawyers-Schema (= 1.0.2)
     - RxBlocking (= 5.1.0)
     - RxSwift (= 5.1.0)
     - SwiftDate (= 4.5.1)
-  - MeetingLawyers-Core (1.0.0):
+  - MeetingLawyers-Core (1.0.2):
     - CryptoSwift (~> 1.0)
-  - MeetingLawyers-Remote (1.0.0):
+  - MeetingLawyers-Remote (1.0.2):
     - Alamofire (= 4.9.1)
     - AlamofireImage (= 3.6.0)
-    - MeetingLawyers-Controller (= 1.0.0)
-    - MeetingLawyers-Core (= 1.0.0)
-    - MeetingLawyers-Schema (= 1.0.0)
-  - MeetingLawyers-Schema (1.0.0):
-    - MeetingLawyers-Core (= 1.0.0)
-  - MeetingLawyers-Socket (1.0.0):
-    - MeetingLawyers-Controller (= 1.0.0)
-    - MeetingLawyers-Core (= 1.0.0)
-    - MeetingLawyers-Schema (= 1.0.0)
+    - MeetingLawyers-Controller (= 1.0.2)
+    - MeetingLawyers-Core (= 1.0.2)
+    - MeetingLawyers-Schema (= 1.0.2)
+  - MeetingLawyers-Schema (1.0.2):
+    - MeetingLawyers-Core (= 1.0.2)
+  - MeetingLawyers-Socket (1.0.2):
+    - MeetingLawyers-Controller (= 1.0.2)
+    - MeetingLawyers-Core (= 1.0.2)
+    - MeetingLawyers-Schema (= 1.0.2)
     - Socket.IO-Client-Swift (= 15.2.0)
-  - MeetingLawyers-Storage (1.0.0):
-    - MeetingLawyers-Controller (= 1.0.0)
-    - MeetingLawyers-Core (= 1.0.0)
-    - MeetingLawyers-Schema (= 1.0.0)
-    - MeetingLawyers-Socket (= 1.0.0)
+  - MeetingLawyers-Storage (1.0.2):
+    - MeetingLawyers-Controller (= 1.0.2)
+    - MeetingLawyers-Core (= 1.0.2)
+    - MeetingLawyers-Schema (= 1.0.2)
+    - MeetingLawyers-Socket (= 1.0.2)
     - RealmSwift (= 10.1.2)
-  - MeetingLawyersSDK (1.0.0):
+  - MeetingLawyersSDK (1.0.2):
     - AlamofireImage (= 3.6.0)
     - Device (= 3.1.2)
-    - MeetingLawyers-Controller (= 1.0.0)
-    - MeetingLawyers-Core (= 1.0.0)
-    - MeetingLawyers-Remote (= 1.0.0)
-    - MeetingLawyers-Schema (= 1.0.0)
-    - MeetingLawyers-Socket (= 1.0.0)
-    - MeetingLawyers-Storage (= 1.0.0)
+    - MeetingLawyers-Controller (= 1.0.2)
+    - MeetingLawyers-Core (= 1.0.2)
+    - MeetingLawyers-Remote (= 1.0.2)
+    - MeetingLawyers-Schema (= 1.0.2)
+    - MeetingLawyers-Socket (= 1.0.2)
+    - MeetingLawyers-Storage (= 1.0.2)
     - MessageKit (= 2.0.0)
     - OpenTok (= 2.19.1)
     - R.swift (= 5.1.0)
@@ -219,13 +219,13 @@ SPEC CHECKSUMS:
   MediQuo-Schema: 28c93eca25f54a6c4450c6de78240edeb68b0fff
   MediQuo-Socket: 5ae87fb7c2b54c675de68ca95c96d7a9cc19bedc
   MediQuo-Storage: c938a741a28c8cdd320ae065abdf378520d961c6
-  MeetingLawyers-Controller: 6cfc13d5a76b6bcf7397937827fecf585dbb40ab
-  MeetingLawyers-Core: 3f15a12d2d16358c4d170db84de8a137de2fd64a
-  MeetingLawyers-Remote: 04140242c42b79046cf47c5c36d0a92fb975a8c8
-  MeetingLawyers-Schema: ad8020e4080187042c8f051830c5f44ab9e94540
-  MeetingLawyers-Socket: c1c9b6ae8fc8cdf38ba1f2284e1b711de7629a6d
-  MeetingLawyers-Storage: 48c13e04cf3478f8744d6e4bc174b3bf18de34bd
-  MeetingLawyersSDK: b60c8a6041bffd5037a046f02c4eca30d6ffaccd
+  MeetingLawyers-Controller: 01200cb36ee8ddac4669d3ff6a827d02e8ddeb3f
+  MeetingLawyers-Core: 1b90281bb40d99371e9a7cf7f5e42860b6ed767e
+  MeetingLawyers-Remote: 87a70c2010a6917e54fae9ccf062566af64c251b
+  MeetingLawyers-Schema: 7f1b7e215fac8c04f28b3b52092508289bc232b2
+  MeetingLawyers-Socket: e55d3c370887d38696c25fdf1bb50e18a228cbd5
+  MeetingLawyers-Storage: 8601beff4c482c597875c7199fac19d14b2e4f90
+  MeetingLawyersSDK: 932a1ba1819483e172cd5996e304049923f7dd75
   MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
   MessageKit: 29c1c87e5a396d2ca7a3f712e5171dc9aba42a1e
   OpenTok: 0c4b4f336462ed5e2aa18b9868eed971f922a09f
