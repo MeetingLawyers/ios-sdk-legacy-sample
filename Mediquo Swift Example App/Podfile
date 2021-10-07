@@ -1,5 +1,5 @@
+source 'https://cdn.cocoapods.org/'
 source 'https://bitbucket.org/meetingdoctors-team/cocoapods-specs.git'
-source 'https://github.com/CocoaPods/Specs.git'
 source 'https://bitbucket.org/meetinglawyers/ios-cocoapods-specs.git'
 
 platform :ios, '11.0'

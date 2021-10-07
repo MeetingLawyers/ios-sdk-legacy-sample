@@ -11,14 +11,15 @@ import MediQuo
 extension MediQuo {
     
     internal static func getUserToken() -> String {
-        return ""
+        return <#your demo user token#>
     }
 
     internal static func getClientName() -> String? {
-        return ""
+        return <#your company name#>
     }
 
     internal static func getClientSecret() -> String? {
-        return  ""
+        return  <#your API Key#>
     }
+
 }

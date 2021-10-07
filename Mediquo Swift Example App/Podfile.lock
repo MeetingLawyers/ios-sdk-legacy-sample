@@ -168,7 +168,7 @@ SPEC REPOS:
     - MeetingLawyers-Socket
     - MeetingLawyers-Storage
     - MeetingLawyersSDK
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - Alamofire
     - AlamofireImage
     - AWSAuthCore
@@ -246,6 +246,6 @@ SPEC CHECKSUMS:
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
   SwipeCellKit: 4eada3884ab1bbae5e8d2fb9030c242aa23d7f42
 
-PODFILE CHECKSUM: e836dab58877d717a433985554ef37cca4919228
+PODFILE CHECKSUM: 4b92e75b5844e27b1540a132fce68eb1467b30c9
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2
