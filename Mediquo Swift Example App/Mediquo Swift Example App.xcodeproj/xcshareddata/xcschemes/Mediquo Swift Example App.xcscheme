@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "69BC17851FBC83380025CC42"
-               BuildableName = "ML Swift Example App.app"
-               BlueprintName = "ML Swift Example App"
-               ReferencedContainer = "container:ML Swift Example App.xcodeproj">
+               BuildableName = "Mediquo Swift Example App.app"
+               BlueprintName = "Mediquo Swift Example App"
+               ReferencedContainer = "container:Mediquo Swift Example App.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "69BC17991FBC83380025CC42"
-               BuildableName = "ML Swift Example AppTests.xctest"
-               BlueprintName = "ML Swift Example AppTests"
-               ReferencedContainer = "container:ML Swift Example App.xcodeproj">
+               BuildableName = "Mediquo Swift Example AppTests.xctest"
+               BlueprintName = "Mediquo Swift Example AppTests"
+               ReferencedContainer = "container:Mediquo Swift Example App.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "69BC17A41FBC83380025CC42"
-               BuildableName = "ML Swift Example AppUITests.xctest"
-               BlueprintName = "ML Swift Example AppUITests"
-               ReferencedContainer = "container:ML Swift Example App.xcodeproj">
+               BuildableName = "Mediquo Swift Example AppUITests.xctest"
+               BlueprintName = "Mediquo Swift Example AppUITests"
+               ReferencedContainer = "container:Mediquo Swift Example App.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "69BC17851FBC83380025CC42"
-            BuildableName = "ML Swift Example App.app"
-            BlueprintName = "ML Swift Example App"
-            ReferencedContainer = "container:ML Swift Example App.xcodeproj">
+            BuildableName = "Mediquo Swift Example App.app"
+            BlueprintName = "Mediquo Swift Example App"
+            ReferencedContainer = "container:Mediquo Swift Example App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "69BC17851FBC83380025CC42"
-            BuildableName = "ML Swift Example App.app"
-            BlueprintName = "ML Swift Example App"
-            ReferencedContainer = "container:ML Swift Example App.xcodeproj">
+            BuildableName = "Mediquo Swift Example App.app"
+            BlueprintName = "Mediquo Swift Example App"
+            ReferencedContainer = "container:Mediquo Swift Example App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
