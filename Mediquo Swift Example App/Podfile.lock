@@ -14,99 +14,50 @@ PODS:
     - AWSCognitoIdentityProvider (= 2.16.0)
   - AWSS3 (2.16.0):
     - AWSCore (= 2.16.0)
-  - CryptoSwift (1.4.0)
+  - CryptoSwift (1.4.2)
   - Device (3.1.2)
-  - Differentiator (4.0.1)
-  - MediQuo (3.1.4):
-    - AlamofireImage (= 3.6.0)
-    - Device (= 3.1.2)
-    - MediQuo-Controller (= 3.1.4)
-    - MediQuo-Core (= 3.1.4)
-    - MediQuo-Remote (= 3.1.4)
-    - MediQuo-Schema (= 3.1.4)
-    - MediQuo-Socket (= 3.1.4)
-    - MediQuo-Storage (= 3.1.4)
-    - MessageKit (= 2.0.0)
-    - OpenTok (= 2.19.1)
-    - R.swift (= 5.1.0)
-    - RxCocoa (= 5.1.0)
-    - RxDataSources (= 4.0.1)
-    - SDWebImage (= 5.0)
-    - Swinject (= 2.6.0)
-    - SwinjectStoryboard (= 2.2.0)
-    - SwipeCellKit (= 2.5.4)
-  - MediQuo-Controller (3.1.4):
+  - MeetingLawyers-Controller (1.0.4-beta1):
     - AWSMobileClient (= 2.16.0)
     - AWSS3 (= 2.16.0)
-    - MediQuo-Core (= 3.1.4)
-    - MediQuo-Schema (= 3.1.4)
-    - RxBlocking (= 5.1.0)
-    - RxSwift (= 5.1.0)
+    - MeetingLawyers-Core (= 1.0.4-beta1)
+    - MeetingLawyers-Schema (= 1.0.4-beta1)
+    - RxBlocking (= 6.2.0)
+    - RxSwift (= 6.2.0)
     - SwiftDate (= 4.5.1)
-  - MediQuo-Core (3.1.4):
+  - MeetingLawyers-Core (1.0.4-beta1):
     - CryptoSwift (~> 1.0)
-  - MediQuo-Remote (3.1.4):
+  - MeetingLawyers-Remote (1.0.4-beta1):
     - Alamofire (= 4.9.1)
     - AlamofireImage (= 3.6.0)
-    - MediQuo-Controller (= 3.1.4)
-    - MediQuo-Core (= 3.1.4)
-    - MediQuo-Schema (= 3.1.4)
-  - MediQuo-Schema (3.1.4):
-    - MediQuo-Core (= 3.1.4)
-  - MediQuo-Socket (3.1.4):
-    - MediQuo-Controller (= 3.1.4)
-    - MediQuo-Core (= 3.1.4)
-    - MediQuo-Schema (= 3.1.4)
+    - MeetingLawyers-Controller (= 1.0.4-beta1)
+    - MeetingLawyers-Core (= 1.0.4-beta1)
+    - MeetingLawyers-Schema (= 1.0.4-beta1)
+  - MeetingLawyers-Schema (1.0.4-beta1):
+    - MeetingLawyers-Core (= 1.0.4-beta1)
+  - MeetingLawyers-Socket (1.0.4-beta1):
+    - MeetingLawyers-Controller (= 1.0.4-beta1)
+    - MeetingLawyers-Core (= 1.0.4-beta1)
+    - MeetingLawyers-Schema (= 1.0.4-beta1)
     - Socket.IO-Client-Swift (= 15.2.0)
-  - MediQuo-Storage (3.1.4):
-    - MediQuo-Controller (= 3.1.4)
-    - MediQuo-Core (= 3.1.4)
-    - MediQuo-Schema (= 3.1.4)
-    - MediQuo-Socket (= 3.1.4)
-    - RealmSwift (= 10.1.2)
-  - MeetingLawyers-Controller (1.0.2):
-    - AWSMobileClient (= 2.16.0)
-    - AWSS3 (= 2.16.0)
-    - MeetingLawyers-Core (= 1.0.2)
-    - MeetingLawyers-Schema (= 1.0.2)
-    - RxBlocking (= 5.1.0)
-    - RxSwift (= 5.1.0)
-    - SwiftDate (= 4.5.1)
-  - MeetingLawyers-Core (1.0.2):
-    - CryptoSwift (~> 1.0)
-  - MeetingLawyers-Remote (1.0.2):
-    - Alamofire (= 4.9.1)
-    - AlamofireImage (= 3.6.0)
-    - MeetingLawyers-Controller (= 1.0.2)
-    - MeetingLawyers-Core (= 1.0.2)
-    - MeetingLawyers-Schema (= 1.0.2)
-  - MeetingLawyers-Schema (1.0.2):
-    - MeetingLawyers-Core (= 1.0.2)
-  - MeetingLawyers-Socket (1.0.2):
-    - MeetingLawyers-Controller (= 1.0.2)
-    - MeetingLawyers-Core (= 1.0.2)
-    - MeetingLawyers-Schema (= 1.0.2)
-    - Socket.IO-Client-Swift (= 15.2.0)
-  - MeetingLawyers-Storage (1.0.2):
-    - MeetingLawyers-Controller (= 1.0.2)
-    - MeetingLawyers-Core (= 1.0.2)
-    - MeetingLawyers-Schema (= 1.0.2)
-    - MeetingLawyers-Socket (= 1.0.2)
-    - RealmSwift (= 10.1.2)
-  - MeetingLawyersSDK (1.0.2):
+  - MeetingLawyers-Storage (1.0.4-beta1):
+    - MeetingLawyers-Controller (= 1.0.4-beta1)
+    - MeetingLawyers-Core (= 1.0.4-beta1)
+    - MeetingLawyers-Schema (= 1.0.4-beta1)
+    - MeetingLawyers-Socket (= 1.0.4-beta1)
+    - RealmSwift (= 10.17.0)
+  - MeetingLawyersSDK (1.0.4-beta1):
     - AlamofireImage (= 3.6.0)
     - Device (= 3.1.2)
-    - MeetingLawyers-Controller (= 1.0.2)
-    - MeetingLawyers-Core (= 1.0.2)
-    - MeetingLawyers-Remote (= 1.0.2)
-    - MeetingLawyers-Schema (= 1.0.2)
-    - MeetingLawyers-Socket (= 1.0.2)
-    - MeetingLawyers-Storage (= 1.0.2)
+    - MeetingLawyers-Controller (= 1.0.4-beta1)
+    - MeetingLawyers-Core (= 1.0.4-beta1)
+    - MeetingLawyers-Remote (= 1.0.4-beta1)
+    - MeetingLawyers-Schema (= 1.0.4-beta1)
+    - MeetingLawyers-Socket (= 1.0.4-beta1)
+    - MeetingLawyers-Storage (= 1.0.4-beta1)
     - MessageKit (= 2.0.0)
-    - OpenTok (= 2.19.1)
+    - OpenTok (= 2.20.1)
     - R.swift (= 5.1.0)
-    - RxCocoa (= 5.1.0)
-    - RxDataSources (= 4.0.1)
+    - RxCocoa (= 6.2.0)
     - SDWebImage (= 5.0)
     - Swinject (= 2.6.0)
     - SwinjectStoryboard (= 2.2.0)
@@ -114,27 +65,23 @@ PODS:
   - MessageInputBar/Core (0.4.1)
   - MessageKit (2.0.0):
     - MessageInputBar/Core
-  - OpenTok (2.19.1)
+  - OpenTok (2.20.1)
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
-  - Realm (10.1.2):
-    - Realm/Headers (= 10.1.2)
-  - Realm/Headers (10.1.2)
-  - RealmSwift (10.1.2):
-    - Realm (= 10.1.2)
-  - RxBlocking (5.1.0):
-    - RxSwift (~> 5)
-  - RxCocoa (5.1.0):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxDataSources (4.0.1):
-    - Differentiator (~> 4.0)
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
-  - RxRelay (5.1.1):
-    - RxSwift (~> 5)
-  - RxSwift (5.1.0)
+  - Realm (10.17.0):
+    - Realm/Headers (= 10.17.0)
+  - Realm/Headers (10.17.0)
+  - RealmSwift (10.17.0):
+    - Realm (= 10.17.0)
+  - RxBlocking (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
   - SDWebImage (5.0.0):
     - SDWebImage/Core (= 5.0.0)
   - SDWebImage/Core (5.0.0)
@@ -148,18 +95,9 @@ PODS:
   - SwipeCellKit (2.5.4)
 
 DEPENDENCIES:
-  - MediQuo (~> 3.1.1)
-  - MeetingLawyersSDK (~> 1.0.0)
+  - MeetingLawyersSDK (= 1.0.4-beta1)
 
 SPEC REPOS:
-  https://bitbucket.org/meetingdoctors-team/cocoapods-specs.git:
-    - MediQuo
-    - MediQuo-Controller
-    - MediQuo-Core
-    - MediQuo-Remote
-    - MediQuo-Schema
-    - MediQuo-Socket
-    - MediQuo-Storage
   https://bitbucket.org/meetinglawyers/ios-cocoapods-specs.git:
     - MeetingLawyers-Controller
     - MeetingLawyers-Core
@@ -179,7 +117,6 @@ SPEC REPOS:
     - AWSS3
     - CryptoSwift
     - Device
-    - Differentiator
     - MessageInputBar
     - MessageKit
     - OpenTok
@@ -189,7 +126,6 @@ SPEC REPOS:
     - RealmSwift
     - RxBlocking
     - RxCocoa
-    - RxDataSources
     - RxRelay
     - RxSwift
     - SDWebImage
@@ -209,35 +145,26 @@ SPEC CHECKSUMS:
   AWSCore: 439de29e3423c637a0c475f9ea329262fd2acc67
   AWSMobileClient: 01d6136e825602ed2f40c9d47b79fd8b382109ea
   AWSS3: 6df833615e2b2f8313b585e2090e80a3e97c550f
-  CryptoSwift: 7cc902df1784de3b389a387756c7d710f197730c
+  CryptoSwift: a532e74ed010f8c95f611d00b8bbae42e9fe7c17
   Device: 62242076214c30fb5760174b3601cefafa70a481
-  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
-  MediQuo: dc014ecb2bbc85f2095b8850d7dbff7c896b1f3d
-  MediQuo-Controller: 479bb6134d07605bfc72365dc2fb8a892ef2a9a6
-  MediQuo-Core: b0c945289eb2b2083d6f2295505764de73e8f842
-  MediQuo-Remote: 64ce34cd1ea0d68a5627ef749810cc750bd48e3e
-  MediQuo-Schema: 28c93eca25f54a6c4450c6de78240edeb68b0fff
-  MediQuo-Socket: 5ae87fb7c2b54c675de68ca95c96d7a9cc19bedc
-  MediQuo-Storage: c938a741a28c8cdd320ae065abdf378520d961c6
-  MeetingLawyers-Controller: 01200cb36ee8ddac4669d3ff6a827d02e8ddeb3f
-  MeetingLawyers-Core: 1b90281bb40d99371e9a7cf7f5e42860b6ed767e
-  MeetingLawyers-Remote: 87a70c2010a6917e54fae9ccf062566af64c251b
-  MeetingLawyers-Schema: 7f1b7e215fac8c04f28b3b52092508289bc232b2
-  MeetingLawyers-Socket: e55d3c370887d38696c25fdf1bb50e18a228cbd5
-  MeetingLawyers-Storage: 8601beff4c482c597875c7199fac19d14b2e4f90
-  MeetingLawyersSDK: 932a1ba1819483e172cd5996e304049923f7dd75
+  MeetingLawyers-Controller: 02268bc46ca31ae75e8469a56e0bbfe1b3bb765b
+  MeetingLawyers-Core: 89e135017bc920d1531aebb2c1926095e5f467d5
+  MeetingLawyers-Remote: 98fa9e415b5c05d12833a82855c7c36989eaa1ab
+  MeetingLawyers-Schema: 35be00a070b9bb69ed30b5d5a7814f4e6b17f641
+  MeetingLawyers-Socket: eb84643bcfc064264cb58ff6b9875ff2be6cd508
+  MeetingLawyers-Storage: 0f5eff908d44a9d65a3d575dfe9e6018b263edfc
+  MeetingLawyersSDK: 01f92092724ef25778a1eea2322264b264be7a0b
   MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
   MessageKit: 29c1c87e5a396d2ca7a3f712e5171dc9aba42a1e
-  OpenTok: 0c4b4f336462ed5e2aa18b9868eed971f922a09f
+  OpenTok: 62dd91a1297816f61a5e5c91e6ff4ecdffa77364
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
-  Realm: 031fdd4be7094d01b43af1a5e49766ab644bb800
-  RealmSwift: 43cf2e114baa9d17d34eb81e7d0def31f21cd444
-  RxBlocking: 5ef131267220f92ef68531dd6afeaf407cd6b41a
-  RxCocoa: 13d2a4d7546a34b8ececae8c281e4ea1dbb94f2b
-  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
-  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
-  RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
+  Realm: 9533276bd76f66aa2fd0d3ffe700c1f6023dcab6
+  RealmSwift: 57f5d59aa29852587aad1e861989e7af139894b5
+  RxBlocking: 0b29f7d2079109a8de49c411381bed7c33ef1eeb
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
@@ -246,6 +173,6 @@ SPEC CHECKSUMS:
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
   SwipeCellKit: 4eada3884ab1bbae5e8d2fb9030c242aa23d7f42
 
-PODFILE CHECKSUM: 7a4beea6129bc6b9ee4104cae6744ead8a39aaf9
+PODFILE CHECKSUM: d33cc566a4251401633ca61286175dd53c63f032
 
 COCOAPODS: 1.11.2

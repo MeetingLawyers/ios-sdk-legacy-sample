@@ -1,13 +1,11 @@
 source 'https://cdn.cocoapods.org/'
-source 'https://bitbucket.org/meetingdoctors-team/cocoapods-specs.git'
 source 'https://bitbucket.org/meetinglawyers/ios-cocoapods-specs.git'
 
 platform :ios, '11.0'
 use_frameworks!
 
 def shared_pods
-    pod 'MediQuo', '~> 3.1.1'
-    pod 'MeetingLawyersSDK', '~> 1.0.0'
+    pod 'MeetingLawyersSDK', '1.0.4-beta1'
 end
 
 target 'Mediquo Swift Example App' do
