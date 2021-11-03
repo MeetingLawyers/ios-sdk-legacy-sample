@@ -16,44 +16,44 @@ PODS:
     - AWSCore (= 2.16.0)
   - CryptoSwift (1.4.2)
   - Device (3.1.2)
-  - MeetingLawyers-Controller (1.0.4-beta1):
+  - MeetingLawyers-Controller (1.0.4):
     - AWSMobileClient (= 2.16.0)
     - AWSS3 (= 2.16.0)
-    - MeetingLawyers-Core (= 1.0.4-beta1)
-    - MeetingLawyers-Schema (= 1.0.4-beta1)
+    - MeetingLawyers-Core (= 1.0.4)
+    - MeetingLawyers-Schema (= 1.0.4)
     - RxBlocking (= 6.2.0)
     - RxSwift (= 6.2.0)
     - SwiftDate (= 4.5.1)
-  - MeetingLawyers-Core (1.0.4-beta1):
+  - MeetingLawyers-Core (1.0.4):
     - CryptoSwift (~> 1.0)
-  - MeetingLawyers-Remote (1.0.4-beta1):
+  - MeetingLawyers-Remote (1.0.4):
     - Alamofire (= 4.9.1)
     - AlamofireImage (= 3.6.0)
-    - MeetingLawyers-Controller (= 1.0.4-beta1)
-    - MeetingLawyers-Core (= 1.0.4-beta1)
-    - MeetingLawyers-Schema (= 1.0.4-beta1)
-  - MeetingLawyers-Schema (1.0.4-beta1):
-    - MeetingLawyers-Core (= 1.0.4-beta1)
-  - MeetingLawyers-Socket (1.0.4-beta1):
-    - MeetingLawyers-Controller (= 1.0.4-beta1)
-    - MeetingLawyers-Core (= 1.0.4-beta1)
-    - MeetingLawyers-Schema (= 1.0.4-beta1)
+    - MeetingLawyers-Controller (= 1.0.4)
+    - MeetingLawyers-Core (= 1.0.4)
+    - MeetingLawyers-Schema (= 1.0.4)
+  - MeetingLawyers-Schema (1.0.4):
+    - MeetingLawyers-Core (= 1.0.4)
+  - MeetingLawyers-Socket (1.0.4):
+    - MeetingLawyers-Controller (= 1.0.4)
+    - MeetingLawyers-Core (= 1.0.4)
+    - MeetingLawyers-Schema (= 1.0.4)
     - Socket.IO-Client-Swift (= 15.2.0)
-  - MeetingLawyers-Storage (1.0.4-beta1):
-    - MeetingLawyers-Controller (= 1.0.4-beta1)
-    - MeetingLawyers-Core (= 1.0.4-beta1)
-    - MeetingLawyers-Schema (= 1.0.4-beta1)
-    - MeetingLawyers-Socket (= 1.0.4-beta1)
+  - MeetingLawyers-Storage (1.0.4):
+    - MeetingLawyers-Controller (= 1.0.4)
+    - MeetingLawyers-Core (= 1.0.4)
+    - MeetingLawyers-Schema (= 1.0.4)
+    - MeetingLawyers-Socket (= 1.0.4)
     - RealmSwift (= 10.17.0)
-  - MeetingLawyersSDK (1.0.4-beta1):
+  - MeetingLawyersSDK (1.0.4):
     - AlamofireImage (= 3.6.0)
     - Device (= 3.1.2)
-    - MeetingLawyers-Controller (= 1.0.4-beta1)
-    - MeetingLawyers-Core (= 1.0.4-beta1)
-    - MeetingLawyers-Remote (= 1.0.4-beta1)
-    - MeetingLawyers-Schema (= 1.0.4-beta1)
-    - MeetingLawyers-Socket (= 1.0.4-beta1)
-    - MeetingLawyers-Storage (= 1.0.4-beta1)
+    - MeetingLawyers-Controller (= 1.0.4)
+    - MeetingLawyers-Core (= 1.0.4)
+    - MeetingLawyers-Remote (= 1.0.4)
+    - MeetingLawyers-Schema (= 1.0.4)
+    - MeetingLawyers-Socket (= 1.0.4)
+    - MeetingLawyers-Storage (= 1.0.4)
     - MessageKit (= 2.0.0)
     - OpenTok (= 2.20.1)
     - R.swift (= 5.1.0)
@@ -95,7 +95,7 @@ PODS:
   - SwipeCellKit (2.5.4)
 
 DEPENDENCIES:
-  - MeetingLawyersSDK (= 1.0.4-beta1)
+  - MeetingLawyersSDK (= 1.0.4)
 
 SPEC REPOS:
   https://bitbucket.org/meetinglawyers/ios-cocoapods-specs.git:
@@ -147,13 +147,13 @@ SPEC CHECKSUMS:
   AWSS3: 6df833615e2b2f8313b585e2090e80a3e97c550f
   CryptoSwift: a532e74ed010f8c95f611d00b8bbae42e9fe7c17
   Device: 62242076214c30fb5760174b3601cefafa70a481
-  MeetingLawyers-Controller: 02268bc46ca31ae75e8469a56e0bbfe1b3bb765b
-  MeetingLawyers-Core: 89e135017bc920d1531aebb2c1926095e5f467d5
-  MeetingLawyers-Remote: 98fa9e415b5c05d12833a82855c7c36989eaa1ab
-  MeetingLawyers-Schema: 35be00a070b9bb69ed30b5d5a7814f4e6b17f641
-  MeetingLawyers-Socket: eb84643bcfc064264cb58ff6b9875ff2be6cd508
-  MeetingLawyers-Storage: 0f5eff908d44a9d65a3d575dfe9e6018b263edfc
-  MeetingLawyersSDK: 01f92092724ef25778a1eea2322264b264be7a0b
+  MeetingLawyers-Controller: addc4efa3a44f5f72c6d688304e3479c32f881a2
+  MeetingLawyers-Core: 3741b669c6287903f0f6d3d1b2fdf6445fd31c1e
+  MeetingLawyers-Remote: 0d71fd50cc4a86f368aa6d16d1ef6e5199f20aae
+  MeetingLawyers-Schema: f7e2da7fbeb5f91febd47c7d561dea1a72798a52
+  MeetingLawyers-Socket: 0b8e833d8ab6e90b010e08d30bdda5c5f7fd90a8
+  MeetingLawyers-Storage: 71f86eba236510684dc6550ae9d5e6c0e1cbe147
+  MeetingLawyersSDK: ac289bd817a27b1fb5484e664136400733f36d63
   MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
   MessageKit: 29c1c87e5a396d2ca7a3f712e5171dc9aba42a1e
   OpenTok: 62dd91a1297816f61a5e5c91e6ff4ecdffa77364
@@ -173,6 +173,6 @@ SPEC CHECKSUMS:
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
   SwipeCellKit: 4eada3884ab1bbae5e8d2fb9030c242aa23d7f42
 
-PODFILE CHECKSUM: d33cc566a4251401633ca61286175dd53c63f032
+PODFILE CHECKSUM: 2600a1b0437edade48cced50d4787deb6adaf779
 
 COCOAPODS: 1.11.2

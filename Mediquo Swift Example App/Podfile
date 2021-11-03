@@ -5,7 +5,7 @@ platform :ios, '11.0'
 use_frameworks!
 
 def shared_pods
-    pod 'MeetingLawyersSDK', '1.0.4-beta1'
+    pod 'MeetingLawyersSDK', '1.0.4'
 end
 
 target 'Mediquo Swift Example App' do

@@ -29,6 +29,7 @@
 		69BC17DD1FBC8DB20025CC42 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC17DC1FBC8DB20025CC42 /* R.generated.swift */; };
 		69BC17DE1FBC8DB20025CC42 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC17DC1FBC8DB20025CC42 /* R.generated.swift */; };
 		69BC17DF1FBC8DB20025CC42 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC17DC1FBC8DB20025CC42 /* R.generated.swift */; };
+		8AD01B4D2732E3C50005AB59 /* UINavigationBar+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4513132732A62A00EC569C /* UINavigationBar+Appearance.swift */; };
 		8AE7039C266A55F3007CB5C5 /* MLMediQuo+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE7039B266A55F3007CB5C5 /* MLMediQuo+Extension.swift */; };
 		D19B86CFA4D5A229A0361162 /* Pods_Mediquo_Swift_Example_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3434500FABF561A998D087 /* Pods_Mediquo_Swift_Example_AppUITests.framework */; };
 		F7B768537C9BF78EF4B27A89 /* Pods_Mediquo_Swift_Example_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3098ED9D41F6DF3305FEBC6F /* Pods_Mediquo_Swift_Example_AppTests.framework */; };
@@ -81,6 +82,7 @@
 		7F1CFB0FFC99E389E8493633 /* Pods-Mediquo Swift Example AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example AppTests.release.xcconfig"; path = "Target Support Files/Pods-Mediquo Swift Example AppTests/Pods-Mediquo Swift Example AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		7F3434500FABF561A998D087 /* Pods_Mediquo_Swift_Example_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mediquo_Swift_Example_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81FCFD4B84BDB8945F1145AF /* Pods-ML Swift Example AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ML Swift Example AppUITests.release.xcconfig"; path = "Target Support Files/Pods-ML Swift Example AppUITests/Pods-ML Swift Example AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8A4513132732A62A00EC569C /* UINavigationBar+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Appearance.swift"; sourceTree = "<group>"; };
 		8AE7039B266A55F3007CB5C5 /* MLMediQuo+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMediQuo+Extension.swift"; sourceTree = "<group>"; };
 		8D85F610F5EFB0B024EA61BD /* Pods_Mediquo_Swift_Example_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mediquo_Swift_Example_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2409A0ED53EEC3681F36976 /* Pods-Mediquo Swift Example App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediquo Swift Example App.debug.xcconfig"; path = "Target Support Files/Pods-Mediquo Swift Example App/Pods-Mediquo Swift Example App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 		D585EEF321E6164A00D3A21B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8A4513132732A62A00EC569C /* UINavigationBar+Appearance.swift */,
 				8AE7039B266A55F3007CB5C5 /* MLMediQuo+Extension.swift */,
 			);
 			path = Extensions;
@@ -564,6 +567,7 @@
 				69BC17BB1FBC8B6C0025CC42 /* ViewController.swift in Sources */,
 				69BC178A1FBC83380025CC42 /* AppDelegate.swift in Sources */,
 				8AE7039C266A55F3007CB5C5 /* MLMediQuo+Extension.swift in Sources */,
+				8AD01B4D2732E3C50005AB59 /* UINavigationBar+Appearance.swift in Sources */,
 				69BC17DD1FBC8DB20025CC42 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,7 +764,7 @@
 				INFOPLIST_FILE = "Mediquo Swift Example App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.medipremium.main;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meetinglawyers.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -778,7 +782,7 @@
 				INFOPLIST_FILE = "Mediquo Swift Example App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.medipremium.main;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meetinglawyers.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
